@@ -9,6 +9,9 @@ export default {
         pallet3: "#9DB2BF",
         pallet4: "#DDE6ED",
       },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+      },
     },
   },
   plugins: [],
