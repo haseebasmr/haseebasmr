@@ -4,6 +4,8 @@ import { useState } from "react";
 export default function StartScreen() {
   const greetings = [
     "Hello", // English
+    "Hello", // English
+    "Hello", // English
     "Hola", // Spanish
     "Bonjour", // French
     "Hallo", // German
