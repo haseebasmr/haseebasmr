@@ -18,7 +18,9 @@ export default function StartScreen() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setGreetingIndex((prev) => (prev + 1) % greetings.length);
+      if (greetingIndex !== greetings.length - 1) {
+        setGreetingIndex((prev) => (prev + 1) % greetings.length);
+      }
     }, 150);
 
     return () => {
@@ -28,7 +30,7 @@ export default function StartScreen() {
 
   return (
     <div className="bg-pallet1 h-screen w-screen flex items-center justify-center absolute top-0 left-0">
-      <p className="text-white text-4xl">{greetings[greetingIndex]}</p>
+      <p className="text-white text-6xl">{greetings[greetingIndex]}</p>
     </div>
   );
 }
