@@ -1,11 +1,22 @@
+import { useEffect } from "react";
+import {
+  createHashRouter,
+  RouterProvider,
+  createRoutesFromElements,
+  Route,
+} from "react-router-dom";
 import "./App.css";
+import { Home } from "./components";
 
 function App() {
-  return (
-    <h1 className="text-3xl bg-gray-400 text-white text-center m-10 p-10">
-      Hello World
-    </h1>
+  const router = createHashRouter(
+    createRoutesFromElements(
+      <>
+        <Route path="/" element={<Home />} />
+      </>
+    )
   );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
