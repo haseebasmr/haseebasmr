@@ -27,7 +27,7 @@ export default function StartScreen() {
   }, [greetingIndex, greetings.length]);
 
   return (
-    <div className="bg-pallet1 h-screen w-screen flex items-center justify-center">
+    <div className="bg-pallet1 h-screen w-screen flex items-center justify-center absolute top-0 left-0">
       <p className="text-white text-4xl">{greetings[greetingIndex]}</p>
     </div>
   );
