@@ -41,15 +41,30 @@ export default function StartScreen() {
   }, [greetingIndex, greetings.length]);
 
   return (
-    <div className="bg-pallet1 h-screen w-screen flex items-center justify-center absolute top-0 left-0">
-      <motion.p
-        className="text-white text-6xl"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5, ease: "circInOut" }}
-      >
-        {greetings[greetingIndex]}
-      </motion.p>
+    <div className="relative">
+      <div className="bg-pallet1 h-screen w-screen flex items-center justify-center absolute">
+        <motion.p
+          className="text-white text-6xl"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5, ease: "circInOut" }}
+        >
+          {greetings[greetingIndex]}
+        </motion.p>
+        <div className="absolute lg:-bottom-40 -bottom-20 w-screen">
+          <svg
+            width="100%"
+            viewBox="0 0 711 131"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M711 80C386.772 172.366 101.905 118.486 0 80V0H711V80Z"
+              fill="#27374D"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
   );
 }

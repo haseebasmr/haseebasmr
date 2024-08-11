@@ -2,7 +2,6 @@ import {
   RouterProvider,
   createRoutesFromElements,
   Route,
-  createBrowserRouter,
   createHashRouter,
 } from "react-router-dom";
 import "./App.css";

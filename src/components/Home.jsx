@@ -19,9 +19,9 @@ export default function Home() {
             key="start"
             initial={{ y: 0 }}
             exit={{
-              y: -1000,
+              y: -1500,
             }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <StartScreen />
           </motion.div>
@@ -30,7 +30,7 @@ export default function Home() {
             key="home"
             initial={{ y: 1000 }}
             animate={{ y: 0 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <div className="bg-home-bg bg-tempbg bg-cover bg-no-repeat bg-center h-screen w-screen">
               <Header />
