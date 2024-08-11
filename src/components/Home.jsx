@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import StartScreen from "./StartScreen";
 import { AnimatePresence, motion } from "framer-motion";
+import Header from "./Header";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -8,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 2000);
   }, []);
   return (
     <div>
@@ -18,16 +19,23 @@ export default function Home() {
             key="start"
             initial={{ y: 0 }}
             exit={{
-              y: [0, -250, -1000],
+              y: -1000,
             }}
-            transition={{ duration: 0.8, times: [0, 0.8, 1] }}
+            transition={{ duration: 0.5 }}
           >
             <StartScreen />
           </motion.div>
         ) : (
-          <div className="bg-pallet2 h-screen w-screen flex items-center justify-center">
-            <p className="text-white text-4xl">Home</p>
-          </div>
+          <motion.div
+            key="home"
+            initial={{ y: 1000 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <div className="bg-home-bg bg-tempbg bg-cover lg:bg-contain bg-no-repeat bg-center h-screen w-screen">
+              <Header />
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </div>
