@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import StartScreen from "./StartScreen";
 import { AnimatePresence, motion } from "framer-motion";
 import Header from "./Header";
+import { Haseeb } from "./haseeb";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -26,20 +27,25 @@ export default function Home() {
             <StartScreen />
           </motion.div>
         ) : (
-          <motion.div
-            key="home"
-            initial={{ y: 1000 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-          >
-            <Header />
+          <div>
             <motion.div
-              className="bg-home-bg bg-cover bg-no-repeat bg-center h-screen w-screen absolute"
-              initial={{ y: 250 }}
+              key="home"
+              initial={{ y: 1000 }}
               animate={{ y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            ></motion.div>
-          </motion.div>
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              <motion.div
+                className="bg-home-bg bg-cover bg-no-repeat bg-center h-screen w-screen relative"
+                initial={{ y: 250 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                <Header />
+                <Haseeb />
+              </motion.div>
+            </motion.div>
+            <div className="h-screen w-screen"></div>
+          </div>
         )}
       </AnimatePresence>
     </div>
