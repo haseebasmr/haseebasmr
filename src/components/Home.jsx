@@ -32,7 +32,7 @@ export default function Home() {
             animate={{ y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <div className="bg-home-bg bg-tempbg bg-cover lg:bg-contain bg-no-repeat bg-center h-screen w-screen">
+            <div className="bg-home-bg bg-tempbg bg-cover bg-no-repeat bg-center h-screen w-screen">
               <Header />
             </div>
           </motion.div>
