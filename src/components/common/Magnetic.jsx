@@ -1,34 +1,67 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
+import throttle from "lodash.throttle";
 
-export default function Magnetic({ children, className }) {
+const Magnetic = ({ children, className }) => {
   const ref = useRef(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isMouseInside, setIsMouseInside] = useState(false);
 
-  const handleMouse = (e) => {
-    const { clientX, clientY } = e;
-    const { height, width, left, top } = ref.current.getBoundingClientRect();
-    const middleX = clientX - (left + width / 2);
-    const middleY = clientY - (top + height / 2);
-    setPosition({ x: middleX, y: middleY });
-  };
+  const handleMouse = useCallback(
+    throttle((e) => {
+      const { clientX, clientY } = e;
+      const { height, width, left, top } = ref.current.getBoundingClientRect();
+      const middleX = clientX - (left + width / 2);
+      const middleY = clientY - (top + height / 2);
+      setPosition({ x: middleX, y: middleY });
+      setIsMouseInside(true);
+    }, 60),
+    []
+  ); // Throttle to roughly 60fps
 
-  const reset = () => {
+  const reset = useCallback(() => {
+    console.log("Resetting position");
     setPosition({ x: 0, y: 0 });
-  };
+  }, []);
+
+  useEffect(() => {
+    const checkMousePosition = (e) => {
+      if (ref.current) {
+        const { clientX, clientY } = e;
+        const { left, top, right, bottom } =
+          ref.current.getBoundingClientRect();
+        const isInside =
+          clientX >= left &&
+          clientX <= right &&
+          clientY >= top &&
+          clientY <= bottom;
+        if (!isInside && isMouseInside) {
+          reset();
+          setIsMouseInside(false);
+        }
+      }
+    };
+
+    document.addEventListener("mousemove", checkMousePosition);
+    return () => {
+      document.removeEventListener("mousemove", checkMousePosition);
+    };
+  }, [isMouseInside, reset]);
 
   const { x, y } = position;
   return (
     <motion.div
-      style={{ position: "relative" }}
+      style={{ position: "relative", willChange: "transform" }}
       ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={reset}
       animate={{ x, y }}
-      transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
+      transition={{ type: "spring", stiffness: 200, damping: 20, mass: 0.1 }}
       className={className}
     >
       {children}
     </motion.div>
   );
-}
+};
+
+export default Magnetic;

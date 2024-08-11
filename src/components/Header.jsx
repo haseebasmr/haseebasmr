@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Magnetic from "./common/Magnetic";
 
 export default function Header() {
@@ -6,14 +5,16 @@ export default function Header() {
   return (
     <div className="flex justify-between items-center px-8 py-4">
       <Magnetic>
-        <div className="text-white font-montserrat text-xl p-4">HaseebASMR</div>
+        <div className="text-white font-montserrat text-xl p-5 bg-black">
+          HaseebASMR
+        </div>
       </Magnetic>
       <div>
         {buttons.map((button) => (
           <Magnetic key={button} className="inline-block">
             <button
               key={button}
-              className="text-white font-montserrat text-lg p-4 mx-1"
+              className="text-white font-montserrat text-lg p-5 bg-black mx-1"
             >
               {button}
             </button>
