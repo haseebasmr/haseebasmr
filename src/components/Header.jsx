@@ -3,7 +3,7 @@ import Magnetic from "./common/Magnetic";
 export default function Header() {
   const buttons = ["Photos", "Videos", "Contact"];
   return (
-    <div className="flex justify-between items-center px-8 py-4">
+    <header className="flex justify-between items-center px-8 py-4">
       <Magnetic>
         <div className="text-white font-montserrat text-xl p-5">HaseebASMR</div>
       </Magnetic>
@@ -19,6 +19,6 @@ export default function Header() {
           </Magnetic>
         ))}
       </div>
-    </div>
+    </header>
   );
 }

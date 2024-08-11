@@ -32,9 +32,13 @@ export default function Home() {
             animate={{ y: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
-            <div className="bg-home-bg bg-tempbg bg-cover bg-no-repeat bg-center h-screen w-screen">
-              <Header />
-            </div>
+            <Header />
+            <motion.div
+              className="bg-home-bg bg-cover bg-no-repeat bg-center h-screen w-screen absolute"
+              initial={{ y: 250 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            ></motion.div>
           </motion.div>
         )}
       </AnimatePresence>
