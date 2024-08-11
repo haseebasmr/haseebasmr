@@ -14,7 +14,7 @@ export default {
         montserrat: ["Montserrat", "sans-serif"],
       },
       backgroundImage: {
-        "home-bg": "url('/public/assets/images/backgroundPic.jpg')",
+        "home-bg": "url('/assets/images/backgroundPic.jpg')",
       },
     },
   },

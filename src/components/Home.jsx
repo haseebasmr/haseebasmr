@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import StartScreen from "./StartScreen";
 import { AnimatePresence, motion } from "framer-motion";
-import Header from "./Header";
-import { Haseeb } from "./haseeb";
+import { Haseeb, Header } from "./";
 import { Parallax } from "react-parallax";
-import SmoothScroll from "./SmoothScroll";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -15,7 +13,7 @@ export default function Home() {
     }, 3000);
   }, []);
   return (
-    <SmoothScroll>
+    <div>
       <AnimatePresence>
         {loading ? (
           <motion.div
@@ -36,19 +34,22 @@ export default function Home() {
               animate={{ y: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
             >
-              <Parallax
-                bgImage="/assets/images/backgroundPic.jpg"
-                strength={200}
-                className="h-screen w-screen"
-              >
-                <Header />
+              <Parallax strength={500}>
+                <motion.div
+                  className="bg-home-bg bg-cover bg-no-repeat bg-center h-screen w-screen relative"
+                  initial={{ y: 250 }}
+                  animate={{ y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                  <Header />
+                  <Haseeb />
+                </motion.div>
               </Parallax>
-              <Haseeb />
             </motion.div>
             <div className="h-screen w-screen"></div>
           </div>
         )}
       </AnimatePresence>
-    </SmoothScroll>
+    </div>
   );
 }
