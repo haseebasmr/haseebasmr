@@ -2,7 +2,7 @@
   "name": "haseebasmr",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://haseebasmr.github.io/haseebasmr/",
+  "homepage": "https://haseebasmr.com",
   "type": "module",
   "scripts": {
     "dev": "vite",
