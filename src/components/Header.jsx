@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <div className="flex justify-between items-center px-8 py-4">
       <Magnetic>
-        <div className="text-white font-montserrat text-xl">HaseebASMR</div>
+        <div className="text-white font-montserrat text-xl p-4">HaseebASMR</div>
       </Magnetic>
       <div>
         {buttons.map((button) => (
