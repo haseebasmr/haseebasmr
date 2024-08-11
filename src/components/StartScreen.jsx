@@ -35,8 +35,11 @@ export default function StartScreen() {
       }
     }, 150);
 
+    document.body.classList.add("overflow-hidden");
+
     return () => {
       clearInterval(interval);
+      document.body.classList.remove("overflow-hidden");
     };
   }, [greetingIndex, greetings.length]);
 
