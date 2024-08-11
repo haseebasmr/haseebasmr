@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export function Haseeb({ className }) {
+export default function Haseeb({ className }) {
   const { scrollY } = useScroll();
   const xPos = useTransform(scrollY, [0, 1000], [0, -700]); // Adjust the range as needed
 
