@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 3000);
   }, []);
   return (
     <div>
@@ -21,7 +21,7 @@ export default function Home() {
             exit={{
               y: -1000,
             }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.3 }}
           >
             <StartScreen />
           </motion.div>
@@ -30,7 +30,7 @@ export default function Home() {
             key="home"
             initial={{ y: 1000 }}
             animate={{ y: 0 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <div className="bg-home-bg bg-tempbg bg-cover bg-no-repeat bg-center h-screen w-screen">
               <Header />
