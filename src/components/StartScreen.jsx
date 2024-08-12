@@ -43,6 +43,10 @@ export default function StartScreen() {
     };
   }, [greetingIndex, greetings.length]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="relative">
       <div className="bg-pallet1 h-screen w-screen flex items-center justify-center absolute">

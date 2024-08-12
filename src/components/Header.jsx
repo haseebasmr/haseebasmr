@@ -5,14 +5,16 @@ export default function Header() {
   return (
     <header className="flex justify-between items-center px-8 py-4">
       <Magnetic>
-        <div className="text-white font-montserrat text-xl p-5">HaseebASMR</div>
+        <button className="text-white font-montserrat text-xl p-2">
+          HaseebASMR
+        </button>
       </Magnetic>
       <div>
         {buttons.map((button) => (
           <Magnetic key={button} className="inline-block">
             <button
               key={button}
-              className="text-white font-montserrat text-lg p-5 mx-1"
+              className="text-white font-montserrat text-lg p-2 mx-1"
             >
               {button}
             </button>

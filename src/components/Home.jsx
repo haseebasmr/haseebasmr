@@ -6,10 +6,14 @@ import { Parallax } from "react-parallax";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [parallaxLoaded, setParallaxLoaded] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
+      setTimeout(() => {
+        setParallaxLoaded(true);
+      }, 1000); // D
     }, 3000);
   }, []);
   return (
@@ -22,7 +26,7 @@ export default function Home() {
             exit={{
               y: -1500,
             }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
             <StartScreen />
           </motion.div>
@@ -31,20 +35,24 @@ export default function Home() {
             <motion.div
               key="home"
               initial={{ y: 1000 }}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
+              animate={{ y: [1000, 50, 0] }}
+              transition={{ duration: 1, times: [0, 0.3, 1] }}
+              className="relative"
             >
-              <Parallax strength={500}>
-                <motion.div
-                  className="bg-home-bg bg-cover bg-no-repeat bg-center h-screen w-screen relative"
-                  initial={{ y: 250 }}
-                  animate={{ y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
+              <Header />
+              <div className="relative">
+                <Parallax
+                  strength={parallaxLoaded ? 0 : 0}
+                  bgImage="/assets/images/backgroundPic.jpg"
+                  bgImageStyle={{
+                    objectFit: "cover",
+                    backgroundAttachment: "fixed",
+                  }}
                 >
-                  <Header />
-                  <Haseeb />
-                </motion.div>
-              </Parallax>
+                  <div className="h-screen w-screen"></div>
+                </Parallax>
+                <Haseeb />
+              </div>
             </motion.div>
             <div className="h-screen w-screen"></div>
           </div>
