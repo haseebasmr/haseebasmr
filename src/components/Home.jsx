@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import StartScreen from "./StartScreen";
 import { AnimatePresence, motion } from "framer-motion";
-import { Haseeb, Header } from "./";
+import { Description, Haseeb, Header } from "./";
 import { Parallax } from "react-parallax";
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
         {loading ? (
           <motion.div
             key="start"
-            initial={{ y: 0 }}
+            initial={{ y: 0, opacity: 1 }}
             exit={{
               y: -1500,
             }}
@@ -54,6 +54,7 @@ export default function Home() {
                 <Haseeb />
               </div>
             </motion.div>
+            <Description />
             <div className="h-screen w-screen"></div>
           </div>
         )}

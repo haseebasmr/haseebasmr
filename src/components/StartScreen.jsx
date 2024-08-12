@@ -49,7 +49,7 @@ export default function StartScreen() {
 
   return (
     <div className="relative">
-      <div className="bg-pallet1 h-screen w-screen flex items-center justify-center absolute">
+      <div className="bg-pallet1 h-screen w-screen flex items-center justify-center absolute z-50">
         <motion.p
           className="text-white text-6xl"
           initial={{ opacity: 0 }}
