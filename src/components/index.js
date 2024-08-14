@@ -6,6 +6,7 @@ import Haseeb from "./Haseeb";
 import SmoothScroll from "./SmoothScroll";
 import Description from "./Description";
 import AboutMeBtn from "./common/AboutMeBtn";
+import Routes from "./Routes";
 
 export {
   StartScreen,
@@ -16,4 +17,5 @@ export {
   SmoothScroll,
   Description,
   AboutMeBtn,
+  Routes,
 };

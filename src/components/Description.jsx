@@ -1,8 +1,8 @@
 import { AboutMeBtn } from "./";
 
-export default function Description() {
+export default function Description({ className }) {
   return (
-    <div className="w-screen h-auto bg-white">
+    <div className={`w-screen h-auto bg-white relative ${className}`}>
       <div className="flex justify-center py-52">
         <div className="flex max-w-5xl mx-20 my-10 space-x-24">
           <div className="text-4xl">

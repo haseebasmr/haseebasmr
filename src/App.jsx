@@ -1,21 +1,12 @@
-import {
-  RouterProvider,
-  createRoutesFromElements,
-  Route,
-  createHashRouter,
-} from "react-router-dom";
-import "./App.css";
-import { Home } from "./components";
+import { Routes } from "./components";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
-  const router = createHashRouter(
-    createRoutesFromElements(
-      <>
-        <Route path="/" element={<Home />} />
-      </>
-    )
+  return (
+    <ParallaxProvider>
+      <Routes />
+    </ParallaxProvider>
   );
-  return <RouterProvider router={router} />;
 }
 
 export default App;
