@@ -3,7 +3,7 @@ import Magnetic from "./Magnetic";
 
 export default function AboutMeBtn() {
   const { scrollY } = useScroll();
-  const yPos = useTransform(scrollY, [700, 1700], [0, -150]); // Adjust the range as needed
+  const yPos = useTransform(scrollY, [700, 1700], [0, -200]); // Adjust the range as needed
   return (
     <div className="flex justify-end mx-20">
       <motion.button
