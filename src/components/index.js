@@ -1,5 +1,5 @@
 import StartScreen from "./StartScreen";
-import Home from "./Home";
+import AppContainer from "./AppContainer";
 import Header from "./Header";
 import Magnetic from "./common/Magnetic";
 import Haseeb from "./Haseeb";
@@ -8,10 +8,12 @@ import Description from "./Description";
 import AboutMeBtn from "./common/AboutMeBtn";
 import Routes from "./Routes";
 import RadialBtn from "./common/RadialBtn";
+import AboutMe from "./AboutMe";
+import Home from "./Home";
 
 export {
   StartScreen,
-  Home,
+  AppContainer,
   Header,
   Magnetic,
   Haseeb,
@@ -20,4 +22,6 @@ export {
   AboutMeBtn,
   Routes,
   RadialBtn,
+  AboutMe,
+  Home,
 };
