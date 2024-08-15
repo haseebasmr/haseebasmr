@@ -34,7 +34,7 @@ export default function RadialBtn() {
       <AnimatePresence>
         {isClicked && (
           <motion.div
-            className="h-10 w-10 fixed top-7 right-7 z-40 pointer-events-none"
+            className="h-10 w-10 fixed top-7 right-7 z-40"
             initial={{ rotate: -150 }}
             animate={{ rotate: 0 }}
             exit={{ rotate: 150 }}
@@ -49,7 +49,9 @@ export default function RadialBtn() {
                   className="absolute h-12 w-12 flex items-center justify-center rounded-full"
                   style={{ transform: `translate(${x}px, ${-y}px)` }}
                 >
-                  <span className="text-white text-sm">{item.label}</span>
+                  <button className="text-white text-sm active:text-xl">
+                    {item.label}
+                  </button>
                 </div>
               );
             })}

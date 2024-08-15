@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Parallax } from "react-scroll-parallax";
-import { Haseeb, Description } from "./";
+import { Haseeb, Description, PhotoCards, VideoCards } from "./";
 
 export default function Home() {
   return (
@@ -22,7 +22,8 @@ export default function Home() {
       </motion.div>
       <Haseeb />
       <Description className="z-10 overflow-hidden" />
-      <div className="w-screen h-screen"></div>
+      <PhotoCards />
+      <VideoCards />
     </>
   );
 }

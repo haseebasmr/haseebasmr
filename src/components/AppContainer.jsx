@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import StartScreen from "./StartScreen";
 import { AnimatePresence, motion } from "framer-motion";
-import { Header } from ".";
+import { Header, Footer } from "./";
 import { Outlet } from "react-router-dom";
 
 export default function AppContainer() {
@@ -31,6 +31,7 @@ export default function AppContainer() {
           <div className="overflow-hidden">
             <Header />
             <Outlet />
+            <Footer />
           </div>
         )}
       </AnimatePresence>

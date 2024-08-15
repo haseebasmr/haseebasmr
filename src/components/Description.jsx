@@ -2,7 +2,7 @@ import { AboutMeBtn } from "./";
 
 export default function Description({ className }) {
   return (
-    <div className={`w-screen h-auto bg-white relative ${className}`}>
+    <div className={`w-screen h-auto bg-pallet4 relative ${className}`}>
       <div className="flex md:justify-center md:pt-52 pb-52 pt-10">
         <div className="flex flex-col md:flex-row max-w-5xl md:mx-20 mx-4 my-10 md:space-x-24 md:space-y-0 space-y-20">
           <div className="md:text-4xl text-2xl">
