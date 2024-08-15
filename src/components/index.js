@@ -7,6 +7,7 @@ import SmoothScroll from "./SmoothScroll";
 import Description from "./Description";
 import AboutMeBtn from "./common/AboutMeBtn";
 import Routes from "./Routes";
+import RadialBtn from "./common/RadialBtn";
 
 export {
   StartScreen,
@@ -18,4 +19,5 @@ export {
   Description,
   AboutMeBtn,
   Routes,
+  RadialBtn,
 };

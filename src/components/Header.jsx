@@ -1,15 +1,16 @@
 import Magnetic from "./common/Magnetic";
+import RadialBtn from "./common/RadialBtn";
 
 export default function Header() {
   const buttons = ["Photos", "Videos", "Contact"];
   return (
-    <header className="flex justify-between items-center px-8 py-8">
+    <header className="flex justify-between items-center md:px-8 md:py-8 py-4 px-2 relative z-50">
       <Magnetic>
         <button className="text-white font-montserrat text-xl p-2 font-medium">
           HaseebASMR
         </button>
       </Magnetic>
-      <div>
+      <div className="hidden md:block">
         {buttons.map((button) => (
           <Magnetic key={button} className="inline-block">
             <button
@@ -21,6 +22,7 @@ export default function Header() {
           </Magnetic>
         ))}
       </div>
+      <RadialBtn />
     </header>
   );
 }
