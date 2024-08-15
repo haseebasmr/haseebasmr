@@ -19,16 +19,15 @@ export default function RadialBtn() {
   return (
     <div className="md:hidden fixed right-2 top-2 z-40">
       {isClicked ? (
-        <FaTimes
-          size={25}
-          color="white"
-          className="absolute right-7 top-7 z-50 pointer-events-none"
-        />
+        <button className="absolute right-7 top-7 z-50" onClick={handleClick}>
+          <FaTimes size={25} color="white" />
+        </button>
       ) : (
         <FaGripLines
           size={25}
           color="white"
           className="absolute right-7 top-7 z-50 pointer-events-none"
+          onClick={handleClick}
         />
       )}
       <AnimatePresence>
@@ -49,7 +48,7 @@ export default function RadialBtn() {
                   className="absolute h-12 w-12 flex items-center justify-center rounded-full"
                   style={{ transform: `translate(${x}px, ${-y}px)` }}
                 >
-                  <button className="text-white text-sm active:text-xl">
+                  <button className="text-white text-sm active:text-xl hover:text-lg">
                     {item.label}
                   </button>
                 </div>
