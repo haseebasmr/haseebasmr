@@ -28,7 +28,7 @@ export default function Home() {
             <StartScreen />
           </motion.div>
         ) : (
-          <div>
+          <div className="overflow-hidden">
             <Header />
             <motion.div
               initial={{ y: 80 }}
@@ -46,8 +46,8 @@ export default function Home() {
               </div>
             </motion.div>
             <Haseeb />
-            <Description className="z-10" />
-            <div className="h-screen w-screen"></div>
+            <Description className="z-10 overflow-hidden" />
+            <div className="w-screen h-screen"></div>
           </div>
         )}
       </AnimatePresence>

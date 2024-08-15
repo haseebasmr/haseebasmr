@@ -36,6 +36,7 @@ export default function StartScreen() {
     }, 150);
 
     document.body.classList.add("overflow-hidden");
+    document.body.classList.add("overflow-x-hidden");
 
     return () => {
       clearInterval(interval);
