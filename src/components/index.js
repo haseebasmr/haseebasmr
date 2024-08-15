@@ -10,6 +10,9 @@ import Routes from "./Routes";
 import RadialBtn from "./common/RadialBtn";
 import AboutMe from "./AboutMe";
 import Home from "./Home";
+import PhotoCards from "./PhotoCards";
+import VideoCards from "./VideoCards";
+import Footer from "./Footer";
 
 export {
   StartScreen,
@@ -24,4 +27,7 @@ export {
   RadialBtn,
   AboutMe,
   Home,
+  PhotoCards,
+  VideoCards,
+  Footer,
 };
