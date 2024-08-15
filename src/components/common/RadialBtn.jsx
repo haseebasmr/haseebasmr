@@ -33,24 +33,27 @@ export default function RadialBtn() {
       )}
       <AnimatePresence>
         {isClicked && (
-          <div className="h-10 w-10 fixed top-7 right-7 z-40 pointer-events-none">
+          <motion.div
+            className="h-10 w-10 fixed top-7 right-7 z-40 pointer-events-none"
+            initial={{ rotate: -150 }}
+            animate={{ rotate: 0 }}
+            exit={{ rotate: 150 }}
+            transition={{ duration: 0.2 }}
+          >
             {items.map((item, index) => {
               const x = radius * Math.cos((item.angle * Math.PI) / 180);
               const y = radius * Math.sin((item.angle * Math.PI) / 180);
               return (
-                <motion.div
+                <div
                   key={index}
-                  className="absolute h-12 w-12 bg-pallet1 flex items-center justify-center rounded-full"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1, x: x, y: -y }}
-                  exit={{ x: 0, y: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  className="absolute h-12 w-12 flex items-center justify-center rounded-full"
+                  style={{ transform: `translate(${x}px, ${-y}px)` }}
                 >
                   <span className="text-white text-sm">{item.label}</span>
-                </motion.div>
+                </div>
               );
             })}
-          </div>
+          </motion.div>
         )}
       </AnimatePresence>
       <motion.button
@@ -65,7 +68,7 @@ export default function RadialBtn() {
         }}
         transition={{
           duration: 0.2,
-          delay: isClicked ? 0 : 0,
+          delay: isClicked ? 0 : 0.2,
           ease: "easeOut",
         }}
         style={{ originX: 0, originY: 0 }}
