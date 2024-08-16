@@ -13,7 +13,7 @@ import slide_image_2 from "/assets/images/backgroundPic.jpg";
 import slide_image_3 from "/assets/images/backgroundPic.jpg";
 import slide_image_4 from "/assets/images/backgroundPic.jpg";
 
-function App() {
+function PhotoCards() {
   return (
     <div className="bg-pallet4">
       <div className="container md:px-4 px-0">
@@ -87,4 +87,4 @@ function App() {
   );
 }
 
-export default App;
+export default PhotoCards;
