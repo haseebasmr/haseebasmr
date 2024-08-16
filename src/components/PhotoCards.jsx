@@ -12,14 +12,11 @@ import slide_image_1 from "/assets/images/backgroundPic.jpg";
 import slide_image_2 from "/assets/images/backgroundPic.jpg";
 import slide_image_3 from "/assets/images/backgroundPic.jpg";
 import slide_image_4 from "/assets/images/backgroundPic.jpg";
-import slide_image_5 from "/assets/images/backgroundPic.jpg";
-import slide_image_6 from "/assets/images/backgroundPic.jpg";
-import slide_image_7 from "/assets/images/backgroundPic.jpg";
 
 function App() {
   return (
     <div className="bg-pallet4">
-      <div className="container">
+      <div className="container md:px-4 px-0">
         <div className="md:text-5xl text-3xl font-medium  text-center py-10">
           Photo Categories
         </div>
@@ -70,19 +67,19 @@ function App() {
           </SwiperSlide>
 
           <div className="slider-controler">
-            <div className="swiper-button-prev slider-arrow z-50 -mt-8">
+            <div className="swiper-button-prev slider-arrow z-50 -mt-8 hidden md:flex">
               <ion-icon
                 name="arrow-back-outline"
                 className="pointer-events-none"
               ></ion-icon>
             </div>
-            <div className="swiper-button-next slider-arrow z-50 -mt-8">
+            <div className="swiper-button-next slider-arrow z-50 -mt-8 hidden md:flex">
               <ion-icon
                 name="arrow-forward-outline"
                 className="pointer-events-none"
               ></ion-icon>
             </div>
-            <div className="swiper-pagination"></div>
+            <div className="swiper-pagination md:-mt-0 -mt-24"></div>
           </div>
         </Swiper>
       </div>

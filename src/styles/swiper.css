@@ -25,7 +25,12 @@
 .swiper-slide {
   width: 37rem;
   height: 42rem;
-  position: relative;
+  /* filter: grayscale(100%) blur(5px); */
+  transition: filter 0.3s ease; /* Smooth transition */
+}
+
+.swiper-slide-active {
+  filter: grayscale(0%); /* Remove grayscale filter from active slide */
 }
 
 @media (max-width: 500px) {
@@ -33,12 +38,12 @@
     height: 47rem;
   }
   .swiper-slide {
-    width: 28rem !important;
-    height: 36rem !important;
+    width: 27rem !important;
+    height: 35rem !important;
   }
   .swiper-slide img {
-    width: 28rem !important;
-    height: 36rem !important;
+    width: 27rem !important;
+    height: 35rem !important;
   }
 }
 
@@ -47,7 +52,7 @@
   height: 42rem;
   border-radius: 2rem;
   object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow */
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .swiper-slide-shadow-left,
@@ -119,6 +124,7 @@
   position: relative;
   width: 15rem !important;
   bottom: 1rem;
+  top: 0;
 }
 
 .swiper-pagination .swiper-pagination-bullet {
