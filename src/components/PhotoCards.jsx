@@ -43,25 +43,25 @@ function App() {
         >
           <SwiperSlide>
             <img src={slide_image_1} alt="slide_image" />
-            <div className="absolute bottom-5 left-5 md:text-8xl text-5xl font-bold text-pallet4">
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Product
             </div>
           </SwiperSlide>
           <SwiperSlide className="relative">
             <img src={slide_image_2} alt="slide_image" />
-            <div className="absolute bottom-5 left-5 md:text-8xl text-5xl font-bold text-pallet4">
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Food
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <img src={slide_image_3} alt="slide_image" />
-            <div className="absolute bottom-5 left-5 md:text-8xl text-5xl font-bold text-pallet4">
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Review
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <img src={slide_image_4} alt="slide_image" />
-            <div className="absolute bottom-5 left-5 md:text-8xl text-5xl font-bold text-pallet4">
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Nature
             </div>
           </SwiperSlide>
