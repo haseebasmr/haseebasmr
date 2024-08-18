@@ -5,10 +5,10 @@ export default function AboutMe() {
         <h1 className="text-7xl font-medium">
           Helping brands thrive <br /> in the digital world
         </h1>
-        <div className="flex md:flex-row flex-col mt-24 pt-24 border-t-2 bg-red-400 border-gray-200 md:space-x-8 h-screen md:space-y-0 space-y-8">
+        <div className="flex md:flex-row flex-col mt-24 pt-24 border-t-2  border-gray-200 md:space-x-8 h-screen md:space-y-0 space-y-8">
           <div className="flex-1">
             <span
-              className="max-h-14 font-medium bg-blue-500 "
+              className="max-h-14 font-medium  "
               style={{
                 flex: 1,
               }}
@@ -17,11 +17,13 @@ export default function AboutMe() {
               solutions. With each project, I push my work to new horizons,
               always putting quality first.
             </span>
-            <span className="bg-black text-white">Always Exploring</span>
+            <div className="mt-10 opacity-50 ">
+              <span className="  ">Always Exploring</span>
+            </div>
           </div>
 
           <div
-            className="bg-green-600"
+            className=""
             style={{
               flex: 2,
             }}
