@@ -36,6 +36,18 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
+      <section className=" mx-24 my-16 ">
+        <div className=" p-10   ">
+          <div className="block">
+            <h1 className="text-4xl  ">I can help you with...</h1>
+          </div>
+        </div>
+        <div className="flex">
+          <div>Design</div>
+          <div>Development</div>
+          <div>The full package</div>
+        </div>
+      </section>
     </div>
   );
 }
