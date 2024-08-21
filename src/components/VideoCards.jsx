@@ -12,14 +12,13 @@ import {
   Mousewheel,
 } from "swiper/modules";
 
-import slide_video_1 from "/assets/videos/video1.mp4";
-import slide_video_2 from "/assets/videos/video1.mp4";
-import slide_video_3 from "/assets/videos/video1.mp4";
-import slide_video_4 from "/assets/videos/video1.mp4";
+import slide_video_1 from "/assets/videos/video2.mp4";
+import slide_video_2 from "/assets/videos/video2.mp4";
+import slide_video_3 from "/assets/videos/video2.mp4";
+import slide_video_4 from "/assets/videos/video2.mp4";
 
 function VideoCards() {
   const swiperRef = useRef(null);
-
   const handleSlideChange = () => {
     const swiper = swiperRef.current;
     if (!swiper) return;
@@ -28,10 +27,8 @@ function VideoCards() {
       if (video) {
         if (index === swiper.activeIndex) {
           video.play();
-          console.log("playing video", index);
         } else {
           video.pause();
-          console.log("pausing video", index);
           video.currentTime = 0; // Reset the video to the beginning
         }
       }
@@ -46,12 +43,15 @@ function VideoCards() {
   }, []);
 
   return (
-    <div className="bg-pallet4">
+    <div className="bg-pallet4 pb-28">
       <div className="container md:px-4 px-0 mx-auto">
         <div className="md:text-5xl text-3xl font-medium text-center py-10">
           Video Categories
         </div>
         <Swiper
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
@@ -61,7 +61,7 @@ function VideoCards() {
           mousewheel={{
             forceToAxis: true,
             realaseOnEdges: true,
-            sensitivity: 1,
+            sensitivity: 0.1,
             thresholdDelta: 1,
             thresholdTime: 1000,
           }}
@@ -89,11 +89,11 @@ function VideoCards() {
           pagination={true}
           modules={[EffectCoverflow, Mousewheel, Pagination, Navigation]}
           navigation={{
-            nextEl: ".swiper-button-next-video",
-            prevEl: ".swiper-button-prev-video",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           }}
           className="mySwiperVideo"
-          // onSlideChange={handleSlideChange}
+          onSlideChange={handleSlideChange}
         >
           <SwiperSlide>
             <div className="aspect-ratio-4-5">
@@ -147,8 +147,8 @@ function VideoCards() {
               Nature
             </div>
           </SwiperSlide>
-          <div className="swiper-button-prev-video cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
-          <div className="swiper-button-next-video cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
+          <div className="swiper-button-prev cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
+          <div className="swiper-button-next cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
         </Swiper>
       </div>
     </div>

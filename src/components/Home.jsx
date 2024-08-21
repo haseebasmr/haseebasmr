@@ -1,8 +1,20 @@
 import { motion } from "framer-motion";
 import { Parallax } from "react-scroll-parallax";
 import { Haseeb, Description, PhotoCards, VideoCards } from "./";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [photoCardsLoaded, setPhotoCardsLoaded] = useState(false);
+
+  useEffect(() => {
+    if (imageLoaded) {
+      setTimeout(() => {
+        setPhotoCardsLoaded(true);
+      }, 1000);
+    }
+  }, [imageLoaded]);
+
   return (
     <>
       <motion.div
@@ -16,14 +28,15 @@ export default function Home() {
               src="/assets/images/backgroundPic.jpg"
               alt="bacground image"
               className="object-cover h-screen w-screen"
+              onLoad={() => setImageLoaded(true)}
             />
           </Parallax>
         </div>
       </motion.div>
       <Haseeb />
       <Description className="z-10 overflow-hidden" />
-      <PhotoCards />
-      <VideoCards />
+      {imageLoaded && <PhotoCards />}
+      {photoCardsLoaded && <VideoCards />}
     </>
   );
 }

@@ -13,14 +13,14 @@ import {
   Navigation,
 } from "swiper/modules";
 
-import slide_image_1 from "/assets/images/backgroundPic.jpg";
-import slide_image_2 from "/assets/images/backgroundPic.jpg";
-import slide_image_3 from "/assets/images/backgroundPic.jpg";
-import slide_image_4 from "/assets/images/backgroundPic.jpg";
+import slide_image_1 from "/assets/images/OIP.jpeg";
+import slide_image_2 from "/assets/images/OIP.jpeg";
+import slide_image_3 from "/assets/images/OIP.jpeg";
+import slide_image_4 from "/assets/images/OIP.jpeg";
 
 function PhotoCards() {
   return (
-    <div className="bg-pallet4">
+    <div className="bg-pallet4 pb-28">
       <div className="container md:px-4 px-0 mx-auto">
         <div className="md:text-5xl text-3xl font-medium  text-center py-10">
           Photo Categories
@@ -35,7 +35,7 @@ function PhotoCards() {
           mousewheel={{
             forceToAxis: true,
             realaseOnEdges: true,
-            sensitivity: 1,
+            sensitivity: 0.1,
             thresholdDelta: 1,
             thresholdTime: 1000,
           }}
