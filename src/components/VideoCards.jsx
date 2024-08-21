@@ -1,11 +1,16 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "../styles/swiper.css";
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import {
+  EffectCoverflow,
+  Pagination,
+  Navigation,
+  Mousewheel,
+} from "swiper/modules";
 
 import slide_video_1 from "/assets/videos/video1.mp4";
 import slide_video_2 from "/assets/videos/video1.mp4";
@@ -47,29 +52,47 @@ function VideoCards() {
           Video Categories
         </div>
         <Swiper
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper;
-            handleSlideChange(); // Ensure the first video plays on initial load
-          }}
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
+          slidesPerView={1}
+          freeMode={true}
+          freeModeSticky={true}
           loop={true}
-          slidesPerView={"auto"}
+          mousewheel={{
+            forceToAxis: true,
+            realaseOnEdges: true,
+            sensitivity: 1,
+            thresholdDelta: 1,
+            thresholdTime: 1000,
+          }}
+          breakpoints={{
+            // Adjust slidesPerView based on screen width
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          speed={800}
           coverflowEffect={{
-            rotate: 0,
+            rotate: 50,
             stretch: 0,
             depth: 100,
-            modifier: 2.5,
+            modifier: 1,
+            slideShadows: true,
           }}
-          pagination={{ el: ".swiper-pagination", clickable: true }}
+          pagination={true}
+          modules={[EffectCoverflow, Mousewheel, Pagination, Navigation]}
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-            clickable: true,
+            nextEl: ".swiper-button-next-video",
+            prevEl: ".swiper-button-prev-video",
           }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
-          className="swiper_container"
+          className="mySwiperVideo w-full pt-[50px] pb-[50px]"
           onSlideChange={handleSlideChange}
         >
           <SwiperSlide>
@@ -117,21 +140,8 @@ function VideoCards() {
             </div>
           </SwiperSlide>
         </Swiper>
-        <div className="slider-controler">
-          <div className="swiper-button-prev slider-arrow z-50 -mt-8">
-            <ion-icon
-              name="arrow-back-outline"
-              className="pointer-events-none"
-            ></ion-icon>
-          </div>
-          <div className="swiper-button-next slider-arrow z-50 -mt-8">
-            <ion-icon
-              name="arrow-forward-outline"
-              className="pointer-events-none"
-            ></ion-icon>
-          </div>
-          <div className="swiper-pagination"></div>
-        </div>
+        <div className="swiper-button-prev-video cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
+        <div className="swiper-button-next-video cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
       </div>
     </div>
   );

@@ -6,7 +6,12 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "../styles/swiper.css";
 
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import {
+  EffectCoverflow,
+  Pagination,
+  Mousewheel,
+  Navigation,
+} from "swiper/modules";
 
 import slide_image_1 from "/assets/images/backgroundPic.jpg";
 import slide_image_2 from "/assets/images/backgroundPic.jpg";
@@ -16,7 +21,7 @@ import slide_image_4 from "/assets/images/backgroundPic.jpg";
 function PhotoCards() {
   return (
     <div className="bg-pallet4">
-      <div className="container md:px-4 px-0">
+      <div className="container md:px-4 px-0 mx-auto">
         <div className="md:text-5xl text-3xl font-medium  text-center py-10">
           Photo Categories
         </div>
@@ -24,63 +29,95 @@ function PhotoCards() {
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
+          slidesPerView={1}
+          freeMode={true}
+          freeModeSticky={true}
           loop={true}
-          slidesPerView={"auto"}
+          mousewheel={{
+            forceToAxis: true,
+            realaseOnEdges: true,
+            sensitivity: 1,
+            thresholdDelta: 1,
+            thresholdTime: 1000,
+          }}
+          breakpoints={{
+            // Adjust slidesPerView based on screen width
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          speed={800}
           coverflowEffect={{
-            rotate: 0,
+            rotate: 50,
             stretch: 0,
             depth: 100,
-            modifier: 2.5,
+            modifier: 1,
+            slideShadows: true,
           }}
-          pagination={{ el: ".swiper-pagination", clickable: true }}
+          pagination={true}
+          modules={[EffectCoverflow, Mousewheel, Pagination, Navigation]}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
-            clickable: true,
           }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
-          className="swiper_container"
+          className="mySwiperPhoto"
         >
           <SwiperSlide>
-            <img src={slide_image_1} alt="slide_image" />
+            <div className="aspect-ratio-4-5">
+              <img
+                src={slide_image_1}
+                alt="slide_image"
+                className="object-cover w-full h-full"
+              />
+            </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Product
             </div>
           </SwiperSlide>
           <SwiperSlide className="relative">
-            <img src={slide_image_2} alt="slide_image" />
+            <div className="aspect-ratio-4-5">
+              <img
+                src={slide_image_2}
+                alt="slide_image"
+                className="object-cover w-full h-full"
+              />
+            </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Food
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide_image_3} alt="slide_image" />
+            <div className="aspect-ratio-4-5">
+              <img
+                src={slide_image_3}
+                alt="slide_image"
+                className="object-cover w-full h-full"
+              />
+            </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Review
             </div>
           </SwiperSlide>
-          <SwiperSlide>
-            <img src={slide_image_4} alt="slide_image" />
+          <SwiperSlide className="bg-black">
+            <div className="aspect-ratio-4-5">
+              <img
+                src={slide_image_4}
+                alt="slide_image"
+                className="object-cover w-full h-full"
+              />
+            </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Nature
             </div>
           </SwiperSlide>
-
-          <div className="slider-controler">
-            <div className="swiper-button-prev slider-arrow z-50 -mt-8 hidden md:flex">
-              <ion-icon
-                name="arrow-back-outline"
-                className="pointer-events-none"
-              ></ion-icon>
-            </div>
-            <div className="swiper-button-next slider-arrow z-50 -mt-8 hidden md:flex">
-              <ion-icon
-                name="arrow-forward-outline"
-                className="pointer-events-none"
-              ></ion-icon>
-            </div>
-            <div className="swiper-pagination md:-mt-0 -mt-24"></div>
-          </div>
+          <div className="swiper-button-prev cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
+          <div className="swiper-button-next cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
         </Swiper>
       </div>
     </div>
