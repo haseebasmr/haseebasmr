@@ -103,7 +103,7 @@ function PhotoCards() {
               Review
             </div>
           </SwiperSlide>
-          <SwiperSlide className="bg-black">
+          <SwiperSlide>
             <div className="aspect-ratio-4-5">
               <img
                 src={slide_image_4}
