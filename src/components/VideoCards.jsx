@@ -1,20 +1,24 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../styles/swiper.css";
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import "../styles/swiperVideo.css";
+import {
+  EffectCoverflow,
+  Pagination,
+  Navigation,
+  Mousewheel,
+} from "swiper/modules";
 
-import slide_video_1 from "/assets/videos/video1.mp4";
-import slide_video_2 from "/assets/videos/video1.mp4";
-import slide_video_3 from "/assets/videos/video1.mp4";
-import slide_video_4 from "/assets/videos/video1.mp4";
+import slide_video_1 from "/assets/videos/video2.mp4";
+import slide_video_2 from "/assets/videos/video2.mp4";
+import slide_video_3 from "/assets/videos/video2.mp4";
+import slide_video_4 from "/assets/videos/video2.mp4";
 
 function VideoCards() {
   const swiperRef = useRef(null);
-
   const handleSlideChange = () => {
     const swiper = swiperRef.current;
     if (!swiper) return;
@@ -23,10 +27,8 @@ function VideoCards() {
       if (video) {
         if (index === swiper.activeIndex) {
           video.play();
-          console.log("playing video", index);
         } else {
           video.pause();
-          console.log("pausing video", index);
           video.currentTime = 0; // Reset the video to the beginning
         }
       }
@@ -41,97 +43,113 @@ function VideoCards() {
   }, []);
 
   return (
-    <div className="bg-pallet4">
-      <div className="container md:px-4 px-0">
+    <div className="bg-pallet4 pb-28">
+      <div className="container md:px-4 px-0 mx-auto">
         <div className="md:text-5xl text-3xl font-medium text-center py-10">
           Video Categories
         </div>
         <Swiper
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
-            handleSlideChange(); // Ensure the first video plays on initial load
           }}
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
+          slidesPerView={1}
+          freeMode={true}
           loop={true}
-          slidesPerView={"auto"}
+          mousewheel={{
+            forceToAxis: true,
+            realaseOnEdges: true,
+            sensitivity: 0.1,
+            thresholdDelta: 1,
+            thresholdTime: 1000,
+          }}
+          ref={swiperRef}
+          breakpoints={{
+            // Adjust slidesPerView based on screen width
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+          speed={800}
           coverflowEffect={{
-            rotate: 0,
+            rotate: 50,
             stretch: 0,
             depth: 100,
-            modifier: 2.5,
+            modifier: 1,
+            slideShadows: true,
           }}
-          pagination={{ el: ".swiper-pagination", clickable: true }}
+          pagination={true}
+          modules={[EffectCoverflow, Mousewheel, Pagination, Navigation]}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
-            clickable: true,
           }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
-          className="swiper_container"
+          className="mySwiperVideo"
           onSlideChange={handleSlideChange}
         >
           <SwiperSlide>
-            <video
-              src={slide_video_1}
-              controls
-              muted
-              className="w-full h-auto"
-            />
+            <div className="aspect-ratio-4-5">
+              <video
+                src={slide_video_1}
+                controls
+                muted
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Product
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <video
-              src={slide_video_2}
-              controls
-              muted
-              className="w-full h-auto"
-            />
+            <div className="aspect-ratio-4-5">
+              <video
+                src={slide_video_2}
+                controls
+                muted
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Food
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <video
-              src={slide_video_3}
-              controls
-              muted
-              className="w-full h-auto"
-            />
+            <div className="aspect-ratio-4-5">
+              <video
+                src={slide_video_3}
+                controls
+                muted
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Review
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <video
-              src={slide_video_4}
-              controls
-              muted
-              className="w-full h-auto"
-            />
+            <div className="aspect-ratio-4-5">
+              <video
+                src={slide_video_4}
+                controls
+                muted
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Nature
             </div>
           </SwiperSlide>
+          <div className="swiper-button-prev cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
+          <div className="swiper-button-next cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
         </Swiper>
-        <div className="slider-controler">
-          <div className="swiper-button-prev slider-arrow z-50 -mt-8">
-            <ion-icon
-              name="arrow-back-outline"
-              className="pointer-events-none"
-            ></ion-icon>
-          </div>
-          <div className="swiper-button-next slider-arrow z-50 -mt-8">
-            <ion-icon
-              name="arrow-forward-outline"
-              className="pointer-events-none"
-            ></ion-icon>
-          </div>
-          <div className="swiper-pagination"></div>
-        </div>
       </div>
     </div>
   );
