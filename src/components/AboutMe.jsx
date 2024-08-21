@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 export default function AboutMe() {
   return (
     <div className="w-screen bg-white">
@@ -42,10 +43,49 @@ export default function AboutMe() {
             <h1 className="text-4xl  ">I can help you with...</h1>
           </div>
         </div>
-        <div className="flex">
-          <div>Design</div>
-          <div>Development</div>
-          <div>The full package</div>
+        <div className="flex  m-5 gap-7 ">
+          <div className="flex-1  ">
+            <div className="font-sans m-7 text-xs mx-5  text-gray-400">01</div>
+            <div className="border-t-2 mx-5 p-4 "></div>
+            <div className=" mx-5 ">
+              <span className="text-3xl">Design</span>
+            </div>
+            <div className="mx-2 my-4 p-3">
+              <p>
+                With a solid track record in designing websites, I deliver
+                strong and user-friendly digital designs. (Since 2024 only in
+                combination with development)
+              </p>
+            </div>
+          </div>
+          <div className="flex-1  ">
+            <div className="font-sans m-7 text-xs mx-5  text-gray-400">02</div>
+            <div className="border-t-2 mx-5 p-4 "></div>
+            <div className=" mx-5 ">
+              <span className="text-3xl">Development</span>
+            </div>
+            <div className="mx-2 my-4 p-3">
+              <p>
+                I build scalable websites from scratch that fit seamlessly with
+                design. My focus is on micro animations, transitions and
+                interaction. Build with Kirby CMS or Webflow.
+              </p>
+            </div>
+          </div>
+          <div className="flex-1  ">
+            <div className="font-sans m-7 text-xs mx-5  text-gray-400">03</div>
+            <div className="border-t-2 mx-5 p-4 "></div>
+            <div className=" mx-5 ">
+              <span className="text-3xl">The full package</span>
+            </div>
+            <div className="mx-2 my-4 p-3">
+              <p>
+                A complete website from concept to implementation, that's what
+                makes me stand out. My great sense for design and my development
+                skills enable me to create kick-ass projects.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
