@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../styles/swiper.css";
+import "../styles/swiperVideo.css";
 import {
   EffectCoverflow,
   Pagination,
@@ -47,7 +47,7 @@ function VideoCards() {
 
   return (
     <div className="bg-pallet4">
-      <div className="container md:px-4 px-0">
+      <div className="container md:px-4 px-0 mx-auto">
         <div className="md:text-5xl text-3xl font-medium text-center py-10">
           Video Categories
         </div>
@@ -57,7 +57,6 @@ function VideoCards() {
           centeredSlides={true}
           slidesPerView={1}
           freeMode={true}
-          freeModeSticky={true}
           loop={true}
           mousewheel={{
             forceToAxis: true,
@@ -66,6 +65,7 @@ function VideoCards() {
             thresholdDelta: 1,
             thresholdTime: 1000,
           }}
+          ref={swiperRef}
           breakpoints={{
             // Adjust slidesPerView based on screen width
             640: {
@@ -92,56 +92,64 @@ function VideoCards() {
             nextEl: ".swiper-button-next-video",
             prevEl: ".swiper-button-prev-video",
           }}
-          className="mySwiperVideo w-full pt-[50px] pb-[50px]"
-          onSlideChange={handleSlideChange}
+          className="mySwiperVideo"
+          // onSlideChange={handleSlideChange}
         >
           <SwiperSlide>
-            <video
-              src={slide_video_1}
-              controls
-              muted
-              className="w-full h-auto"
-            />
+            <div className="aspect-ratio-4-5">
+              <video
+                src={slide_video_1}
+                controls
+                muted
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Product
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <video
-              src={slide_video_2}
-              controls
-              muted
-              className="w-full h-auto"
-            />
+            <div className="aspect-ratio-4-5">
+              <video
+                src={slide_video_2}
+                controls
+                muted
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Food
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <video
-              src={slide_video_3}
-              controls
-              muted
-              className="w-full h-auto"
-            />
+            <div className="aspect-ratio-4-5">
+              <video
+                src={slide_video_3}
+                controls
+                muted
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Review
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <video
-              src={slide_video_4}
-              controls
-              muted
-              className="w-full h-auto"
-            />
+            <div className="aspect-ratio-4-5">
+              <video
+                src={slide_video_4}
+                controls
+                muted
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
               Nature
             </div>
           </SwiperSlide>
+          <div className="swiper-button-prev-video cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
+          <div className="swiper-button-next-video cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
         </Swiper>
-        <div className="swiper-button-prev-video cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
-        <div className="swiper-button-next-video cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
       </div>
     </div>
   );

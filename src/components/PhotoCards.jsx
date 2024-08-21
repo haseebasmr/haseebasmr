@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../styles/swiper.css";
+import "../styles/swiperPhoto.css";
 
 import {
   EffectCoverflow,
@@ -31,7 +31,6 @@ function PhotoCards() {
           centeredSlides={true}
           slidesPerView={1}
           freeMode={true}
-          freeModeSticky={true}
           loop={true}
           mousewheel={{
             forceToAxis: true,
@@ -80,7 +79,7 @@ function PhotoCards() {
               Product
             </div>
           </SwiperSlide>
-          <SwiperSlide className="relative">
+          <SwiperSlide>
             <div className="aspect-ratio-4-5">
               <img
                 src={slide_image_2}
