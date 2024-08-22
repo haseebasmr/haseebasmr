@@ -13,10 +13,10 @@ import {
   Navigation,
 } from "swiper/modules";
 
-import slide_image_1 from "/assets/images/OIP.jpeg";
-import slide_image_2 from "/assets/images/OIP.jpeg";
-import slide_image_3 from "/assets/images/OIP.jpeg";
-import slide_image_4 from "/assets/images/OIP.jpeg";
+import slide_image_1 from "/assets/images/product.jpg";
+import slide_image_2 from "/assets/images/food.jpg";
+import slide_image_3 from "/assets/images/portrait.jpg";
+import slide_image_4 from "/assets/images/aesthetic.jpg";
 
 function PhotoCards() {
   return (
@@ -100,9 +100,10 @@ function PhotoCards() {
               />
             </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
-              Review
+              Portrait
             </div>
           </SwiperSlide>
+
           <SwiperSlide>
             <div className="aspect-ratio-4-5">
               <img
@@ -112,7 +113,7 @@ function PhotoCards() {
               />
             </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
-              Nature
+              Aesthetics
             </div>
           </SwiperSlide>
           <div className="swiper-button-prev cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
