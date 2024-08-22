@@ -2,11 +2,11 @@
 export default function AboutMe() {
   return (
     <div className="w-screen bg-white">
-      <div className="md:mx-48 mx-10 py-24">
-        <h1 className="text-7xl font-medium">
+      <div className="md:mx-48 mx-5 pt-20 pb-16 ">
+        <h1 className="md:text-7xl  text-4xl font-medium">
           Helping brands thrive <br /> in the digital world
         </h1>
-        <div className="flex md:flex-row flex-col mt-24 pt-24 border-t-2  border-gray-200 md:space-x-8 h-screen md:space-y-0 space-y-8">
+        <div className="flex md:flex-row flex-col md:mt-24 md:pt-24 mt-16 pt-16 border-t-2  border-gray-200 md:space-x-8 h-screen md:space-y-0 space-y-8">
           <div className="flex-1">
             <span
               className="max-h-14 font-medium  "
@@ -37,15 +37,19 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
-      <section className=" mx-24 my-16 ">
-        <div className=" p-10   ">
+      <section className=" md:mx-24 md:my-16 ">
+        <div className=" md:p-10 p-1 mx-4   ">
           <div className="block">
-            <h1 className="text-5xl font-medium ">I can help you with...</h1>
+            <h1 className="md:text-5xl mb-7  text-3xl font-medium ">
+              I can help you with...
+            </h1>
           </div>
         </div>
-        <div className="flex  m-5 gap-7 ">
+        <div className=" flex flex-col md:flex-row   md:m-5 md:gap-7 ">
           <div className="flex-1  ">
-            <div className="font-sans m-7 text-xs mx-5  text-gray-400">01</div>
+            <div className="font-sans m-7 text-xs mx-5  text-gray-400 hidden md:block ">
+              01
+            </div>
             <div className="border-t-2 mx-5 p-4 "></div>
             <div className=" mx-5 ">
               <span className="text-3xl font-medium ">Design</span>
@@ -59,7 +63,9 @@ export default function AboutMe() {
             </div>
           </div>
           <div className="flex-1  ">
-            <div className="font-sans m-7 text-xs mx-5  text-gray-400">02</div>
+            <div className="font-sans m-7 text-xs mx-5  text-gray-400 hidden md:block ">
+              02
+            </div>
             <div className="border-t-2 mx-5 p-4 "></div>
             <div className=" mx-5 ">
               <span className="text-3xl font-medium ">Development</span>
@@ -73,7 +79,9 @@ export default function AboutMe() {
             </div>
           </div>
           <div className="flex-1  ">
-            <div className="font-sans m-7 text-xs mx-5  text-gray-400">03</div>
+            <div className="font-sans m-7 text-xs mx-5  text-gray-400 hidden md:block ">
+              03
+            </div>
             <div className="border-t-2 mx-5 p-4 "></div>
             <div className=" mx-5 ">
               <span className="text-3xl font-medium ">The full package</span>
@@ -88,8 +96,8 @@ export default function AboutMe() {
           </div>
         </div>
       </section>
-      <div className="md:mx-48 mx-10 py-24">
-        <div className="flex md:flex-row flex-col mt-24 pt-22 md:space-x-8 h-screen md:space-y-0 space-y-8">
+      <div className="md:mx-48 mx-5 md:py-24">
+        <div className="flex md:flex-row flex-col-reverse md:mt-24 pt-22 md:space-x-8 h-screen md:space-y-0 space-y-8">
           <div
             className=""
             style={{
@@ -103,12 +111,14 @@ export default function AboutMe() {
             />
           </div>
           <div className="flex-1  ">
-            <div className="mt-44 ml-20  ">
-              <span className=" text-5xl font-medium">Achievments...</span>
+            <div className="md:mt-44 md:ml-20  ">
+              <span className="  md:text-5xl  text-4xl  font-medium">
+                Achievments...
+              </span>
             </div>
 
             <p
-              className="max-h-14 ml-20 mt-10 font-medium  "
+              className="mt-7   md:ml-20 md:mt-10 font-medium  "
               style={{
                 flex: 1,
               }}
