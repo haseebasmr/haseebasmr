@@ -1,3 +1,5 @@
+import { Parallax } from "react-scroll-parallax";
+
 /* eslint-disable react/no-unescaped-entities */
 export default function AboutMe() {
   return (
@@ -27,13 +29,16 @@ export default function AboutMe() {
             className=""
             style={{
               flex: 2,
+              overflow: "hidden",
             }}
           >
-            <img
-              src="/assets/images/backgroundPic.jpg"
-              alt="no image"
-              className="object-cover h-full"
-            />
+            <Parallax speed={-15} className="h-full w-full">
+              <img
+                src="/assets/images/backgroundPic.jpg"
+                alt="no image"
+                className="object-cover h-full w-full"
+              />
+            </Parallax>
           </div>
         </div>
       </div>
@@ -102,13 +107,16 @@ export default function AboutMe() {
             className="mb-5 md:mb-0 "
             style={{
               flex: 1,
+              overflow: "hidden",
             }}
           >
-            <img
-              src="/assets/images/backgroundPic.jpg"
-              alt="no image"
-              className="object-cover h-full"
-            />
+            <Parallax speed={-10} className="h-full w-full">
+              <img
+                src="/assets/images/backgroundPic.jpg"
+                alt="no image"
+                className="object-cover h-full"
+              />
+            </Parallax>
           </div>
           <div className="flex-1  ">
             <div className="md:mt-44 md:ml-20  ">

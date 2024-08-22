@@ -7,7 +7,7 @@ export default function AboutMeBtn({ className }) {
   const yPos = useTransform(scrollY, [700, 1700], [0, -200]); // Adjust the range as needed
   const navigate = useNavigate();
   return (
-    <div className={`flex justify-end mx-20 ${className}`}>
+    <div className={`flex justify-end md:mx-20 mx-5 ${className}`}>
       <motion.button
         className="bg-black text-white font-montserrat text-xl font-medium h-48 w-48 rounded-full"
         style={{ y: yPos }}
