@@ -13,6 +13,7 @@ import Home from "./Home";
 import PhotoCards from "./PhotoCards";
 import VideoCards from "./VideoCards";
 import Footer from "./Footer";
+import GetInTouchBtn from "./common/GetInTouchBtn";
 
 export {
   StartScreen,
@@ -30,4 +31,5 @@ export {
   PhotoCards,
   VideoCards,
   Footer,
+  GetInTouchBtn,
 };

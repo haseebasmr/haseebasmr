@@ -45,7 +45,7 @@ function VideoCards() {
   return (
     <div className="bg-pallet4 pb-28">
       <div className="container md:px-4 px-0 mx-auto">
-        <div className="md:text-5xl text-3xl font-medium text-center py-10">
+        <div className="md:text-5xl text-4xl font-medium text-center py-10">
           Video Categories
         </div>
         <Swiper
