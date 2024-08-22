@@ -2,7 +2,7 @@
 export default function AboutMe() {
   return (
     <div className="w-screen bg-white">
-      <div className="md:mx-48 mx-5 py-20">
+      <div className="md:mx-48 mx-5 pt-20 pb-16 ">
         <h1 className="md:text-7xl  text-4xl font-medium">
           Helping brands thrive <br /> in the digital world
         </h1>
@@ -40,7 +40,7 @@ export default function AboutMe() {
       <section className=" md:mx-24 md:my-16 ">
         <div className=" md:p-10 p-1 mx-4   ">
           <div className="block">
-            <h1 className="md:text-5xl text-3xl font-medium ">
+            <h1 className="md:text-5xl mb-7  text-3xl font-medium ">
               I can help you with...
             </h1>
           </div>
@@ -96,8 +96,8 @@ export default function AboutMe() {
           </div>
         </div>
       </section>
-      <div className="md:mx-48 mx-10 py-24">
-        <div className="flex md:flex-row flex-col mt-24 pt-22 md:space-x-8 h-screen md:space-y-0 space-y-8">
+      <div className="md:mx-48 mx-5 md:py-24">
+        <div className="flex md:flex-row flex-col-reverse md:mt-24 pt-22 md:space-x-8 h-screen md:space-y-0 space-y-8">
           <div
             className=""
             style={{
@@ -111,12 +111,14 @@ export default function AboutMe() {
             />
           </div>
           <div className="flex-1  ">
-            <div className="mt-44 ml-20  ">
-              <span className=" text-5xl font-medium">Achievments...</span>
+            <div className="md:mt-44 md:ml-20  ">
+              <span className="  md:text-5xl  text-4xl  font-medium">
+                Achievments...
+              </span>
             </div>
 
             <p
-              className="max-h-14 ml-20 mt-10 font-medium  "
+              className="mt-7   md:ml-20 md:mt-10 font-medium  "
               style={{
                 flex: 1,
               }}
