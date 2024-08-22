@@ -99,7 +99,7 @@ export default function AboutMe() {
       <div className="md:mx-48 mx-5 md:py-24">
         <div className="flex md:flex-row flex-col-reverse md:mt-24 pt-22 md:space-x-8 h-screen md:space-y-0 space-y-8">
           <div
-            className=""
+            className="mb-5 md:mb-0 "
             style={{
               flex: 1,
             }}
@@ -118,7 +118,7 @@ export default function AboutMe() {
             </div>
 
             <p
-              className="mt-7   md:ml-20 md:mt-10 font-medium  "
+              className="mt-7 md:mb-0 mb-10  md:ml-20 md:mt-10 font-medium  "
               style={{
                 flex: 1,
               }}
