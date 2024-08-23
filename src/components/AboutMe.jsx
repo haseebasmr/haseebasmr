@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import { Parallax } from "react-scroll-parallax";
 
 /* eslint-disable react/no-unescaped-entities */
 export default function AboutMe() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="w-screen bg-white">
       <div className="md:mx-48 mx-5 pt-20 pb-16 ">
