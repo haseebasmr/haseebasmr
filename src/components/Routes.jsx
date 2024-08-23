@@ -4,7 +4,7 @@ import {
   Route,
   createHashRouter,
 } from "react-router-dom";
-import { AboutMe, AppContainer, Home } from "./";
+import { AboutMe, AppContainer, Home, Contact } from "./";
 
 function Routes() {
   const router = createHashRouter(
@@ -12,6 +12,7 @@ function Routes() {
       <Route path="/" element={<AppContainer />}>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<AboutMe />} />
+        <Route path="contact" element={<Contact />} />
       </Route>
     )
   );
