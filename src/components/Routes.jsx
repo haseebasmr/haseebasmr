@@ -9,11 +9,13 @@ import { AboutMe, AppContainer, Home, Contact } from "./";
 function Routes() {
   const router = createHashRouter(
     createRoutesFromElements(
-      <Route path="/" element={<AppContainer />}>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<AboutMe />} />
-        <Route path="contact" element={<Contact />} />
-      </Route>
+      <>
+        <Route path="/" element={<AppContainer />}>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<AboutMe />} />
+        </Route>
+        <Route path="/contact" element={<Contact />} />
+      </>
     )
   );
   return <RouterProvider router={router} />;
