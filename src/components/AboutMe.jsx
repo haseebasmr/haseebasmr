@@ -45,9 +45,9 @@ export default function AboutMe() {
       <section className=" md:mx-24 md:my-16 ">
         <div className=" md:p-10 p-1 mx-4   ">
           <div className="block">
-            <h1 className="md:text-5xl mb-7  text-3xl font-medium ">
+            <h5 className="md:text-5xl mb-7  text-3xl font-medium ">
               I can help you with...
-            </h1>
+            </h5>
           </div>
         </div>
         <div className=" flex flex-col md:flex-row   md:m-5 md:gap-7 ">
