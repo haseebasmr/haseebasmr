@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-// Contact me page
+// Contact me page hehe
 import { Magnetic } from "./";
 export default function Contact() {
   return (
