@@ -3,7 +3,6 @@ import Magnetic from "./common/Magnetic";
 import RadialBtn from "./common/RadialBtn";
 
 export default function Header() {
-  // const buttons = ["Photos", "Videos", "Contact"];
   const buttons = [
     {
       Text: "Photos",
