@@ -25,7 +25,7 @@ export default function Home() {
         <div className="w-screen h-screen">
           <Parallax speed={-20}>
             <img
-              src="/assets/images/backgroundPic.jpg"
+              src="/assets/images/bg.jpg"
               alt="bacground image"
               className="object-cover h-screen w-screen"
               onLoad={() => setImageLoaded(true)}
