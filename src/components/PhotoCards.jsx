@@ -17,8 +17,10 @@ import slide_image_1 from "/assets/images/product.jpg";
 import slide_image_2 from "/assets/images/food.jpg";
 import slide_image_3 from "/assets/images/portrait.jpg";
 import slide_image_4 from "/assets/images/aesthetic.jpg";
+import { useNavigate } from "react-router-dom";
 
 function PhotoCards() {
+  const navigate = useNavigate();
   return (
     <div className="bg-pallet4 pb-28">
       <div className="container md:px-4 px-0 mx-auto">
@@ -79,7 +81,7 @@ function PhotoCards() {
               Product
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide onClick={() => navigate("photofood")}>
             <div className="aspect-ratio-4-5">
               <img
                 src={slide_image_2}

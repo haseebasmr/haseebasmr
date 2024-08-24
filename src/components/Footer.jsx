@@ -19,9 +19,11 @@ export default function Footer() {
       observer.observe(footerRef.current);
     }
 
+    const currentFooterRef = footerRef.current;
+
     return () => {
-      if (footerRef.current) {
-        observer.unobserve(footerRef.current);
+      if (currentFooterRef) {
+        observer.unobserve(currentFooterRef);
       }
     };
   }, []);
@@ -36,7 +38,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-pallet1 text-white md:pt-44 pt-24">
-      <div className="md:mx-72 mx-5">
+      <div className="lg:mx-72 mx-5">
         <div className="block mb-4">
           <img
             src="/assets/images/smallPic.jpg"
@@ -61,22 +63,22 @@ export default function Footer() {
         </motion.div>
         <div className="flex justify-center -mt-20">
           <Magnetic>
-            <button className="text-white font-montserrat text-lg p-2 mx-1 font-medium">
+            <button className="text-white font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
               Instagram
             </button>
           </Magnetic>
           <Magnetic>
-            <button className="text-white font-montserrat text-lg p-2 mx-1 font-medium">
+            <button className="text-white font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
               Facebook
             </button>
           </Magnetic>
           <Magnetic>
-            <button className="text-white font-montserrat text-lg p-2 mx-1 font-medium">
+            <button className="text-white font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
               Whatsapp
             </button>
           </Magnetic>
         </div>
-        <div className="text-center pt-12 pb-4">
+        <div className="text-center text-xs pt-12 pb-4 text-gray-400">
           &copy; {new Date().getFullYear()} HaseebASMR. All rights reserved.
         </div>
       </div>
