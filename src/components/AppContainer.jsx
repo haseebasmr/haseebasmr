@@ -1,17 +1,12 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 import StartScreen from "./StartScreen";
 import { AnimatePresence, motion } from "framer-motion";
 import { Header, Footer } from "./";
 import { Outlet } from "react-router-dom";
+import { LoadingContext } from "../context/LoadingContextProvider";
 
 export default function AppContainer() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, []);
+  const { loading } = useContext(LoadingContext);
   return (
     <div>
       <AnimatePresence>

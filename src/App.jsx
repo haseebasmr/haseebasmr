@@ -1,11 +1,14 @@
 import { Routes } from "./components";
 import { ParallaxProvider } from "react-scroll-parallax";
+import LoadingContextProvider from "./context/LoadingContextProvider";
 
 function App() {
   return (
-    <ParallaxProvider>
-      <Routes />
-    </ParallaxProvider>
+    <LoadingContextProvider>
+      <ParallaxProvider>
+        <Routes />
+      </ParallaxProvider>
+    </LoadingContextProvider>
   );
 }
 
