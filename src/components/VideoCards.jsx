@@ -60,10 +60,6 @@ function VideoCards() {
           loop={true}
           mousewheel={{
             forceToAxis: true,
-            realaseOnEdges: true,
-            sensitivity: 0.1,
-            thresholdDelta: 1,
-            thresholdTime: 1000,
           }}
           ref={swiperRef}
           breakpoints={{
@@ -99,11 +95,11 @@ function VideoCards() {
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_1}
-                loop
                 controls
                 muted
                 className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-transparent"></div>
             </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
               Food
@@ -113,11 +109,11 @@ function VideoCards() {
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_2}
-                loop
                 controls
                 muted
                 className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-transparent"></div>
             </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
               Product
@@ -127,11 +123,11 @@ function VideoCards() {
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_3}
-                loop
                 controls
                 muted
                 className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-transparent"></div>
             </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
               Review
@@ -141,11 +137,11 @@ function VideoCards() {
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_4}
-                loop
                 controls
                 muted
                 className="w-full h-full object-cover"
               />
+              <div className="absolute inset-0 bg-transparent"></div>
             </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
               Nature
