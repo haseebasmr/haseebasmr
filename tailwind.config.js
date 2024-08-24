@@ -16,6 +16,11 @@ export default {
       backgroundImage: {
         "home-bg": "url('/assets/images/backgroundPic.jpg')",
       },
+      rotate: {
+        20: "20deg",
+        5: "5deg",
+        4: "4deg",
+      },
     },
   },
   plugins: [],
