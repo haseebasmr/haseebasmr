@@ -1,7 +1,37 @@
-export default function Food() {
+import { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination } from "swiper/modules";
+
+export default function App() {
   return (
-    <div className="bg-pallet1 h-screen w-screen flex items-center justify-center">
-      <p className="text-white text-6xl">Food</p>
-    </div>
+    <>
+      <Swiper
+        direction={"vertical"}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper w-full h-full"
+      >
+        <SwiperSlide className="text-center text-lg flex items-center">
+          Slide 1
+        </SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>Slide 5</SwiperSlide>
+        <SwiperSlide>Slide 6</SwiperSlide>
+        <SwiperSlide>Slide 7</SwiperSlide>
+        <SwiperSlide>Slide 8</SwiperSlide>
+        <SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
+    </>
   );
 }
