@@ -20,7 +20,21 @@ export default function Contact() {
   };
   return (
     <div className="w-screen h-screen bg-pallet1">
-      <div className="md:pt-44 md:pl-44  md:flex-row  flex flex-col-reverse pt-44  p-5">
+      <div className="flex flex-row items-center justify-between md:px-10 w-screen pt-3 px-5 md:pt-11 ">
+        <Magnetic>
+          <button className=" font-montserrat  text-xl text-white">
+            HaseebASMR
+          </button>
+        </Magnetic>
+
+        <div className=" font-montserrat  text-xl text-white">
+          <Magnetic>
+            <button className="md:mt-1 mt-3">Contact</button>
+            <div className="ml-9 cursor-pointer -mt-14 text-7xl ">.</div>
+          </Magnetic>
+        </div>
+      </div>
+      <div className="md:pt-16 md:pl-44  md:flex-row  flex flex-col-reverse pt-16  p-5">
         <div className="flex-3   ">
           <h1 className="text-7xl md:block hidden pt-14 mt-12 pb-6 text-white">
             Let's start a <br /> project together
@@ -81,6 +95,9 @@ export default function Contact() {
             </button>
           </a>
         </Magnetic>
+      </div>
+      <div className="text-center text-xs md:pt-28 pt-52 pb-4 text-gray-400">
+        &copy; {new Date().getFullYear()} HaseebASMR. All rights reserved.
       </div>
     </div>
   );
