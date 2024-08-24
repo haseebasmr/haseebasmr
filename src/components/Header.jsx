@@ -30,9 +30,9 @@ export default function Header() {
       </Magnetic>
       <div className="hidden md:block">
         {buttons.map((button) => (
-          <Magnetic key={button} className="inline-block">
+          <Magnetic key={button.Text} className="inline-block">
             <button
-              key={button}
+              key={button.Text}
               className="text-white font-montserrat text-lg p-2 mx-1 font-medium"
               onClick={() => navigate(button.Link)}
             >

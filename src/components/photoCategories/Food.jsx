@@ -1,4 +1,3 @@
-import { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -7,30 +6,84 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Mousewheel, Pagination } from "swiper/modules";
 
-export default function App() {
+import slide_image_1 from "/assets/images/product.jpg";
+import { useEffect, useRef } from "react";
+// import slide_image_2 from "/assets/images/food.jpg";
+// import slide_image_3 from "/assets/images/portrait.jpg";
+// import slide_image_4 from "/assets/images/aesthetic.jpg";
+
+export default function Food() {
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.on("slideChange", () => {
+        const slides = swiperRef.current.swiper.slides;
+        slides.forEach((slide, index) => {
+          if (index === swiperRef.current.swiper.activeIndex) {
+            console.log(slide);
+            slide.querySelector(".slide-content").classList.remove("rotate-45");
+          } else {
+            slide.querySelector(".slide-content").classList.add("rotate-45");
+          }
+        });
+      });
+    }
+  }, []);
   return (
     <>
       <Swiper
+        ref={swiperRef}
         direction={"vertical"}
-        pagination={{
-          clickable: true,
+        centeredSlides={true}
+        mousewheel={{
+          forceToAxis: true,
+          releaseOnEdges: true,
+          sensitivity: 0.5,
+          thresholdDelta: 10,
+          thresholdTime: 1000,
         }}
-        modules={[Pagination]}
-        className="mySwiper w-full h-full"
+        slidesPerView={1}
+        loop={true}
+        modules={[Mousewheel]}
+        speed={800}
+        className="mySwiper w-screen h-screen bg-slate-600 px-2"
       >
-        <SwiperSlide className="text-center text-lg flex items-center">
-          Slide 1
+        <SwiperSlide>
+          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
+            <div
+              className="w-[600px] aspect-[4/5] bg-black overflow-hidden"
+              style={{
+                backgroundImage: `url(${slide_image_1})`,
+                backgroundSize: "cover",
+              }}
+            ></div>
+          </div>
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
+            <div
+              className="w-[600px] aspect-[4/5] bg-black overflow-hidden"
+              style={{
+                backgroundImage: `url(${slide_image_1})`,
+                backgroundSize: "cover",
+              }}
+            ></div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
+            <div
+              className="w-[600px] aspect-[4/5] bg-black overflow-hidden"
+              style={{
+                backgroundImage: `url(${slide_image_1})`,
+                backgroundSize: "cover",
+              }}
+            ></div>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </>
   );
