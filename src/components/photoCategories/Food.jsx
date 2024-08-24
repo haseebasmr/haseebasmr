@@ -61,7 +61,7 @@ export default function Food() {
         className="mySwiper w-screen h-screen px-2 flex-1"
       >
         <SwiperSlide>
-          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
+          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000 overflow-hidden">
             <div
               className="md:w-[600px] w-[400px] aspect-[4/5] bg-black"
               style={{
@@ -72,7 +72,7 @@ export default function Food() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
+          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000 overflow-hidden">
             <div
               className="md:w-[600px] w-[400px] aspect-[4/5] bg-black"
               style={{
@@ -83,7 +83,7 @@ export default function Food() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
+          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000 overflow-hidden">
             <div
               className="md:w-[600px] w-[400px] aspect-[4/5] bg-black"
               style={{
@@ -94,7 +94,7 @@ export default function Food() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
+          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000 overflow-hidden">
             <div
               className="md:w-[600px] w-[400px] aspect-[4/5] bg-black"
               style={{
@@ -105,7 +105,7 @@ export default function Food() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
+          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000 overflow-hidden">
             <div
               className="md:w-[600px] w-[400px] aspect-[4/5] bg-black"
               style={{
