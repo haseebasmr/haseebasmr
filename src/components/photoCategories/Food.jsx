@@ -24,16 +24,19 @@ export default function Food() {
         slides.forEach((slide, index) => {
           if (index === swiperRef.current.swiper.activeIndex) {
             console.log(slide);
-            slide.querySelector(".slide-content").classList.remove("rotate-45");
+            slide.querySelector(".slide-content").classList.remove("rotate-20");
+            slide.querySelector(".slide-content").classList.add("rotate-4");
           } else {
-            slide.querySelector(".slide-content").classList.add("rotate-45");
+            slide.querySelector(".slide-content").classList.remove("rotate-4");
+            slide.querySelector(".slide-content").classList.add("rotate-20");
           }
         });
       });
     }
   }, []);
   return (
-    <>
+    <div className="flex items-center justify-center bg-pallet2">
+      <div className="text-8xl text-white ml-48 hidden lg:block">Food 🍲</div>
       <Swiper
         ref={swiperRef}
         direction={"vertical"}
@@ -47,9 +50,11 @@ export default function Food() {
         }}
         slidesPerView={1}
         loop={true}
+        loopAddBlankSlides={true}
+        loopAdditionalSlides={1}
         modules={[Mousewheel]}
         speed={800}
-        className="mySwiper w-screen h-screen bg-slate-600 px-2"
+        className="mySwiper w-screen h-screen px-2 flex-1"
       >
         <SwiperSlide>
           <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
@@ -95,7 +100,18 @@ export default function Food() {
             ></div>
           </div>
         </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
+            <div
+              className="md:w-[600px] w-[400px] aspect-[4/5] bg-black"
+              style={{
+                backgroundImage: `url(${slide_image_4})`,
+                backgroundSize: "cover",
+              }}
+            ></div>
+          </div>
+        </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 }
