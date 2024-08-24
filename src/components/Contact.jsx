@@ -35,7 +35,7 @@ export default function Contact() {
         </Magnetic>
         <Magnetic>
           <button className="text-white font-montserrat md:text-2xl p-2 mx-1 font-medium">
-            Facebook
+            TikTok
           </button>
         </Magnetic>
         <Magnetic>
