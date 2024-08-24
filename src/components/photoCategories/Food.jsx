@@ -26,13 +26,9 @@ export default function Food() {
           if (index === swiperRef.current.swiper.activeIndex) {
             console.log(slide);
             slide.querySelector(".slide-content").classList.remove("rotate-20");
-            slide.querySelector(".slide-content").classList.add("lg:rotate-6");
-            slide.querySelector(".slide-content").classList.add("rotate-0");
+            slide.querySelector(".slide-content").classList.add("rotate-4");
           } else {
-            slide
-              .querySelector(".slide-content")
-              .classList.remove("lg:rotate-6");
-            slide.querySelector(".slide-content").classList.remove("rotate-0");
+            slide.querySelector(".slide-content").classList.remove("rotate-4");
             slide.querySelector(".slide-content").classList.add("rotate-20");
           }
         });
@@ -56,7 +52,7 @@ export default function Food() {
         slidesPerView={1}
         loop={true}
         loopAddBlankSlides={true}
-        loopAdditionalSlides={1}
+        loopAdditionalSlides={0}
         modules={[Mousewheel]}
         speed={800}
         className="mySwiper w-screen h-screen px-2 flex-1"
