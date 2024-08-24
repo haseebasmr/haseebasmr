@@ -2,6 +2,7 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { GetInTouchBtn, Magnetic } from "./"; // Adjust the import path as needed
+import { FaYoutube, FaTiktok, FaInstagram } from "react-icons/fa";
 import React from "react";
 
 export default function Footer() {
@@ -83,8 +84,11 @@ export default function Footer() {
               href="http://www.instagram.com/haseebasmr/"
               onClick={instaButton}
             >
-              <button className="text-white font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
-                Instagram
+              <button className="text-white flex flex-col font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
+                <div className="flex-1 ml-5 text-5xl ">
+                  <FaInstagram />
+                </div>
+                <div className="flex-1">Instagram</div>
               </button>
             </a>
           </Magnetic>
@@ -93,8 +97,11 @@ export default function Footer() {
               href="https://youtube.com/@haseeb_asmr?feature=shared"
               onClick={youtubeButton}
             >
-              <button className="text-white font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
-                YouTube
+              <button className="text-white flex flex-col font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
+                <div className="flex-1 ml-4 text-5xl ">
+                  <FaYoutube />
+                </div>
+                <div className="flex-1">YouTube</div>
               </button>
             </a>
           </Magnetic>
@@ -103,8 +110,11 @@ export default function Footer() {
               href="https://www.tiktok.com/@haseebasmr?_t=8p8N7OnZWUB&_r=1"
               onClick={tiktokButton}
             >
-              <button className="text-white font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
-                TikTok
+              <button className="text-white flex flex-col font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
+                <div className="flex-1 ml-2 text-5xl  ">
+                  <FaTiktok />
+                </div>
+                <div className="flex-1  ">TikTok</div>
               </button>
             </a>
           </Magnetic>
