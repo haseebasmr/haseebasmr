@@ -12,7 +12,7 @@ import {
   Mousewheel,
 } from "swiper/modules";
 
-import slide_video_1 from "/assets/videos/video2.mp4";
+import slide_video_1 from "/assets/videos/cooking.mp4";
 import slide_video_2 from "/assets/videos/video2.mp4";
 import slide_video_3 from "/assets/videos/video2.mp4";
 import slide_video_4 from "/assets/videos/video2.mp4";
@@ -104,8 +104,8 @@ function VideoCards() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
-              Product
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
+              Food
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -117,8 +117,8 @@ function VideoCards() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
-              Food
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
+              Product
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -130,7 +130,7 @@ function VideoCards() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
               Review
             </div>
           </SwiperSlide>
@@ -143,7 +143,7 @@ function VideoCards() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
               Nature
             </div>
           </SwiperSlide>

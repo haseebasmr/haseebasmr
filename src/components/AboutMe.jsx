@@ -10,7 +10,7 @@ export default function AboutMe() {
     <div className="w-screen bg-white">
       <div className="md:mx-48 mx-5 pt-20 pb-16 ">
         <h1 className="md:text-7xl  text-4xl font-medium">
-          Helping brands thrive <br /> in the digital world
+          Transforming ideas into <br /> visual masterpieces
         </h1>
         <div className="flex md:flex-row flex-col md:mt-24 md:pt-24 mt-16 pt-16 border-t-2  border-gray-200 md:space-x-8 h-screen md:space-y-0 space-y-8">
           <div className="flex-1">
@@ -20,12 +20,13 @@ export default function AboutMe() {
                 flex: 1,
               }}
             >
-              I help companies from all over the world with tailor-made
-              solutions. With each project, I push my work to new horizons,
-              always putting quality first.
+              I work with companies around the world to create customized visual
+              solutions that fit their needs. With every project, I challenge
+              myself to explore new creative ideas while always focusing on
+              delivering the highest quality.
             </span>
             <div className="mt-10 opacity-50 ">
-              <span className="  ">Always Exploring</span>
+              <span className="  ">Perpetual Learning…</span>
             </div>
           </div>
 
@@ -50,7 +51,7 @@ export default function AboutMe() {
         <div className=" md:p-10 p-1 mx-4   ">
           <div className="block">
             <h5 className="md:text-5xl mb-7  text-3xl font-medium ">
-              I can help you with...
+              I’m here to guide you through...
             </h5>
           </div>
         </div>
@@ -61,13 +62,13 @@ export default function AboutMe() {
             </div>
             <div className="border-t-2 mx-5 p-4 "></div>
             <div className=" mx-5 ">
-              <span className="text-3xl font-medium ">Design</span>
+              <span className="text-3xl font-medium ">Photography</span>
             </div>
             <div className="mx-2 my-4 p-3 font-medium ">
               <p>
-                With a solid track record in designing websites, I deliver
-                strong and user-friendly digital designs. (Since 2024 only in
-                combination with development)
+                With 6 years of experience in photography, I provide striking
+                visual content that drives business growth and enhances personal
+                projects with creative and professional photography.
               </p>
             </div>
           </div>
@@ -77,13 +78,13 @@ export default function AboutMe() {
             </div>
             <div className="border-t-2 mx-5 p-4 "></div>
             <div className=" mx-5 ">
-              <span className="text-3xl font-medium ">Development</span>
+              <span className="text-3xl font-medium ">Videography</span>
             </div>
             <div className="mx-2 my-4 p-3 font-medium ">
               <p>
-                I build scalable websites from scratch that fit seamlessly with
-                design. My focus is on micro animations, transitions and
-                interaction. Build with Kirby CMS or Webflow.
+                From captivating ads to cinematic visuals, I craft dynamic
+                content that leaves a lasting impression and constantly evolves
+                with fresh ideas.
               </p>
             </div>
           </div>
@@ -93,13 +94,13 @@ export default function AboutMe() {
             </div>
             <div className="border-t-2 mx-5 p-4 "></div>
             <div className=" mx-5 ">
-              <span className="text-3xl font-medium ">The full package</span>
+              <span className="text-3xl font-medium ">ASMR</span>
             </div>
             <div className="mx-2 my-4 p-3 font-medium ">
               <p>
-                A complete website from concept to implementation, that's what
-                makes me stand out. My great sense for design and my development
-                skills enable me to create kick-ass projects.
+                Experience the magic of ASMR through videos that combine rich,
+                calming sounds with compelling visuals, offering a unique and
+                deeply satisfying sensory journey.
               </p>
             </div>
           </div>
@@ -135,10 +136,11 @@ export default function AboutMe() {
                 flex: 1,
               }}
             >
-              I am a proud member of the Awwwards International Jury, where I
-              judge the best websites in the world using my expertise as a
-              designer and developer. Micro animations and transitions have my
-              full attention and get me thrilled with every move.
+              Over six years of industry experience, global client
+              collaborations, and contributions to Pakistani television shows
+              have shaped my creative path. I prioritize values while showcasing
+              content creation’s boundless opportunities while adhering the
+              principles of islam.
             </p>
           </div>
         </div>
