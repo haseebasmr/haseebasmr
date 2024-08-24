@@ -34,7 +34,7 @@ export default function Contact() {
         </div>
         <div className="flex-1   md:-mb-0 -mb-24 pt-9  pl-36 md:pl-0 ">
           <img
-            className="object-cover md:ml-10 md:h-64 md:w-64 h-24 w-24"
+            className="object-cover md:ml-10 md:h-64 md:w-64 h-28 w-28"
             style={{
               borderRadius: "50%",
             }}
@@ -51,7 +51,7 @@ export default function Contact() {
             onClick={WhattsappButton}
           >
             <button className="text-white flex flex-col font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
-              <div className="flex-1 ml-5 text-5xl ">
+              <div className="flex-1 md:ml-6 ml-8  md:text-5xl text-3xl ">
                 <FaWhatsapp />
               </div>
               <div className="flex-1">WhatsApp</div>
@@ -61,7 +61,7 @@ export default function Contact() {
         <Magnetic>
           <a href="http://www.instagram.com/haseebasmr/" onClick={instaButton}>
             <button className="text-white flex flex-col font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
-              <div className="flex-1 ml-5 text-5xl ">
+              <div className="flex-1 md:ml-5 ml-6 md:text-5xl text-3xl ">
                 <FaInstagram />
               </div>
               <div className="flex-1">Instagram</div>
@@ -74,7 +74,7 @@ export default function Contact() {
             onClick={tiktokButton}
           >
             <button className="text-white flex flex-col font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
-              <div className="flex-1 ml-2 text-5xl ">
+              <div className="flex-1 md:ml-2 ml-3 md:text-5xl text-3xl ">
                 <FaTiktok />
               </div>
               <div className="flex-1">TikTok</div>

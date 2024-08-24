@@ -96,6 +96,7 @@ function VideoCards() {
               <video
                 src={slide_video_1}
                 controls
+                loop
                 muted
                 className="w-full h-full object-cover"
               />
@@ -109,6 +110,7 @@ function VideoCards() {
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_2}
+                loop
                 controls
                 muted
                 className="w-full h-full object-cover"
@@ -123,6 +125,7 @@ function VideoCards() {
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_3}
+                loop
                 controls
                 muted
                 className="w-full h-full object-cover"
@@ -137,6 +140,7 @@ function VideoCards() {
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_4}
+                loop
                 controls
                 muted
                 className="w-full h-full object-cover"

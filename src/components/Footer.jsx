@@ -85,7 +85,7 @@ export default function Footer() {
               onClick={instaButton}
             >
               <button className="text-white flex flex-col font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
-                <div className="flex-1 ml-5 text-5xl ">
+                <div className="flex-1 md:ml-5  ml-6 md:text-5xl text-3xl ">
                   <FaInstagram />
                 </div>
                 <div className="flex-1">Instagram</div>
@@ -98,7 +98,7 @@ export default function Footer() {
               onClick={youtubeButton}
             >
               <button className="text-white flex flex-col font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
-                <div className="flex-1 ml-4 text-5xl ">
+                <div className="flex-1 md:ml-4  ml-5 md:text-5xl text-3xl ">
                   <FaYoutube />
                 </div>
                 <div className="flex-1">YouTube</div>
@@ -111,7 +111,7 @@ export default function Footer() {
               onClick={tiktokButton}
             >
               <button className="text-white flex flex-col font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
-                <div className="flex-1 ml-2 text-5xl  ">
+                <div className="flex-1 md:ml-2  ml-3 md:text-5xl text-3xl  ">
                   <FaTiktok />
                 </div>
                 <div className="flex-1  ">TikTok</div>
