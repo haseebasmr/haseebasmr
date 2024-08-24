@@ -50,7 +50,7 @@ export default function Contact() {
             onClick={WhattsappButton}
           >
             <button className="text-white font-montserrat md:text-2xl p-2 mx-1 font-medium">
-              Whattsapp
+              WhatsApp
             </button>
           </a>
         </Magnetic>
