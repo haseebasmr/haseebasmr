@@ -25,9 +25,13 @@ export default function Food() {
           if (index === swiperRef.current.swiper.activeIndex) {
             console.log(slide);
             slide.querySelector(".slide-content").classList.remove("rotate-20");
-            slide.querySelector(".slide-content").classList.add("rotate-4");
+            slide.querySelector(".slide-content").classList.add("lg:rotate-6");
+            slide.querySelector(".slide-content").classList.add("rotate-0");
           } else {
-            slide.querySelector(".slide-content").classList.remove("rotate-4");
+            slide
+              .querySelector(".slide-content")
+              .classList.remove("lg:rotate-6");
+            slide.querySelector(".slide-content").classList.remove("rotate-0");
             slide.querySelector(".slide-content").classList.add("rotate-20");
           }
         });
