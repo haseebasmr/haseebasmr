@@ -77,7 +77,7 @@ function PhotoCards() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
               Product
             </div>
           </SwiperSlide>
@@ -89,7 +89,7 @@ function PhotoCards() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
               Food
             </div>
           </SwiperSlide>
@@ -101,7 +101,7 @@ function PhotoCards() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
               Portrait
             </div>
           </SwiperSlide>
@@ -114,7 +114,7 @@ function PhotoCards() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-6xl text-5xl font-bold text-pallet4">
               Aesthetics
             </div>
           </SwiperSlide>

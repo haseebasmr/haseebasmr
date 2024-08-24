@@ -104,7 +104,7 @@ function VideoCards() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
               Food
             </div>
           </SwiperSlide>
@@ -117,7 +117,7 @@ function VideoCards() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
               Product
             </div>
           </SwiperSlide>
@@ -130,7 +130,7 @@ function VideoCards() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
               Review
             </div>
           </SwiperSlide>
@@ -143,7 +143,7 @@ function VideoCards() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-8xl text-5xl font-bold text-pallet4">
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
               Nature
             </div>
           </SwiperSlide>
