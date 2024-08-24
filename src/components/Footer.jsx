@@ -1,8 +1,24 @@
+/* eslint-disable no-unused-vars */
 import { useRef, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { GetInTouchBtn, Magnetic } from "./"; // Adjust the import path as needed
+import React from "react";
 
 export default function Footer() {
+  const instaButton = (e) => {
+    e.preventDefault(); // Prevent the default behavior of the anchor tag
+    window.location.href = "http://www.instagram.com/haseebasmr/"; // Replace with your desired URL
+  };
+  const youtubeButton = (e) => {
+    e.preventDefault(); // Prevent the default behavior of the anchor tag
+    window.location.href = "https://youtube.com/@haseeb_asmr?feature=shared"; // Replace with your desired URL
+  };
+  const tiktokButton = (e) => {
+    e.preventDefault(); // Prevent the default behavior of the anchor tag
+    window.location.href =
+      "https://www.tiktok.com/@haseebasmr?_t=8p8N7OnZWUB&_r=1"; // Replace with your desired URL
+  };
+
   const controls = useAnimation();
   const footerRef = useRef(null);
   const [inView, setInView] = useState(false);
@@ -63,19 +79,34 @@ export default function Footer() {
         </motion.div>
         <div className="flex justify-center -mt-20">
           <Magnetic>
-            <button className="text-white font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
-              Instagram
-            </button>
+            <a
+              href="http://www.instagram.com/haseebasmr/"
+              onClick={instaButton}
+            >
+              <button className="text-white font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
+                Instagram
+              </button>
+            </a>
           </Magnetic>
           <Magnetic>
-            <button className="text-white font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
-              Facebook
-            </button>
+            <a
+              href="https://youtube.com/@haseeb_asmr?feature=shared"
+              onClick={youtubeButton}
+            >
+              <button className="text-white font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
+                YouTube
+              </button>
+            </a>
           </Magnetic>
           <Magnetic>
-            <button className="text-white font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
-              Whatsapp
-            </button>
+            <a
+              href="https://www.tiktok.com/@haseebasmr?_t=8p8N7OnZWUB&_r=1"
+              onClick={tiktokButton}
+            >
+              <button className="text-white font-montserrat md:text-lg text-base p-2 mx-1 font-medium">
+                TikTok
+              </button>
+            </a>
           </Magnetic>
         </div>
         <div className="text-center text-xs pt-12 pb-4 text-gray-400">

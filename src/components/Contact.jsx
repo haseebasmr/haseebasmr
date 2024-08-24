@@ -1,7 +1,22 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 // Contact me page completed
 import { Magnetic } from "./";
+import React from "react";
 export default function Contact() {
+  const instaButton = (e) => {
+    e.preventDefault(); // Prevent the default behavior of the anchor tag
+    window.location.href = "http://www.instagram.com/haseebasmr/"; // Replace with your desired URL
+  };
+  const WhattsappButton = (e) => {
+    e.preventDefault(); // Prevent the default behavior of the anchor tag
+    window.location.href = "http://wa.me/+923235407105 "; // Replace with your desired URL
+  };
+  const tiktokButton = (e) => {
+    e.preventDefault(); // Prevent the default behavior of the anchor tag
+    window.location.href =
+      "https://www.tiktok.com/@haseebasmr?_t=8p8N7OnZWUB&_r=1"; // Replace with your desired URL
+  };
   return (
     <div className="w-screen h-screen bg-pallet1">
       <div className="md:pt-44 md:pl-44  md:flex-row  flex flex-col-reverse pt-44  p-5">
@@ -29,19 +44,32 @@ export default function Contact() {
       </div>
       <div className="flex justify-center md:gap-8 md:mt-16">
         <Magnetic>
-          <button className="text-white font-montserrat md:text-2xl p-2 mx-1 font-medium">
-            Instagram
-          </button>
+          <a
+            href="wa.me/+923235407105"
+            target="_blank"
+            onClick={WhattsappButton}
+          >
+            <button className="text-white font-montserrat md:text-2xl p-2 mx-1 font-medium">
+              Whattsapp
+            </button>
+          </a>
         </Magnetic>
         <Magnetic>
-          <button className="text-white font-montserrat md:text-2xl p-2 mx-1 font-medium">
-            TikTok
-          </button>
+          <a href="http://www.instagram.com/haseebasmr/" onClick={instaButton}>
+            <button className="text-white font-montserrat md:text-2xl p-2 mx-1 font-medium">
+              Instagram
+            </button>
+          </a>
         </Magnetic>
         <Magnetic>
-          <button className="text-white font-montserrat md:text-2xl p-2 mx-1 font-medium">
-            Whatsapp
-          </button>
+          <a
+            href="https://www.tiktok.com/@haseebasmr?_t=8p8N7OnZWUB&_r=1"
+            onClick={tiktokButton}
+          >
+            <button className="text-white font-montserrat md:text-2xl p-2 mx-1 font-medium">
+              TikTok
+            </button>
+          </a>
         </Magnetic>
       </div>
     </div>
