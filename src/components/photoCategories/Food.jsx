@@ -7,12 +7,12 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Mousewheel, Pagination } from "swiper/modules";
+import { useEffect, useRef } from "react";
 
 import slide_image_1 from "/assets/images/product.jpg";
-import { useEffect, useRef } from "react";
-// import slide_image_2 from "/assets/images/food.jpg";
-// import slide_image_3 from "/assets/images/portrait.jpg";
-// import slide_image_4 from "/assets/images/aesthetic.jpg";
+import slide_image_2 from "/assets/images/food.jpg";
+import slide_image_3 from "/assets/images/portrait.jpg";
+import slide_image_4 from "/assets/images/aesthetic.jpg";
 
 export default function Food() {
   const swiperRef = useRef(null);
@@ -54,7 +54,7 @@ export default function Food() {
         <SwiperSlide>
           <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
             <div
-              className="w-[600px] aspect-[4/5] bg-black overflow-hidden"
+              className="md:w-[600px] w-[400px] aspect-[4/5] bg-black"
               style={{
                 backgroundImage: `url(${slide_image_1})`,
                 backgroundSize: "cover",
@@ -65,9 +65,9 @@ export default function Food() {
         <SwiperSlide>
           <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
             <div
-              className="w-[600px] aspect-[4/5] bg-black overflow-hidden"
+              className="md:w-[600px] w-[400px] aspect-[4/5] bg-black"
               style={{
-                backgroundImage: `url(${slide_image_1})`,
+                backgroundImage: `url(${slide_image_2})`,
                 backgroundSize: "cover",
               }}
             ></div>
@@ -76,9 +76,20 @@ export default function Food() {
         <SwiperSlide>
           <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
             <div
-              className="w-[600px] aspect-[4/5] bg-black overflow-hidden"
+              className="md:w-[600px] w-[400px] aspect-[4/5] bg-black"
               style={{
-                backgroundImage: `url(${slide_image_1})`,
+                backgroundImage: `url(${slide_image_3})`,
+                backgroundSize: "cover",
+              }}
+            ></div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
+            <div
+              className="md:w-[600px] w-[400px] aspect-[4/5] bg-black"
+              style={{
+                backgroundImage: `url(${slide_image_4})`,
                 backgroundSize: "cover",
               }}
             ></div>
