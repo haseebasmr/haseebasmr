@@ -51,7 +51,7 @@ export default function Food() {
         slidesPerView={1}
         loop={true}
         loopAddBlankSlides={true}
-        loopAdditionalSlides={1}
+        loopAdditionalSlides={0}
         modules={[Mousewheel]}
         speed={800}
         className="mySwiper w-screen h-screen px-2 flex-1"
