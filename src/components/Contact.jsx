@@ -45,7 +45,7 @@ export default function Contact() {
             Let's start a <br /> project together
           </h1>
           <h1 className="md:hidden block mr-32 text-white text-2xl pb-6 pl-8 ">
-            Let's <br />
+            Let&apos;s <br />
             start a <br />
             project <br />
             together
@@ -101,7 +101,7 @@ export default function Contact() {
           </a>
         </Magnetic>
       </div>
-      <div className="text-center text-xs md:pt-28 pt-52 pb-4 text-gray-400">
+      <div className="text-center text-xs md:pt-28 pt-56 pb-4 text-gray-400">
         &copy; {new Date().getFullYear()} HaseebASMR. All rights reserved.
       </div>
     </div>
