@@ -4,7 +4,9 @@
 import { Magnetic } from "./";
 import React from "react";
 import { FaWhatsapp, FaInstagram, FaTiktok } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 export default function Contact() {
+  const navigate = useNavigate();
   const instaButton = (e) => {
     e.preventDefault(); // Prevent the default behavior of the anchor tag
     window.location.href = "http://www.instagram.com/haseebasmr/"; // Replace with your desired URL
@@ -22,7 +24,10 @@ export default function Contact() {
     <div className="w-screen h-screen bg-pallet1">
       <div className="flex flex-row items-center justify-between md:px-10 w-screen pt-3 px-5 md:pt-11 ">
         <Magnetic>
-          <button className=" font-montserrat  text-xl text-white">
+          <button
+            className=" font-montserrat  text-xl text-white"
+            onClick={() => navigate("/")}
+          >
             HaseebASMR
           </button>
         </Magnetic>
