@@ -15,7 +15,7 @@ import slide_image_2 from "/assets/images/food.jpg";
 import slide_image_3 from "/assets/images/portrait.jpg";
 import slide_image_4 from "/assets/images/aesthetic.jpg";
 
-export default function Food() {
+export default function FoodPhoto() {
   const swiperRef = useRef(null);
 
   useEffect(() => {
