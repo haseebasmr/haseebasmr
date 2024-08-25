@@ -16,6 +16,7 @@ import slide_video_1 from "/assets/videos/cooking.mp4";
 import slide_video_2 from "/assets/videos/video2.mp4";
 import slide_video_3 from "/assets/videos/video2.mp4";
 import slide_video_4 from "/assets/videos/video2.mp4";
+import { useNavigate } from "react-router-dom";
 
 function VideoCards() {
   const swiperRef = useRef(null);
@@ -41,6 +42,8 @@ function VideoCards() {
       handleSlideChange(); // Ensure the first video plays on initial load
     }
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <div className="bg-pallet4 pb-28">
@@ -91,7 +94,7 @@ function VideoCards() {
           className="mySwiperVideo"
           onSlideChange={handleSlideChange}
         >
-          <SwiperSlide>
+          <SwiperSlide onClick={() => navigate("foodvideo")}>
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_1}
