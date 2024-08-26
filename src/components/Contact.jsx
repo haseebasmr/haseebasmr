@@ -39,19 +39,16 @@ export default function Contact() {
           </Magnetic>
         </div>
       </div>
-      <div className="md:pt-16 md:pl-44  md:flex-row  flex flex-col-reverse pt-16  p-5">
-        <div className="flex-3   ">
+      <div className="md:pt-16 md:pl-44  md:flex-row  flex flex-col pt-28  p-5">
+        <div className="md:flex-3  flex-1  ">
           <h1 className="text-7xl md:block hidden pt-14 mt-12 pb-6 text-white">
             Let's start a <br /> project together
           </h1>
-          <h1 className="md:hidden block mr-32 text-white text-2xl pb-6 pl-8 ">
-            Let&apos;s <br />
-            start a <br />
-            project <br />
-            together
+          <h1 className="md:hidden  block bg-red-400  text-white text-2xl ">
+            Let&apos;s start a project together
           </h1>
         </div>
-        <div className="flex-1   md:-mb-0 -mb-24 pt-9  pl-36 md:pl-0 ">
+        <div className="flex-1 bg-blue-400 pt-9  pl-36 md:pl-0 ">
           <img
             className="object-cover md:ml-10 md:h-64 md:w-64 h-28 w-28"
             style={{
