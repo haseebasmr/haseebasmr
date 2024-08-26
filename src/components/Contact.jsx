@@ -39,18 +39,18 @@ export default function Contact() {
           </Magnetic>
         </div>
       </div>
-      <div className="md:pt-16 md:pl-44  md:flex-row  flex flex-col pt-32  p-5">
-        <div className="md:flex-3  flex-1  ">
+      <div className="md:pt-16 md:pl-44 justify-center items-center md:flex-row  flex flex-col pt-48   p-5">
+        <div className="md:flex-3   flex-1  ">
           <h1 className="text-7xl md:block hidden pt-14 mt-12 pb-6 text-white">
-            Let's start a <br /> project together
+            Let&apos;s start a <br /> project together
           </h1>
           <h1 className="md:hidden  block  text-white text-2xl ">
             Let&apos;s start a project together
           </h1>
         </div>
-        <div className="flex-1 pt-4 md:pt-9  pl-20 md:pl-0 ">
+        <div className="flex-1  pt-4 md:pt-9  ">
           <img
-            className="object-cover md:ml-10 md:h-64 md:w-64 h-32 w-32"
+            className="object-cover md:ml-10  md:h-64 md:w-64 h-32 w-32"
             style={{
               borderRadius: "50%",
             }}
