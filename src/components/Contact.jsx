@@ -101,7 +101,7 @@ export default function Contact() {
           </a>
         </Magnetic>
       </div>
-      <div className="text-center text-xs md:pt-28 pt-56 pb-4 text-gray-400">
+      <div className="text-center text-xs  fixed bottom-0 w-screen md:pt-28 pt-56 pb-4 text-gray-400">
         &copy; {new Date().getFullYear()} HaseebASMR. All rights reserved.
       </div>
     </div>
