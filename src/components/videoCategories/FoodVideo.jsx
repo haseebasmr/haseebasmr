@@ -18,13 +18,37 @@ import slide_video_4 from "/assets/videos/video2.mp4";
 export default function FoodPhoto() {
   const swiperRef = useRef(null);
 
+  const handleSlideChange = () => {
+    const swiper = swiperRef.current.swiper;
+
+    if (!swiper) return;
+    // console.log(swiper);
+    swiper.slides?.forEach((slide, index) => {
+      const video = slide.querySelector("video");
+      if (video) {
+        if (index === swiper.activeIndex) {
+          video.play();
+        } else {
+          video.pause();
+          video.currentTime = 0; // Reset the video to the beginning
+        }
+      }
+    });
+  };
+
+  useEffect(() => {
+    const swiper = swiperRef.current;
+    if (swiper) {
+      handleSlideChange(); // Ensure the first video plays on initial load
+    }
+  }, []);
+
   useEffect(() => {
     if (swiperRef.current) {
       swiperRef.current.swiper.on("slideChange", () => {
         const slides = swiperRef.current.swiper.slides;
         slides.forEach((slide, index) => {
           if (index === swiperRef.current.swiper.activeIndex) {
-            console.log(slide);
             slide.querySelector(".slide-content").classList.remove("rotate-20");
             slide.querySelector(".slide-content").classList.add("rotate-4");
           } else {
@@ -72,6 +96,7 @@ export default function FoodPhoto() {
             spaceBetween: 820,
           },
         }}
+        onSlideChange={handleSlideChange}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="">
