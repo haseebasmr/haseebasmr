@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+// import Swiper from "react-id-swiper";
 
 // Import Swiper styles
 import "swiper/css";
@@ -52,21 +53,33 @@ export default function FoodPhoto() {
         mousewheel={{
           forceToAxis: true,
           releaseOnEdges: true,
-          sensitivity: 0.5,
-          thresholdDelta: 10,
-          thresholdTime: 1000,
+          sensitivity: 0.1,
         }}
         slidesPerView={1}
+        spaceBetween={-120}
         loop={true}
         loopAddBlankSlides={true}
-        loopAdditionalSlides={0}
+        // loopAdditionalSlides={0}
         modules={[Mousewheel]}
         speed={800}
         className="mySwiper w-screen h-screen px-2 flex-1"
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: -120,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 820,
+          },
+        }}
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000">
+          <SwiperSlide key={index} className="">
+            <div
+              key={index}
+              className="flex justify-center items-center w-full h-full slide-content transition-transform duration-1000"
+            >
               <div
                 className="md:w-[600px] w-[400px] aspect-[4/5] bg-black"
                 style={{
