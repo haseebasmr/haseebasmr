@@ -1,6 +1,6 @@
 # Haseebasmr.com
 
-## Production will be completed in 1 week
+## Production will be completed in 2 weeks
 
 ### Stay tuned for further updates
 
