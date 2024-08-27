@@ -15,6 +15,7 @@ import VideoCards from "./VideoCards";
 import Footer from "./Footer";
 import GetInTouchBtn from "./common/GetInTouchBtn";
 import Contact from "./Contact";
+import Transition from "./Transition";
 
 export {
   StartScreen,
@@ -34,4 +35,5 @@ export {
   Footer,
   GetInTouchBtn,
   Contact,
+  Transition,
 };
