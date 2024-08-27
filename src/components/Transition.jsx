@@ -44,6 +44,9 @@ export default function Transition({ children, text }) {
         }}
         animate={{
           top: "calc(-100vh)",
+          transitionEnd: {
+            top: "100vh",
+          },
         }}
         transition={{
           duration: 0.75,
