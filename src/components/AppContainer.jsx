@@ -9,8 +9,8 @@ export default function AppContainer() {
   const { loading } = useContext(LoadingContext);
   return (
     <div>
-      <AnimatePresence>
-        {loading ? (
+      {loading ? (
+        <AnimatePresence>
           <motion.div
             key="start"
             initial={{ y: 0, opacity: 1 }}
@@ -22,14 +22,14 @@ export default function AppContainer() {
           >
             <StartScreen />
           </motion.div>
-        ) : (
-          <div className="overflow-hidden">
-            <Header />
-            <Outlet />
-            <Footer />
-          </div>
-        )}
-      </AnimatePresence>
+        </AnimatePresence>
+      ) : (
+        <div className="overflow-hidden">
+          <Header />
+          <Outlet />
+          <Footer />
+        </div>
+      )}
     </div>
   );
 }
