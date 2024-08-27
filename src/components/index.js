@@ -6,7 +6,6 @@ import Haseeb from "./Haseeb";
 import SmoothScroll from "./SmoothScroll";
 import Description from "./Description";
 import AboutMeBtn from "./common/AboutMeBtn";
-import Routes from "./Routes";
 import RadialBtn from "./common/RadialBtn";
 import AboutMe from "./AboutMe";
 import Home from "./Home";
@@ -16,6 +15,8 @@ import Footer from "./Footer";
 import GetInTouchBtn from "./common/GetInTouchBtn";
 import Contact from "./Contact";
 import Transition from "./Transition";
+import FoodPhoto from "./photoCategories/FoodPhoto";
+import FoodVideo from "./videoCategories/FoodVideo";
 
 export {
   StartScreen,
@@ -26,7 +27,6 @@ export {
   SmoothScroll,
   Description,
   AboutMeBtn,
-  Routes,
   RadialBtn,
   AboutMe,
   Home,
@@ -36,4 +36,6 @@ export {
   GetInTouchBtn,
   Contact,
   Transition,
+  FoodPhoto,
+  FoodVideo,
 };
