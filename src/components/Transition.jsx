@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Transition({ children, text }) {
@@ -38,44 +38,43 @@ export default function Transition({ children, text }) {
 
   return (
     <div>
-      <AnimatePresence mode="wait">
-        <motion.svg
-          initial={{
-            top: "-300px",
-          }}
-          animate={{
-            top: "calc(-100vh)",
-          }}
+      <motion.svg
+        initial={{
+          top: "-300px",
+        }}
+        animate={{
+          top: "calc(-100vh)",
+        }}
+        transition={{
+          duration: 0.75,
+          delay: 0.3,
+          ease: [0.76, 0, 0.24, 1],
+        }}
+        exit={{
+          top: "-300px",
+        }}
+        style={{
+          width: "100vw",
+          height: "calc(100vh + 600px)",
+          top: "-300px",
+          left: "0",
+          position: "fixed",
+          pointerEvents: "none",
+          zIndex: "40",
+        }}
+        fill="blue"
+      >
+        <motion.path
+          d={initialPath}
+          animate={{ d: targetPath }}
           transition={{
             duration: 0.75,
             delay: 0.3,
             ease: [0.76, 0, 0.24, 1],
           }}
-          exit={{
-            top: "-300px",
-          }}
-          style={{
-            width: "100vw",
-            height: "calc(100vh + 600px)",
-            top: "-300px",
-            left: "0",
-            position: "fixed",
-            pointerEvents: "none",
-            zIndex: "40",
-          }}
-          fill="blue"
-        >
-          <motion.path
-            d={initialPath}
-            animate={{ d: targetPath }}
-            transition={{
-              duration: 0.75,
-              delay: 0.3,
-              ease: [0.76, 0, 0.24, 1],
-            }}
-          ></motion.path>
-        </motion.svg>
-      </AnimatePresence>
+          exit={{ d: initialPath }}
+        ></motion.path>
+      </motion.svg>
       {children}
     </div>
   );
