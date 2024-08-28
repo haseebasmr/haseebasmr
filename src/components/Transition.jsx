@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Transition({ children }) {
   const [dimensions, setDimensions] = useState({
@@ -8,7 +9,26 @@ export default function Transition({ children }) {
     height: window.innerHeight,
   });
 
-  const text = "Hello";
+  const location = useLocation();
+  const [text, setText] = useState(location.pathname);
+
+  useEffect(() => {
+    setText(location.pathname);
+  }, [location]);
+
+  const textMap = {
+    "/": "Home",
+    "/contact": "Contact",
+    "/about": "About Me",
+    "/foodphoto": "Food Photography",
+    "/productphoto": "Product Photography",
+    "/portraitphoto": "Portrait Photography",
+    "/aestheticsphoto": "Aesthetics Photography",
+    "/foodvideo": "Food Videography",
+    "/productvideo": "Product Videography",
+    "/reviewvideo": "Review Videography",
+    "/naturevideo": "Nature Videography",
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -55,6 +75,9 @@ export default function Transition({ children }) {
         animate={{
           opacity: 0,
           top: -100,
+          transitionEnd: {
+            top: "55%",
+          },
         }}
         exit={{
           opacity: 1,
@@ -66,7 +89,7 @@ export default function Transition({ children }) {
           ease: [0.33, 1, 0.68, 1],
         }}
       >
-        {text}
+        {textMap[text]}
       </motion.p>
       <motion.svg
         initial={{
