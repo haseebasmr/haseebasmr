@@ -44,7 +44,7 @@ export default function Transition({ children }) {
       <motion.p
         className="text-6xl"
         style={{
-          position: "absolute",
+          position: "fixed",
           top: "45%",
           left: "50%",
           transform: "translate(-50%)",
