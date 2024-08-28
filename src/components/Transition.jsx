@@ -62,7 +62,7 @@ export default function Transition({ children }) {
   return (
     <div>
       <motion.p
-        className="text-6xl"
+        className="md:text-6xl text-3xl text-center"
         style={{
           position: "fixed",
           top: "45%",

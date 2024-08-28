@@ -52,17 +52,17 @@ export default function StartScreen() {
     <div className="relative">
       <div className="bg-pallet1 h-screen w-screen flex items-center justify-center absolute z-50">
         <motion.p
-          className="text-white text-6xl"
+          className="text-white md:text-6xl text-3xl text-center m-0 p-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, ease: "circInOut" }}
           style={{
-            position: "absolute",
+            position: "fixed",
             top: "45%",
             left: "50%",
             transform: "translate(-50%)",
             color: "white",
-            zIndex: "41",
+            zIndex: "50",
           }}
         >
           {greetings[greetingIndex]}
