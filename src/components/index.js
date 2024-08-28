@@ -16,6 +16,7 @@ import GetInTouchBtn from "./common/GetInTouchBtn";
 import Contact from "./Contact";
 import Transition from "./Transition";
 import FoodPhoto from "./photoCategories/FoodPhoto";
+import ProductPhoto from "./photoCategories/ProductPhoto";
 import FoodVideo from "./videoCategories/FoodVideo";
 
 export {
@@ -37,5 +38,6 @@ export {
   Contact,
   Transition,
   FoodPhoto,
+  ProductPhoto,
   FoodVideo,
 };

@@ -7,6 +7,7 @@ import {
   Home,
   Contact,
   FoodPhoto,
+  ProductPhoto,
   FoodVideo,
 } from "./components";
 import { AnimatePresence } from "framer-motion";
@@ -24,6 +25,7 @@ function App() {
             </Route>
             <Route path="/contact" element={<Contact />} />
             <Route path="/foodphoto" element={<FoodPhoto />} />
+            <Route path="/productphoto" element={<ProductPhoto />} />
             <Route path="/foodvideo" element={<FoodVideo />} />
           </Routes>
         </AnimatePresence>
