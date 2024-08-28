@@ -56,6 +56,14 @@ export default function StartScreen() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5, ease: "circInOut" }}
+          style={{
+            position: "absolute",
+            top: "45%",
+            left: "50%",
+            transform: "translate(-50%)",
+            color: "white",
+            zIndex: "41",
+          }}
         >
           {greetings[greetingIndex]}
         </motion.p>
