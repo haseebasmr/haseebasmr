@@ -8,6 +8,8 @@ import {
   Contact,
   FoodPhoto,
   ProductPhoto,
+  PortraitPhoto,
+  AestheticsPhoto,
   FoodVideo,
 } from "./components";
 import { AnimatePresence } from "framer-motion";
@@ -26,6 +28,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/foodphoto" element={<FoodPhoto />} />
             <Route path="/productphoto" element={<ProductPhoto />} />
+            <Route path="/portraitphoto" element={<PortraitPhoto />} />
+            <Route path="/aestheticsphoto" element={<AestheticsPhoto />} />
             <Route path="/foodvideo" element={<FoodVideo />} />
           </Routes>
         </AnimatePresence>

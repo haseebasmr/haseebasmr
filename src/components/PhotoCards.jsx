@@ -93,7 +93,7 @@ function PhotoCards() {
               Food
             </div>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide onClick={() => navigate("portraitphoto")}>
             <div className="aspect-ratio-4-5">
               <img
                 src={slide_image_3}
@@ -106,7 +106,7 @@ function PhotoCards() {
             </div>
           </SwiperSlide>
 
-          <SwiperSlide>
+          <SwiperSlide onClick={() => navigate("aestheticsphoto")}>
             <div className="aspect-ratio-4-5">
               <img
                 src={slide_image_4}

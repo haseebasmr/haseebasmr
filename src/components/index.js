@@ -17,6 +17,8 @@ import Contact from "./Contact";
 import Transition from "./Transition";
 import FoodPhoto from "./photoCategories/FoodPhoto";
 import ProductPhoto from "./photoCategories/ProductPhoto";
+import PortraitPhoto from "./photoCategories/PortraitPhoto";
+import AestheticsPhoto from "./photoCategories/AestheticsPhoto";
 import FoodVideo from "./videoCategories/FoodVideo";
 
 export {
@@ -39,5 +41,7 @@ export {
   Transition,
   FoodPhoto,
   ProductPhoto,
+  PortraitPhoto,
+  AestheticsPhoto,
   FoodVideo,
 };
