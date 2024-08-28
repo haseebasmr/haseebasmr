@@ -20,6 +20,9 @@ import ProductPhoto from "./photoCategories/ProductPhoto";
 import PortraitPhoto from "./photoCategories/PortraitPhoto";
 import AestheticsPhoto from "./photoCategories/AestheticsPhoto";
 import FoodVideo from "./videoCategories/FoodVideo";
+import NatureVideo from "./videoCategories/NatureVideo";
+import ProductVideo from "./videoCategories/ProductVideo";
+import ReviewVideo from "./videoCategories/ReviewVideo";
 
 export {
   StartScreen,
@@ -44,4 +47,7 @@ export {
   PortraitPhoto,
   AestheticsPhoto,
   FoodVideo,
+  NatureVideo,
+  ProductVideo,
+  ReviewVideo,
 };

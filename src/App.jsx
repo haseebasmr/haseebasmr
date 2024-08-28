@@ -11,6 +11,9 @@ import {
   PortraitPhoto,
   AestheticsPhoto,
   FoodVideo,
+  ProductVideo,
+  ReviewVideo,
+  NatureVideo,
 } from "./components";
 import { AnimatePresence } from "framer-motion";
 
@@ -31,6 +34,9 @@ function App() {
             <Route path="/portraitphoto" element={<PortraitPhoto />} />
             <Route path="/aestheticsphoto" element={<AestheticsPhoto />} />
             <Route path="/foodvideo" element={<FoodVideo />} />
+            <Route path="/productvideo" element={<ProductVideo />} />
+            <Route path="/reviewvideo" element={<ReviewVideo />} />
+            <Route path="/naturevideo" element={<NatureVideo />} />
           </Routes>
         </AnimatePresence>
       </ParallaxProvider>
