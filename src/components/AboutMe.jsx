@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Parallax } from "react-scroll-parallax";
-import { motion } from "framer-motion";
 import Transition from "./Transition";
 
 export default function AboutMe() {
@@ -117,7 +116,7 @@ export default function AboutMe() {
                 overflow: "hidden",
               }}
             >
-              <Parallax speed={-10} className="h-full w-full">
+              <Parallax speed={-15} className="h-full w-full">
                 <img
                   src="/assets/images/backgroundPic.jpg"
                   alt="no image"
