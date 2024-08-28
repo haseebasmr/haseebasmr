@@ -8,16 +8,18 @@ import React from "react";
 export default function Footer() {
   const instaButton = (e) => {
     e.preventDefault(); // Prevent the default behavior of the anchor tag
-    window.location.href = "http://www.instagram.com/haseebasmr/"; // Replace with your desired URL
+    window.open("http://www.instagram.com/haseebasmr/", "_blank"); // Open in new tab
   };
   const youtubeButton = (e) => {
     e.preventDefault(); // Prevent the default behavior of the anchor tag
-    window.location.href = "https://youtube.com/@haseeb_asmr?feature=shared"; // Replace with your desired URL
+    window.open("https://youtube.com/@haseeb_asmr?feature=shared", "_blank"); // Open in new tab
   };
   const tiktokButton = (e) => {
     e.preventDefault(); // Prevent the default behavior of the anchor tag
-    window.location.href =
-      "https://www.tiktok.com/@haseebasmr?_t=8p8N7OnZWUB&_r=1"; // Replace with your desired URL
+    window.open(
+      "https://www.tiktok.com/@haseebasmr?_t=8p8N7OnZWUB&_r=1",
+      "_blank"
+    ); // Open in new tab
   };
 
   const controls = useAnimation();

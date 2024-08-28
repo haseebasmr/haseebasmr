@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable react/no-unescaped-entities */
 // Contact me page completed
 import { Magnetic, Transition } from "./";
 import React from "react";
@@ -9,16 +8,18 @@ export default function Contact() {
   const navigate = useNavigate();
   const instaButton = (e) => {
     e.preventDefault(); // Prevent the default behavior of the anchor tag
-    window.location.href = "http://www.instagram.com/haseebasmr/"; // Replace with your desired URL
+    window.open("http://www.instagram.com/haseebasmr/", "_blank"); // Open in new tab
   };
   const WhattsappButton = (e) => {
     e.preventDefault(); // Prevent the default behavior of the anchor tag
-    window.location.href = "http://wa.me/+923235407105 "; // Replace with your desired URL
+    window.open("http://wa.me/+923235407105", "_blank"); // Open in new tab
   };
   const tiktokButton = (e) => {
     e.preventDefault(); // Prevent the default behavior of the anchor tag
-    window.location.href =
-      "https://www.tiktok.com/@haseebasmr?_t=8p8N7OnZWUB&_r=1"; // Replace with your desired URL
+    window.open(
+      "https://www.tiktok.com/@haseebasmr?_t=8p8N7OnZWUB&_r=1",
+      "_blank"
+    ); // Open in new tab
   };
   return (
     <Transition>
