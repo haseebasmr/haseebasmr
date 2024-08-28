@@ -135,8 +135,8 @@ function VideoCards() {
               />
               <div className="absolute inset-0 bg-transparent"></div>
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
-              Review
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-6xl text-5xl font-bold text-pallet4">
+              Promotion
             </div>
           </SwiperSlide>
           <SwiperSlide onClick={() => navigate("naturevideo")}>
