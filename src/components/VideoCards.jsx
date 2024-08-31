@@ -94,36 +94,6 @@ function VideoCards() {
           className="mySwiperVideo"
           onSlideChange={handleSlideChange}
         >
-          <SwiperSlide onClick={() => navigate("cookingvideo")}>
-            <div className="aspect-ratio-4-5">
-              <video
-                src={slide_video_1}
-                controls
-                loop
-                muted
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-transparent"></div>
-            </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
-              Cooking
-            </div>
-          </SwiperSlide>
-          <SwiperSlide onClick={() => navigate("cookingasmrvideo")}>
-            <div className="aspect-ratio-4-5">
-              <video
-                src={slide_video_2}
-                loop
-                controls
-                muted
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-transparent"></div>
-            </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-5xl text-5xl font-bold text-pallet4">
-              CookingASMR
-            </div>
-          </SwiperSlide>
           <SwiperSlide onClick={() => navigate("promotionvideo")}>
             <div className="aspect-ratio-4-5">
               <video
@@ -152,6 +122,37 @@ function VideoCards() {
             </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
               Nature
+            </div>
+          </SwiperSlide>
+          <SwiperSlide onClick={() => navigate("asmrvideo")}>
+            <div className="aspect-ratio-4-5">
+              <video
+                src={slide_video_1}
+                controls
+                loop
+                muted
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-transparent"></div>
+            </div>
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
+              ASMR
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide onClick={() => navigate("cookingasmrvideo")}>
+            <div className="aspect-ratio-4-5">
+              <video
+                src={slide_video_2}
+                loop
+                controls
+                muted
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-transparent"></div>
+            </div>
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-5xl text-5xl font-bold text-pallet4">
+              CookingASMR
             </div>
           </SwiperSlide>
           <div className="swiper-button-prev cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
