@@ -71,21 +71,14 @@ export default function Transition({ children }) {
           color: "white",
           zIndex: "50",
         }}
-        initial={{ opacity: 1, top: "45%" }}
+        initial={{ opacity: 0, top: "60%" }}
         animate={{
-          opacity: 0,
-          top: -100,
-          transitionEnd: {
-            top: "55%",
-          },
-        }}
-        exit={{
-          opacity: 1,
-          top: "45%",
+          opacity: [0, 1, 1, 0],
+          top: ["60%", "45%", "45%", "-20%"],
         }}
         transition={{
-          duration: 0.5,
-          delay: 0.3,
+          duration: 1,
+          times: [0, 0.3, 0.7, 1],
           ease: [0.33, 1, 0.68, 1],
         }}
       >
@@ -97,6 +90,9 @@ export default function Transition({ children }) {
         }}
         animate={{
           top: "calc(-100vh)",
+          transition: {
+            delay: 0.6,
+          },
           transitionEnd: {
             top: "100vh",
           },
