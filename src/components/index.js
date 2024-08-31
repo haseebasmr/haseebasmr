@@ -22,7 +22,7 @@ import AestheticsPhoto from "./photoCategories/AestheticsPhoto";
 import NaturePhoto from "./photoCategories/NaturePhoto";
 import FoodVideo from "./videoCategories/FoodVideo";
 import NatureVideo from "./videoCategories/NatureVideo";
-import ProductVideo from "./videoCategories/ProductVideo";
+import CookingASMRVideo from "./videoCategories/CookingASMRVideo";
 import ReviewVideo from "./videoCategories/ReviewVideo";
 
 export {
@@ -50,6 +50,6 @@ export {
   NaturePhoto,
   FoodVideo,
   NatureVideo,
-  ProductVideo,
+  CookingASMRVideo,
   ReviewVideo,
 };

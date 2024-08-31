@@ -12,7 +12,7 @@ import {
   AestheticsPhoto,
   NaturePhoto,
   FoodVideo,
-  ProductVideo,
+  CookingASMRVideo,
   ReviewVideo,
   NatureVideo,
 } from "./components";
@@ -36,7 +36,7 @@ function App() {
             <Route path="/aestheticsphoto" element={<AestheticsPhoto />} />
             <Route path="/naturephoto" element={<NaturePhoto />} />
             <Route path="/foodvideo" element={<FoodVideo />} />
-            <Route path="/productvideo" element={<ProductVideo />} />
+            <Route path="/cookingasmrvideo" element={<CookingASMRVideo />} />
             <Route path="/reviewvideo" element={<ReviewVideo />} />
             <Route path="/naturevideo" element={<NatureVideo />} />
           </Routes>
