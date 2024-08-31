@@ -81,6 +81,18 @@ function PhotoCards() {
               Product
             </div>
           </SwiperSlide>
+          <SwiperSlide onClick={() => navigate("naturephoto")}>
+            <div className="aspect-ratio-4-5">
+              <img
+                src={slide_image_1}
+                alt="slide_image"
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
+              Nature
+            </div>
+          </SwiperSlide>
           <SwiperSlide onClick={() => navigate("foodphoto")}>
             <div className="aspect-ratio-4-5">
               <img

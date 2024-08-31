@@ -19,6 +19,7 @@ import FoodPhoto from "./photoCategories/FoodPhoto";
 import ProductPhoto from "./photoCategories/ProductPhoto";
 import PortraitPhoto from "./photoCategories/PortraitPhoto";
 import AestheticsPhoto from "./photoCategories/AestheticsPhoto";
+import NaturePhoto from "./photoCategories/NaturePhoto";
 import FoodVideo from "./videoCategories/FoodVideo";
 import NatureVideo from "./videoCategories/NatureVideo";
 import ProductVideo from "./videoCategories/ProductVideo";
@@ -46,6 +47,7 @@ export {
   ProductPhoto,
   PortraitPhoto,
   AestheticsPhoto,
+  NaturePhoto,
   FoodVideo,
   NatureVideo,
   ProductVideo,

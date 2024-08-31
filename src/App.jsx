@@ -10,6 +10,7 @@ import {
   ProductPhoto,
   PortraitPhoto,
   AestheticsPhoto,
+  NaturePhoto,
   FoodVideo,
   ProductVideo,
   ReviewVideo,
@@ -33,6 +34,7 @@ function App() {
             <Route path="/productphoto" element={<ProductPhoto />} />
             <Route path="/portraitphoto" element={<PortraitPhoto />} />
             <Route path="/aestheticsphoto" element={<AestheticsPhoto />} />
+            <Route path="/naturephoto" element={<NaturePhoto />} />
             <Route path="/foodvideo" element={<FoodVideo />} />
             <Route path="/productvideo" element={<ProductVideo />} />
             <Route path="/reviewvideo" element={<ReviewVideo />} />
