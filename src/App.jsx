@@ -11,7 +11,7 @@ import {
   PortraitPhoto,
   AestheticsPhoto,
   NaturePhoto,
-  CookingVideo,
+  ASMRVideo,
   CookingASMRVideo,
   PromotionVideo,
   NatureVideo,
@@ -35,7 +35,7 @@ function App() {
             <Route path="/portraitphoto" element={<PortraitPhoto />} />
             <Route path="/aestheticsphoto" element={<AestheticsPhoto />} />
             <Route path="/naturephoto" element={<NaturePhoto />} />
-            <Route path="/cookingvideo" element={<CookingVideo />} />
+            <Route path="/asmrvideo" element={<ASMRVideo />} />
             <Route path="/cookingasmrvideo" element={<CookingASMRVideo />} />
             <Route path="/promotionvideo" element={<PromotionVideo />} />
             <Route path="/naturevideo" element={<NatureVideo />} />

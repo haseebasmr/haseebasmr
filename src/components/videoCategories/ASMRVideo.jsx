@@ -16,7 +16,7 @@ import slide_video_3 from "/assets/videos/video2.mp4";
 import slide_video_4 from "/assets/videos/video2.mp4";
 import Transition from "../Transition";
 
-export default function CookingVideo() {
+export default function ASMRVideo() {
   const swiperRef = useRef(null);
 
   const handleSlideChange = () => {
@@ -70,9 +70,7 @@ export default function CookingVideo() {
   return (
     <Transition>
       <div className="flex items-center justify-center bg-pallet2">
-        <div className="text-7xl text-white ml-48 hidden lg:block">
-          Cooking 🍲
-        </div>
+        <div className="text-7xl text-white ml-48 hidden lg:block">ASMR 🍲</div>
         <Swiper
           ref={swiperRef}
           direction={"vertical"}

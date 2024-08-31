@@ -20,7 +20,7 @@ import ProductPhoto from "./photoCategories/ProductPhoto";
 import PortraitPhoto from "./photoCategories/PortraitPhoto";
 import AestheticsPhoto from "./photoCategories/AestheticsPhoto";
 import NaturePhoto from "./photoCategories/NaturePhoto";
-import CookingVideo from "./videoCategories/CookingVideo";
+import ASMRVideo from "./videoCategories/ASMRVideo";
 import NatureVideo from "./videoCategories/NatureVideo";
 import CookingASMRVideo from "./videoCategories/CookingASMRVideo";
 import PromotionVideo from "./videoCategories/PromotionVideo";
@@ -48,7 +48,7 @@ export {
   PortraitPhoto,
   AestheticsPhoto,
   NaturePhoto,
-  CookingVideo,
+  ASMRVideo,
   NatureVideo,
   CookingASMRVideo,
   PromotionVideo,
