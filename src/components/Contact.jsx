@@ -7,19 +7,19 @@ import { useNavigate } from "react-router-dom";
 export default function Contact() {
   const navigate = useNavigate();
   const instaButton = (e) => {
-    e.preventDefault(); // Prevent the default behavior of the anchor tag
-    window.open("http://www.instagram.com/haseebasmr/", "_blank"); // Open in new tab
+    e.preventDefault();
+    window.open("http://www.instagram.com/haseebasmr/", "_blank");
   };
   const WhattsappButton = (e) => {
-    e.preventDefault(); // Prevent the default behavior of the anchor tag
-    window.open("http://wa.me/+923235407105", "_blank"); // Open in new tab
+    e.preventDefault();
+    window.open("http://wa.me/+923235407105", "_blank");
   };
   const tiktokButton = (e) => {
-    e.preventDefault(); // Prevent the default behavior of the anchor tag
+    e.preventDefault();
     window.open(
       "https://www.tiktok.com/@haseebasmr?_t=8p8N7OnZWUB&_r=1",
       "_blank"
-    ); // Open in new tab
+    );
   };
   return (
     <Transition>
