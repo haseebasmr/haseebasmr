@@ -11,9 +11,9 @@ import {
   PortraitPhoto,
   AestheticsPhoto,
   NaturePhoto,
-  FoodVideo,
+  CookingVideo,
   CookingASMRVideo,
-  ReviewVideo,
+  PromotionVideo,
   NatureVideo,
 } from "./components";
 import { AnimatePresence } from "framer-motion";
@@ -35,9 +35,9 @@ function App() {
             <Route path="/portraitphoto" element={<PortraitPhoto />} />
             <Route path="/aestheticsphoto" element={<AestheticsPhoto />} />
             <Route path="/naturephoto" element={<NaturePhoto />} />
-            <Route path="/foodvideo" element={<FoodVideo />} />
+            <Route path="/cookingvideo" element={<CookingVideo />} />
             <Route path="/cookingasmrvideo" element={<CookingASMRVideo />} />
-            <Route path="/reviewvideo" element={<ReviewVideo />} />
+            <Route path="/promotionvideo" element={<PromotionVideo />} />
             <Route path="/naturevideo" element={<NatureVideo />} />
           </Routes>
         </AnimatePresence>

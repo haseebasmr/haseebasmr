@@ -94,7 +94,7 @@ function VideoCards() {
           className="mySwiperVideo"
           onSlideChange={handleSlideChange}
         >
-          <SwiperSlide onClick={() => navigate("foodvideo")}>
+          <SwiperSlide onClick={() => navigate("cookingvideo")}>
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_1}
@@ -106,7 +106,7 @@ function VideoCards() {
               <div className="absolute inset-0 bg-transparent"></div>
             </div>
             <div className="absolute bottom-5 md:left-5 left-8 md:text-7xl text-5xl font-bold text-pallet4">
-              Food
+              Cooking
             </div>
           </SwiperSlide>
           <SwiperSlide onClick={() => navigate("cookingasmrvideo")}>
@@ -124,7 +124,7 @@ function VideoCards() {
               CookingASMR
             </div>
           </SwiperSlide>
-          <SwiperSlide onClick={() => navigate("reviewvideo")}>
+          <SwiperSlide onClick={() => navigate("promotionvideo")}>
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_3}

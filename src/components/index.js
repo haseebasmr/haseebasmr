@@ -20,10 +20,10 @@ import ProductPhoto from "./photoCategories/ProductPhoto";
 import PortraitPhoto from "./photoCategories/PortraitPhoto";
 import AestheticsPhoto from "./photoCategories/AestheticsPhoto";
 import NaturePhoto from "./photoCategories/NaturePhoto";
-import FoodVideo from "./videoCategories/FoodVideo";
+import CookingVideo from "./videoCategories/CookingVideo";
 import NatureVideo from "./videoCategories/NatureVideo";
 import CookingASMRVideo from "./videoCategories/CookingASMRVideo";
-import ReviewVideo from "./videoCategories/ReviewVideo";
+import PromotionVideo from "./videoCategories/PromotionVideo";
 
 export {
   StartScreen,
@@ -48,8 +48,8 @@ export {
   PortraitPhoto,
   AestheticsPhoto,
   NaturePhoto,
-  FoodVideo,
+  CookingVideo,
   NatureVideo,
   CookingASMRVideo,
-  ReviewVideo,
+  PromotionVideo,
 };

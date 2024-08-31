@@ -16,7 +16,7 @@ import slide_video_3 from "/assets/videos/video2.mp4";
 import slide_video_4 from "/assets/videos/video2.mp4";
 import Transition from "../Transition";
 
-export default function ReviewVideo() {
+export default function PromotionVideo() {
   const swiperRef = useRef(null);
 
   const handleSlideChange = () => {
