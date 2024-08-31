@@ -55,8 +55,8 @@ export default function Transition({ children }) {
   const targetPath = `
     M0 300
     Q${width / 2} 0 ${width} 300
-    L${width} ${height}
-    Q${width / 2} ${height} 0 ${height}
+    L${width} ${height + 300}
+    Q${width / 2} ${height + 300} 0 ${height + 300}
     L0 0 `;
 
   return (
@@ -73,12 +73,12 @@ export default function Transition({ children }) {
         }}
         initial={{ opacity: 0, top: "60%" }}
         animate={{
-          opacity: [0, 1, 1, 0],
+          opacity: [0, 1, 1, 1],
           top: ["60%", "45%", "45%", "-20%"],
         }}
         transition={{
           duration: 1,
-          times: [0, 0.3, 0.7, 1],
+          times: [0, 0.2, 0.7, 1],
           ease: [0.33, 1, 0.68, 1],
         }}
       >
@@ -89,9 +89,10 @@ export default function Transition({ children }) {
           top: "-300px",
         }}
         animate={{
-          top: "calc(-100vh)",
+          top: "calc(-150vh)",
           transition: {
             delay: 0.6,
+            duration: 0.5,
           },
           transitionEnd: {
             top: "100vh",
@@ -103,6 +104,7 @@ export default function Transition({ children }) {
         }}
         exit={{
           top: "-300px",
+          duration: 0.5,
         }}
         style={{
           width: "100vw",
@@ -119,7 +121,8 @@ export default function Transition({ children }) {
           d={initialPath}
           animate={{ d: targetPath }}
           transition={{
-            duration: 0.75,
+            duration: 0.5,
+            delay: 0.6,
             ease: [0.76, 0, 0.24, 1],
           }}
           exit={{ d: initialPath }}
