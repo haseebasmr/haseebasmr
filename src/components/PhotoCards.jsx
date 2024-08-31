@@ -105,6 +105,18 @@ function PhotoCards() {
               Food
             </div>
           </SwiperSlide>
+          <SwiperSlide onClick={() => navigate("aestheticsphoto")}>
+            <div className="aspect-ratio-4-5">
+              <img
+                src={slide_image_4}
+                alt="slide_image"
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="absolute bottom-5 md:left-5 left-8 md:text-6xl text-5xl font-bold text-pallet4">
+              Aesthetics
+            </div>
+          </SwiperSlide>
           <SwiperSlide onClick={() => navigate("portraitphoto")}>
             <div className="aspect-ratio-4-5">
               <img
@@ -118,18 +130,6 @@ function PhotoCards() {
             </div>
           </SwiperSlide>
 
-          <SwiperSlide onClick={() => navigate("aestheticsphoto")}>
-            <div className="aspect-ratio-4-5">
-              <img
-                src={slide_image_4}
-                alt="slide_image"
-                className="object-cover w-full h-full"
-              />
-            </div>
-            <div className="absolute bottom-5 md:left-5 left-8 md:text-6xl text-5xl font-bold text-pallet4">
-              Aesthetics
-            </div>
-          </SwiperSlide>
           <div className="swiper-button-prev cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
           <div className="swiper-button-next cursor-pointer bg-pallet3 p-10 rounded-full text-white hidden md:flex"></div>
         </Swiper>
