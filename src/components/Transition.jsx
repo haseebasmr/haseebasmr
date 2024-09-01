@@ -116,7 +116,7 @@ export default function Transition({ children }) {
           pointerEvents: "none",
           zIndex: "40",
         }}
-        fill="#27374D"
+        fill="#526d82"
       >
         <motion.path
           d={initialPath}
