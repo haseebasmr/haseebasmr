@@ -20,15 +20,16 @@ export default function Transition({ children }) {
     "/": "Home",
     "/contact": "Contact",
     "/about": "About Me",
-    "/foodphoto": "Food ",
-    "/productphoto": "Products",
-    "/portraitphoto": "Portraits",
+    "/foodphoto": "Food",
+    "/productphoto": "Product",
+    "/portraitphoto": "Portrait",
     "/aestheticsphoto": "Aesthetics",
     "/naturephoto": "Nature",
     "/asmrvideo": "ASMR",
-    "/productvideo": "Product Videography",
-    "/promotionvideo": "Promotional",
+    "/productvideo": "Product",
+    "/promotionvideo": "Promotion",
     "/naturevideo": "Nature",
+    "/cookingasmrvideo": "Cooking ASMR",
   };
 
   useEffect(() => {
@@ -116,7 +117,7 @@ export default function Transition({ children }) {
           pointerEvents: "none",
           zIndex: "40",
         }}
-        fill="#526d82"
+        fill="#27374d"
       >
         <motion.path
           d={initialPath}

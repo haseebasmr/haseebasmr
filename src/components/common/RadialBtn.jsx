@@ -58,7 +58,7 @@ export default function RadialBtn() {
         )}
       </AnimatePresence>
       <motion.button
-        className="bg-pallet2 flex items-center justify-center rounded-full"
+        className="bg-pallet1 flex items-center justify-center rounded-full"
         onClick={handleClick}
         initial={{ height: 0, width: 0 }}
         animate={{
