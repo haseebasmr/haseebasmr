@@ -20,14 +20,15 @@ export default function Transition({ children }) {
     "/": "Home",
     "/contact": "Contact",
     "/about": "About Me",
-    "/foodphoto": "Food Photography",
-    "/productphoto": "Product Photography",
-    "/portraitphoto": "Portrait Photography",
-    "/aestheticsphoto": "Aesthetics Photography",
-    "/foodvideo": "Food Videography",
+    "/foodphoto": "Food ",
+    "/productphoto": "Products",
+    "/portraitphoto": "Portraits",
+    "/aestheticsphoto": "Aesthetics",
+    "/naturephoto": "Nature",
+    "/asmrvideo": "ASMR",
     "/productvideo": "Product Videography",
-    "/reviewvideo": "Review Videography",
-    "/naturevideo": "Nature Videography",
+    "/promotionvideo": "Promotional",
+    "/naturevideo": "Nature",
   };
 
   useEffect(() => {
