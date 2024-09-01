@@ -46,8 +46,8 @@ export default function AestheticsPhoto() {
   ];
   return (
     <Transition>
-      <div className="flex items-center justify-center bg-pallet2">
-        <div className="text-6xl text-white ml-48 hidden lg:block">
+      <div className="flex items-center justify-center bg-pallet4">
+        <div className="text-6xl text-black  ml-48 hidden lg:block">
           Aesthetics 😎
         </div>
         <Swiper

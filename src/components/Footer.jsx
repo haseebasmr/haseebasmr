@@ -56,7 +56,7 @@ export default function Footer() {
   }, [inView, controls]);
 
   return (
-    <footer className="bg-pallet1 text-white md:pt-44 pt-24">
+    <footer className="bg-pallet5 text-white md:pt-44 pt-24">
       <div className="lg:mx-72 mx-5">
         <div className="block mb-4">
           <img

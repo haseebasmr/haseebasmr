@@ -46,8 +46,8 @@ export default function FoodPhoto() {
   ];
   return (
     <Transition>
-      <div className="flex items-center justify-center bg-pallet2">
-        <div className="text-8xl text-white ml-48 hidden lg:block">Food 🍲</div>
+      <div className="flex items-center justify-center bg-pallet4">
+        <div className="text-8xl text-black ml-48 hidden lg:block">Food 🍲</div>
         <Swiper
           ref={swiperRef}
           direction={"vertical"}

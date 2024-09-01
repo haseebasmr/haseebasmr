@@ -23,7 +23,7 @@ export default function Contact() {
   };
   return (
     <Transition>
-      <div className="w-screen h-screen bg-pallet1">
+      <div className="w-screen h-screen bg-pallet5">
         <div className="flex flex-row items-center justify-between md:px-10 w-screen pt-3 px-5 md:pt-11 ">
           <Magnetic>
             <button

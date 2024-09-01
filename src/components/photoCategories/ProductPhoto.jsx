@@ -46,8 +46,8 @@ export default function ProductPhoto() {
   ];
   return (
     <Transition>
-      <div className="flex items-center justify-center bg-pallet2">
-        <div className="text-7xl text-white ml-48 hidden lg:block">
+      <div className="flex items-center justify-center bg-pallet4">
+        <div className="text-7xl text-black ml-48 hidden lg:block">
           Product 💰{" "}
         </div>
         <Swiper

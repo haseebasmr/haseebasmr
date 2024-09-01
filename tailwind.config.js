@@ -8,6 +8,7 @@ export default {
         pallet2: "#526D82",
         pallet3: "#9DB2BF",
         pallet4: "#DDE6ED",
+        pallet5: "#27374de6",
         tempbg: "#999d9e",
       },
       fontFamily: {
