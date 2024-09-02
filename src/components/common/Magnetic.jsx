@@ -20,7 +20,6 @@ const Magnetic = ({ children, className }) => {
   ); // Throttle to roughly 60fps
 
   const reset = useCallback(() => {
-    console.log("Resetting position");
     setPosition({ x: 0, y: 0 });
   }, []);
 

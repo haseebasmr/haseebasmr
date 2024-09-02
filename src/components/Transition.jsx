@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function Transition({ children }) {
@@ -11,6 +11,7 @@ export default function Transition({ children }) {
 
   const location = useLocation();
   const [text, setText] = useState(location.pathname);
+  const textRef = useRef(null);
 
   useEffect(() => {
     setText(location.pathname);
@@ -61,21 +62,31 @@ export default function Transition({ children }) {
     Q${width / 2} ${height + 300} 0 ${height + 300}
     L0 0 `;
 
+  useEffect(() => {
+    if (textRef.current) {
+      const textWidth = textRef.current.offsetWidth;
+      const textHeight = textRef.current.offsetHeight;
+      textRef.current.style.left = `calc(50% - ${textWidth / 2}px)`;
+      textRef.current.style.top = `calc(50% - ${textHeight / 2}px)`;
+    }
+  }, [textRef.current]);
+
   return (
     <div>
       <motion.p
+        ref={textRef}
         className="md:text-6xl text-3xl text-center"
         style={{
           position: "fixed",
-          top: "45%",
-          left: "50%",
-          transform: "translate(-50%)",
           color: "white",
+          transformOrigin: "center",
+          left: "calc(50%)",
           zIndex: "50",
         }}
         initial={{ opacity: 0, top: "60%" }}
         animate={{
           opacity: [0, 1, 1, 1],
+          scale: [0, 1, 1, 1],
           top: ["60%", "45%", "45%", "-20%"],
         }}
         transition={{
