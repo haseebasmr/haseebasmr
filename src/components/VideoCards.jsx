@@ -46,7 +46,7 @@ function VideoCards() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-pallet4 pb-28">
+    <div className="bg-pallet4 pb-28" id="videos">
       <div className="container md:px-4 px-0 mx-auto">
         <div className="md:text-5xl text-4xl font-medium text-center py-10">
           Video Categories
