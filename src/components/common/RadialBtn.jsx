@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { FaGripLines, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function RadialBtn() {
   const [isClicked, setIsClicked] = useState(false);
@@ -15,6 +16,8 @@ export default function RadialBtn() {
     { label: "Videos", angle: 218 },
     { label: "Contact", angle: 270 },
   ];
+
+  const navigate = useNavigate();
 
   return (
     <div className="md:hidden fixed right-2 top-2 z-40">
@@ -48,7 +51,10 @@ export default function RadialBtn() {
                   className="absolute h-12 w-12 flex items-center justify-center rounded-full"
                   style={{ transform: `translate(${x}px, ${-y}px)` }}
                 >
-                  <button className="text-white text-sm active:text-xl hover:text-lg">
+                  <button
+                    onClick={() => navigate("/contact")}
+                    className="text-white text-sm active:text-xl hover:text-lg"
+                  >
                     {item.label}
                   </button>
                 </div>
