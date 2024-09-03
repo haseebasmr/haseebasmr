@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useRef, useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import throttle from "lodash.throttle";
@@ -7,6 +8,7 @@ const Magnetic = ({ children, className }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isMouseInside, setIsMouseInside] = useState(false);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleMouse = useCallback(
     throttle((e) => {
       const { clientX, clientY } = e;

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { motion, useScroll, useTransform } from "framer-motion";
 import Magnetic from "./Magnetic";
 import { useNavigate } from "react-router-dom";

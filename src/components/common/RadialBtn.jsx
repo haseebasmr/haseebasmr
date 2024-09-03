@@ -12,12 +12,34 @@ export default function RadialBtn() {
 
   const radius = 100; // Radius of the arc
   const items = [
-    { label: "Photos", angle: 180 },
-    { label: "Videos", angle: 218 },
-    { label: "Contact", angle: 270 },
+    { label: "Photos", angle: 180, Link: "#photos" },
+    { label: "Videos", angle: 218, Link: "#videos" },
+    { label: "Contact", angle: 270, Link: "/contact" },
   ];
 
   const navigate = useNavigate();
+
+  const handleRadialClick = (link) => {
+    if (link.startsWith("#")) {
+      const id = link.substring(1);
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        handleClick();
+      } else {
+        navigate("/", { state: { targetId: id } });
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+            handleClick();
+          }
+        }, [2300]);
+      }
+    } else {
+      navigate(link);
+    }
+  };
 
   return (
     <div className="md:hidden fixed right-2 top-2 z-40">
@@ -52,7 +74,7 @@ export default function RadialBtn() {
                   style={{ transform: `translate(${x}px, ${-y}px)` }}
                 >
                   <button
-                    onClick={() => navigate("/contact")}
+                    onClick={() => handleRadialClick(item.Link)}
                     className="text-white text-sm active:text-xl hover:text-lg"
                   >
                     {item.label}

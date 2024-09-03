@@ -69,7 +69,7 @@ export default function Transition({ children }) {
       textRef.current.style.left = `calc(50% - ${textWidth / 2}px)`;
       textRef.current.style.top = `calc(50% - ${textHeight / 2}px)`;
     }
-  }, [textRef.current]);
+  }, []);
 
   return (
     <div>
