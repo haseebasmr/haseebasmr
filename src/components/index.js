@@ -3,7 +3,6 @@ import AppContainer from "./AppContainer";
 import Header from "./Header";
 import Magnetic from "./common/Magnetic";
 import Haseeb from "./Haseeb";
-import SmoothScroll from "./SmoothScroll";
 import Description from "./Description";
 import AboutMeBtn from "./common/AboutMeBtn";
 import RadialBtn from "./common/RadialBtn";
@@ -31,7 +30,6 @@ export {
   Header,
   Magnetic,
   Haseeb,
-  SmoothScroll,
   Description,
   AboutMeBtn,
   RadialBtn,

@@ -38,6 +38,7 @@ export default function RadialBtn() {
       }
     } else {
       navigate(link);
+      handleClick();
     }
   };
 

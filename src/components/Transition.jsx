@@ -91,7 +91,7 @@ export default function Transition({ children }) {
         }}
         transition={{
           duration: 1,
-          times: [0, 0.2, 0.7, 1],
+          times: [0, 0.3, 0.7, 1],
           ease: [0.33, 1, 0.68, 1],
         }}
       >
