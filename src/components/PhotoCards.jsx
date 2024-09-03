@@ -13,10 +13,11 @@ import {
   Navigation,
 } from "swiper/modules";
 
-import slide_image_1 from "/assets/images/product.jpg";
-import slide_image_2 from "/assets/images/food.jpg";
-import slide_image_3 from "/assets/images/portrait.jpg";
-import slide_image_4 from "/assets/images/aesthetic.jpg";
+import slide_image_1 from "/assets/images/product1.jpg";
+import slide_image_2 from "/assets/images/food1.jpg";
+import slide_image_3 from "/assets/images/portrait1.jpg";
+import slide_image_4 from "/assets/images/aesthetic1.jpg";
+import slide_image_5 from "/assets/images/nature1.jpg";
 import { useNavigate } from "react-router-dom";
 
 function PhotoCards() {
@@ -84,7 +85,7 @@ function PhotoCards() {
           <SwiperSlide onClick={() => navigate("naturephoto")}>
             <div className="aspect-ratio-4-5">
               <img
-                src={slide_image_1}
+                src={slide_image_5}
                 alt="slide_image"
                 className="object-cover w-full h-full"
               />

@@ -9,10 +9,10 @@ import "swiper/css/pagination";
 import { Mousewheel } from "swiper/modules";
 import { useEffect, useRef } from "react";
 
-import slide_image_1 from "/assets/images/product.jpg";
-import slide_image_2 from "/assets/images/food.jpg";
-import slide_image_3 from "/assets/images/portrait.jpg";
-import slide_image_4 from "/assets/images/aesthetic.jpg";
+import slide_image_1 from "/assets/images/food1.jpg";
+import slide_image_2 from "/assets/images/food2.jpg";
+import slide_image_3 from "/assets/images/food3.jpg";
+import slide_image_4 from "/assets/images/food4.jpg";
 import Transition from "../Transition";
 
 export default function FoodPhoto() {
