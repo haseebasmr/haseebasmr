@@ -34,7 +34,7 @@ export default function RadialBtn() {
             element.scrollIntoView({ behavior: "smooth" });
             handleClick();
           }
-        }, [2300]);
+        }, [2500]);
       }
     } else {
       navigate(link);
