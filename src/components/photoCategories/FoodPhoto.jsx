@@ -1,14 +1,12 @@
-/* eslint-disable no-unused-vars */
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// import Swiper from "react-id-swiper";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Mousewheel, Pagination } from "swiper/modules";
+import { Mousewheel } from "swiper/modules";
 import { useEffect, useRef } from "react";
 
 import slide_image_1 from "/assets/images/product.jpg";
@@ -26,7 +24,6 @@ export default function FoodPhoto() {
         const slides = swiperRef.current.swiper.slides;
         slides.forEach((slide, index) => {
           if (index === swiperRef.current.swiper.activeIndex) {
-            console.log(slide);
             slide.querySelector(".slide-content").classList.remove("rotate-20");
             slide.querySelector(".slide-content").classList.add("rotate-4");
           } else {

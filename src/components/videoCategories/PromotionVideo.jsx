@@ -1,6 +1,5 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// import Swiper from "react-id-swiper";
 
 // Import Swiper styles
 import "swiper/css";
@@ -23,7 +22,6 @@ export default function PromotionVideo() {
     const swiper = swiperRef.current.swiper;
 
     if (!swiper) return;
-    // console.log(swiper);
     swiper.slides?.forEach((slide, index) => {
       const video = slide.querySelector("video");
       if (video) {
