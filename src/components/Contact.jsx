@@ -105,6 +105,24 @@ export default function Contact() {
         </div>
         <div className="text-center text-xs  fixed bottom-0 w-screen md:pt-28 pt-56 pb-4 text-gray-400">
           &copy; {new Date().getFullYear()} HaseebASMR. All rights reserved.
+          <div>
+            Creators:
+            <a
+              className="ml-1 mr-1"
+              href="https://www.linkedin.com/in/sanaullah-turab-9791aa257/"
+              target="_blank"
+            >
+              Sanaullah Turab
+            </a>
+            &
+            <a
+              className="ml-1 mr-1"
+              href="https://www.linkedin.com/in/asadullah-turab-6946b2236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+            >
+              Asadullah Turab.
+            </a>
+          </div>
         </div>
       </div>
     </Transition>
