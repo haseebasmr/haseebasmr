@@ -12,8 +12,8 @@ import {
   Mousewheel,
 } from "swiper/modules";
 
-import slide_video_1 from "/assets/videos/cooking.mp4";
-import slide_video_2 from "/assets/videos/video2.mp4";
+import slide_video_1 from "/assets/videos/compressed1.mp4";
+import slide_video_2 from "/assets/videos/cooking.mp4";
 import slide_video_3 from "/assets/videos/video2.mp4";
 import slide_video_4 from "/assets/videos/video2.mp4";
 import { useNavigate } from "react-router-dom";
