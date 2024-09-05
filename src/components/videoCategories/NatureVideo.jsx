@@ -119,6 +119,7 @@ export default function ReviewVideo() {
                 >
                   <video
                     controls
+                    loop
                     src={slide.video}
                     style={{
                       position: "absolute",

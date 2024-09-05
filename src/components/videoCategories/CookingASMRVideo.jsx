@@ -119,6 +119,7 @@ export default function CookingASMRVideo() {
                 >
                   <video
                     controls
+                    loop
                     src={slide.video}
                     style={{
                       position: "absolute",

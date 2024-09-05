@@ -117,6 +117,7 @@ export default function ASMRVideo() {
                 >
                   <video
                     controls
+                    loop
                     src={slide.video}
                     style={{
                       position: "absolute",
