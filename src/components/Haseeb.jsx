@@ -13,13 +13,13 @@ export default function Haseeb({ className }) {
       style={{ x: xPos, opacity: opacity }}
     >
       <motion.div
-        className="text-white md:text-8xl text-5xl md:-mx-2 -mx-1"
+        className="font-confine text-white md:text-8xl text-6xl"
         style={{ x: xPos }}
       >
         M Haseeb
       </motion.div>
       <motion.div
-        className="text-white md:text-3xl text-xl"
+        className="text-white md:text-3xl text-xl font-bold"
         style={{ x: xPosSecond }}
       >
         Photographer & Video creator

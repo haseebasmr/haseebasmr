@@ -1,6 +1,20 @@
 /* Monstserrat */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
+@font-face{
+    font-family: "Vanguard";
+    src: url("./fonts/Vanguard/Fontspring-DEMO-vanguardcf-bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Confine";
+    src: url("./fonts/Confine/Confine-Bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

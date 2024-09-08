@@ -14,6 +14,8 @@ export default {
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
+        vanguard: ["Vanguard", "sans-serif"],
+        confine: ["Confine", "sans-serif"],
       },
       backgroundImage: {
         "home-bg": "url('/assets/images/backgroundPic.jpg')",
