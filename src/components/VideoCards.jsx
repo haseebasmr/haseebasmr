@@ -48,7 +48,7 @@ function VideoCards() {
   return (
     <div className="bg-pallet4 pb-28" id="videos">
       <div className="container md:px-4 px-0 mx-auto">
-        <div className="md:text-5xl text-4xl font-medium text-center py-10">
+        <div className="md:text-5xl  text-4xl font-medium text-center py-10">
           Video Categories
         </div>
         <Swiper
@@ -105,7 +105,7 @@ function VideoCards() {
               />
               <div className="absolute inset-0 bg-transparent"></div>
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
+            <div className="absolute font-confine bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
               Promotion
             </div>
           </SwiperSlide>
@@ -120,7 +120,7 @@ function VideoCards() {
               />
               <div className="absolute inset-0 bg-transparent"></div>
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
+            <div className="absolute font-confine bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
               Nature
             </div>
           </SwiperSlide>
@@ -135,7 +135,7 @@ function VideoCards() {
               />
               <div className="absolute inset-0 bg-transparent"></div>
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
+            <div className="absolute font-confine bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
               ASMR
             </div>
           </SwiperSlide>
@@ -151,7 +151,7 @@ function VideoCards() {
               />
               <div className="absolute inset-0 bg-transparent"></div>
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 lg:text-5xl text-4xl font-bold text-pallet4">
+            <div className="absolute font-confine bottom-5 md:left-5 left-8 lg:text-5xl text-4xl font-bold text-pallet4">
               CookingASMR
             </div>
           </SwiperSlide>

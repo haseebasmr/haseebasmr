@@ -68,8 +68,8 @@ export default function ReviewVideo() {
   return (
     <Transition>
       <div className="flex items-center justify-center bg-pallet4">
-        <div className="text-7xl text-black ml-48 hidden lg:block">
-          Nature 🎄
+        <div className="text-7xl font-confine text-black ml-48 hidden lg:block">
+          Nature
         </div>
         <Swiper
           ref={swiperRef}
