@@ -21,14 +21,15 @@ export default function Home() {
         <motion.div
           initial={{ y: 80 }}
           animate={{ y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.3, ease: "easeOut", delay: 0.7 }}
         >
-          <div className="w-screen h-screen">
+          <div className="w-screen">
             <Parallax speed={-20}>
               <img
                 src="/assets/images/homebg.jpg"
                 alt="bacground image"
                 className="object-cover h-screen w-screen"
+                style={{ height: "calc(100vh + 100px)" }}
                 onLoad={() => setImageLoaded(true)}
               />
             </Parallax>
