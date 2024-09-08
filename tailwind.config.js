@@ -10,6 +10,7 @@ export default {
         pallet4: "#DDE6ED",
         pallet5: "#27374de6",
         tempbg: "#999d9e",
+        tempbg2: "#97b4c2",
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
