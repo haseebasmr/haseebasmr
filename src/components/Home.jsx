@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Transition>
-        <Parallax speed={-10}>
+        <Parallax speed={-20}>
           <div className="w-screen">
             <motion.img
               initial={{ y: 80 }}
