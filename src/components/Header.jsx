@@ -40,7 +40,7 @@ export default function Header() {
   };
 
   return (
-    <header className="flex justify-between bg-transparent items-center md:px-8 md:py-8 py-4 px-2 relative z-40">
+    <header className="flex justify-between absolute w-screen bg-transparent items-center md:px-8 md:py-8 py-4 px-2  z-40">
       <Magnetic>
         <button
           className="text-white font-montserrat text-xl p-2 font-medium"
