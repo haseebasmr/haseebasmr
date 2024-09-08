@@ -40,7 +40,7 @@ export default function AboutMe() {
             >
               <Parallax speed={-15} className="h-full w-full">
                 <img
-                  src="/assets/images/backgroundPic.jpg"
+                  src="/assets/images/about1.jpg"
                   alt="no image"
                   className="object-cover h-full w-full"
                 />

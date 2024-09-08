@@ -56,7 +56,7 @@ export default function Contact() {
               style={{
                 borderRadius: "50%",
               }}
-              src="/assets/images/homebg.jpg"
+              src="/assets/images/smallhome.jpg"
               alt="No Image!"
             />
           </div>

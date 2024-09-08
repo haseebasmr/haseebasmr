@@ -60,7 +60,7 @@ export default function Footer() {
       <div className="lg:mx-72 mx-5">
         <div className="block mb-4">
           <img
-            src="/assets/images/smallPic.jpg"
+            src="/assets/images/smallhome.jpg"
             alt="Small Pic"
             className="md:w-24 md:h-24 w-12 h-12 rounded-full md:mr-12 mr-5 inline-block"
           />
