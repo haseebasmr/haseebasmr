@@ -18,23 +18,20 @@ export default function Home() {
   return (
     <>
       <Transition>
-        <motion.div
-          initial={{ y: 80 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 0.3, ease: "easeOut", delay: 0.7 }}
-        >
+        <Parallax speed={-10}>
           <div className="w-screen">
-            <Parallax speed={-20}>
-              <img
-                src="/assets/images/homebg.jpg"
-                alt="bacground image"
-                className="object-cover h-screen w-screen"
-                style={{ height: "calc(100vh + 100px)" }}
-                onLoad={() => setImageLoaded(true)}
-              />
-            </Parallax>
+            <motion.img
+              initial={{ y: 80 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut", delay: 0.7 }}
+              src="/assets/images/homebg.jpg"
+              alt="bacground image"
+              className="object-cover w-screen h-screen"
+              style={{ height: "calc(100vh + 100px)" }}
+              onLoad={() => setImageLoaded(true)}
+            />
           </div>
-        </motion.div>
+        </Parallax>
         <Haseeb />
         <Description className="z-10 overflow-hidden" />
         {imageLoaded && <PhotoCards />}
