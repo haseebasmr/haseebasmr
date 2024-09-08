@@ -8,7 +8,7 @@ export default function AboutMe() {
   }, []);
   return (
     <Transition>
-      <div className="w-screen bg-white">
+      <div className="w-screen md:mt-24 mt-20 bg-white">
         <div className="md:mx-48 mx-5 pt-20 pb-16 ">
           <h1 className="md:text-7xl  text-4xl font-medium">
             Transforming ideas into <br /> visual masterpieces
