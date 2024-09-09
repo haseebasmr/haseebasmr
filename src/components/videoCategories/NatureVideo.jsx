@@ -18,6 +18,7 @@ import Transition from "../Transition";
 export default function ReviewVideo() {
   const swiperRef = useRef(null);
 
+  /*
   const handleSlideChange = () => {
     const swiper = swiperRef.current.swiper;
 
@@ -41,6 +42,7 @@ export default function ReviewVideo() {
       handleSlideChange(); // Ensure the first video plays on initial load
     }
   }, []);
+  */
 
   useEffect(() => {
     if (swiperRef.current) {
@@ -98,7 +100,7 @@ export default function ReviewVideo() {
               spaceBetween: 820,
             },
           }}
-          onSlideChange={handleSlideChange}
+        //onSlideChange={handleSlideChange}
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index} className="">
@@ -120,6 +122,9 @@ export default function ReviewVideo() {
                   <video
                     controls
                     loop
+                    autoPlay
+                    playsInline
+                    muted
                     src={slide.video}
                     style={{
                       position: "absolute",

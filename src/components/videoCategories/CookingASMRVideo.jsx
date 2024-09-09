@@ -18,6 +18,7 @@ import Transition from "../Transition";
 export default function CookingASMRVideo() {
   const swiperRef = useRef(null);
 
+  /*
   const handleSlideChange = () => {
     const swiper = swiperRef.current.swiper;
 
@@ -41,6 +42,7 @@ export default function CookingASMRVideo() {
       handleSlideChange(); // Ensure the first video plays on initial load
     }
   }, []);
+  */
 
   useEffect(() => {
     if (swiperRef.current) {
@@ -65,6 +67,7 @@ export default function CookingASMRVideo() {
     { id: 4, video: slide_video_4 },
     { id: 1, video: slide_video_1 },
   ];
+
   return (
     <Transition>
       <div className="flex items-center justify-center bg-pallet4">
@@ -98,7 +101,7 @@ export default function CookingASMRVideo() {
               spaceBetween: 820,
             },
           }}
-          onSlideChange={handleSlideChange}
+        //onSlideChange={handleSlideChange}
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index} className="">
@@ -118,8 +121,10 @@ export default function CookingASMRVideo() {
                   }}
                 >
                   <video
-                    controls
+                    playsInline
+                    autoPlay
                     loop
+                    muted
                     src={slide.video}
                     style={{
                       position: "absolute",

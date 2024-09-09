@@ -20,29 +20,31 @@ import { useNavigate } from "react-router-dom";
 
 function VideoCards() {
   const swiperRef = useRef(null);
-  const handleSlideChange = () => {
-    const swiper = swiperRef.current;
-    if (!swiper) return;
-    swiper.slides?.forEach((slide, index) => {
-      const video = slide.querySelector("video");
-      if (video) {
-        if (index === swiper.activeIndex) {
-          video.play();
-        } else {
-          video.pause();
-          video.currentTime = 0; // Reset the video to the beginning
+  /*
+    const handleSlideChange = () => {
+      const swiper = swiperRef.current;
+      if (!swiper) return;
+      swiper.slides?.forEach((slide, index) => {
+        const video = slide.querySelector("video");
+        if (video) {
+          if (index === swiper.activeIndex) {
+            video.play();
+          } else {
+            video.pause();
+            video.currentTime = 0; // Reset the video to the beginning
+          }
         }
+      });
+    };
+  
+    useEffect(() => {
+      const swiper = swiperRef.current;
+      if (swiper) {
+        handleSlideChange(); // Ensure the first video plays on initial load
       }
-    });
-  };
-
-  useEffect(() => {
-    const swiper = swiperRef.current;
-    if (swiper) {
-      handleSlideChange(); // Ensure the first video plays on initial load
-    }
-  }, []);
-
+    }, []);
+  
+  */
   const navigate = useNavigate();
 
   return (
@@ -92,14 +94,15 @@ function VideoCards() {
             prevEl: ".swiper-button-prev",
           }}
           className="mySwiperVideo"
-          onSlideChange={handleSlideChange}
+        //onSlideChange={handleSlideChange}
         >
           <SwiperSlide onClick={() => navigate("promotionvideo")}>
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_3}
                 loop
-                controls
+                autoPlay
+                playsInline
                 muted
                 className="w-full h-full object-cover"
               />
@@ -114,7 +117,8 @@ function VideoCards() {
               <video
                 src={slide_video_4}
                 loop
-                controls
+                autoPlay
+                playsInline
                 muted
                 className="w-full h-full object-cover"
               />
@@ -129,7 +133,8 @@ function VideoCards() {
               <video
                 src={slide_video_1}
                 controls
-                loop
+                autoPlay
+                playsInline
                 muted
                 className="w-full h-full object-cover"
               />
@@ -145,7 +150,8 @@ function VideoCards() {
               <video
                 src={slide_video_2}
                 loop
-                controls
+                autoPlay
+                playsInline
                 muted
                 className="w-full h-full object-cover"
               />
