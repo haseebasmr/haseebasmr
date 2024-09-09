@@ -70,8 +70,8 @@ export default function PromotionVideo() {
   return (
     <Transition>
       <div className="flex items-center justify-center bg-pallet4">
-        <div className="text-6xl text-black ml-48 hidden lg:block">
-          Promotional 😍
+        <div className="text-6xl font-confine text-black ml-48 hidden lg:block">
+          Promotion
         </div>
         <Swiper
           ref={swiperRef}

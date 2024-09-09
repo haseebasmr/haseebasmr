@@ -44,8 +44,8 @@ export default function PortraitPhoto() {
   return (
     <Transition>
       <div className="flex items-center justify-center bg-pallet4">
-        <div className="text-7xl text-black ml-48 hidden lg:block">
-          Portraits 😍
+        <div className="text-7xl font-confine text-black ml-48 hidden lg:block">
+          Portraits
         </div>
         <Swiper
           ref={swiperRef}

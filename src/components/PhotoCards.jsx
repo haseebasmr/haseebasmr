@@ -78,7 +78,7 @@ function PhotoCards() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
+            <div className="absolute font-confine bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
               Product
             </div>
           </SwiperSlide>
@@ -90,7 +90,7 @@ function PhotoCards() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
+            <div className="absolute font-confine bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
               Nature
             </div>
           </SwiperSlide>
@@ -102,7 +102,7 @@ function PhotoCards() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
+            <div className="absolute font-confine bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
               Food
             </div>
           </SwiperSlide>
@@ -114,7 +114,7 @@ function PhotoCards() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
+            <div className="absolute font-confine bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
               Aesthetics
             </div>
           </SwiperSlide>
@@ -126,7 +126,7 @@ function PhotoCards() {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="absolute bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
+            <div className="absolute font-confine bottom-5 md:left-5 left-8 lg:text-6xl text-4xl font-bold text-pallet4">
               Portrait
             </div>
           </SwiperSlide>
