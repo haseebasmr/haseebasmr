@@ -99,7 +99,7 @@ function VideoCards() {
           <SwiperSlide onClick={() => navigate("promotionvideo")}>
             <div className="aspect-ratio-4-5">
               <video
-                src={slide_video_3}
+                src={slide_video_1}
                 loop
                 autoPlay
                 playsInline
@@ -115,7 +115,7 @@ function VideoCards() {
           <SwiperSlide onClick={() => navigate("naturevideo")}>
             <div className="aspect-ratio-4-5">
               <video
-                src={slide_video_4}
+                src={slide_video_2}
                 loop
                 autoPlay
                 playsInline
@@ -131,7 +131,7 @@ function VideoCards() {
           <SwiperSlide onClick={() => navigate("asmrvideo")}>
             <div className="aspect-ratio-4-5">
               <video
-                src={slide_video_1}
+                src={slide_video_3}
                 loop
                 autoPlay
                 playsInline
@@ -148,7 +148,7 @@ function VideoCards() {
           <SwiperSlide onClick={() => navigate("cookingasmrvideo")}>
             <div className="aspect-ratio-4-5">
               <video
-                src={slide_video_2}
+                src={slide_video_4}
                 loop
                 autoPlay
                 playsInline
