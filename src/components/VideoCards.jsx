@@ -12,10 +12,10 @@ import {
   Mousewheel,
 } from "swiper/modules";
 
-import slide_video_1 from "/assets/videos/1.mp4";
-import slide_video_2 from "/assets/videos/2.mp4";
-import slide_video_3 from "/assets/videos/3.mp4";
-import slide_video_4 from "/assets/videos/4.mp4";
+import slide_video_1 from "/assets/videos/Promotion/thumbnail.mp4";
+import slide_video_2 from "/assets/videos/Nature/Thumbnail.mp4";
+import slide_video_3 from "/assets/videos/ASMR/thumbnail.mp4";
+import slide_video_4 from "/assets/videos/CookingASMR/thumbnail.mp4";
 import { useNavigate } from "react-router-dom";
 
 function VideoCards() {
@@ -132,7 +132,7 @@ function VideoCards() {
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_1}
-                controls
+                loop
                 autoPlay
                 playsInline
                 muted

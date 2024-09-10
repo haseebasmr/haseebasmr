@@ -9,10 +9,10 @@ import "swiper/css/pagination";
 import { Mousewheel } from "swiper/modules";
 import { useEffect, useRef } from "react";
 
-import slide_video_1 from "/assets/videos/17.mp4";
-import slide_video_2 from "/assets/videos/18.mp4";
-import slide_video_3 from "/assets/videos/19.mp4";
-import slide_video_4 from "/assets/videos/20.mp4";
+import slide_video_1 from "/assets/videos/Promotion/1.mp4";
+import slide_video_2 from "/assets/videos/Promotion/2.mp4";
+import slide_video_3 from "/assets/videos/Promotion/3.mp4";
+import slide_video_4 from "/assets/videos/Promotion/4.mp4";
 import Transition from "../Transition";
 
 export default function PromotionVideo() {

@@ -9,10 +9,10 @@ import "swiper/css/pagination";
 import { Mousewheel } from "swiper/modules";
 import { useEffect, useRef } from "react";
 
-import slide_video_1 from "/assets/videos/13.mp4";
-import slide_video_2 from "/assets/videos/14.mp4";
-import slide_video_3 from "/assets/videos/15.mp4";
-import slide_video_4 from "/assets/videos/16.mp4";
+import slide_video_1 from "/assets/videos/Nature/1.mp4";
+import slide_video_2 from "/assets/videos/Nature/2.mp4";
+import slide_video_3 from "/assets/videos/Nature/3.mp4";
+import slide_video_4 from "/assets/videos/Nature/4.mp4";
 import Transition from "../Transition";
 
 export default function ReviewVideo() {
