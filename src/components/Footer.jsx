@@ -117,7 +117,7 @@ export default function Footer() {
           <div>
             Creators:
             <a
-              className="ml-1 mr-1"
+              className="ml-1 mr-1 hover:text-blue-600 "
               href="https://www.linkedin.com/in/sanaullah-turab-9791aa257/"
               target="_blank"
             >
@@ -125,7 +125,7 @@ export default function Footer() {
             </a>
             &
             <a
-              className="ml-1 mr-1"
+              className="ml-1 mr-1 hover:text-blue-600 "
               href="https://www.linkedin.com/in/asadullah-turab-6946b2236?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
             >
