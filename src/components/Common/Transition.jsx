@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";

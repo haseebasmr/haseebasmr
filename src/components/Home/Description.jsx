@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { AboutMeBtn } from "../";
 
 export default function Description({ className }) {

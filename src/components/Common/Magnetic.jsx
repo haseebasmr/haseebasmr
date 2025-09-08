@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useRef, useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import throttle from "lodash.throttle";

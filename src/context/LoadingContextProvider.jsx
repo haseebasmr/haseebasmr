@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { createContext, useState, useEffect } from "react";
 
 const LoadingContext = createContext({});
