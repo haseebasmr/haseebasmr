@@ -9,6 +9,7 @@ import Transition from "./Common/Transition";
 import Contact from "./Contact/Contact";
 //Home
 import AboutMeBtn from "./Home/AboutMeBtn";
+import ContactButtons from "./Home/ContactButtons";
 import Description from "./Home/Description";
 import Haseeb from "./Home/Haseeb";
 import Home from "./Home/Home";
@@ -28,6 +29,7 @@ export {
   Transition,
   Contact,
   AboutMeBtn,
+  ContactButtons,
   Description,
   Haseeb,
   Home,

@@ -2,7 +2,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Parallax } from "react-scroll-parallax";
 import { useEffect, useState } from "react";
 
-import { Haseeb, Description, PhotoCards, VideoCards, Transition } from "../";
+import {
+  Haseeb,
+  Description,
+  PhotoCards,
+  VideoCards,
+  Transition,
+  ContactButtons,
+} from "../";
 
 export default function Home() {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -45,6 +52,7 @@ export default function Home() {
         </Parallax>
         <Haseeb />
         <Description className="z-10 overflow-hidden" />
+        <ContactButtons />
         {imageLoaded && <PhotoCards />}
         {photoCardsLoaded && <VideoCards />}
       </Transition>
