@@ -16,8 +16,8 @@ export default function CountUp({
   const ref = useRef(null);
   const motionValue = useMotionValue(direction === "down" ? to : from);
 
-  const damping = 20 + 40 * (1 / duration);
-  const stiffness = 100 * (1 / duration);
+  const damping = 160 + 40 * (1 / duration);
+  const stiffness = 300 * (1 / duration);
 
   const springValue = useSpring(motionValue, {
     damping,
