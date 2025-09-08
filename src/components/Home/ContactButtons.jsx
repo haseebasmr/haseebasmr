@@ -20,7 +20,7 @@ export default function ContactButtons() {
   };
 
   return (
-    <div className="flex justify-center md:gap-8 bg-pallet4 text-pallet2 pt-5">
+    <div className="flex justify-center md:gap-8 bg-pallet4 text-gray-900 pt-5 md:pb-20 pb-10">
       <Magnetic>
         <a href="wa.me/+923235407105" target="_blank" onClick={WhattsappButton}>
           <button className="flex flex-col font-montserrat md:text-lg text-base p-2 mx-1 font-medium">

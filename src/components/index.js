@@ -1,6 +1,7 @@
 //About me
 import AboutMe from "./AboutMe/AboutMe";
 //Common
+import CountUp from "./Common/CountUp";
 import GetInTouchBtn from "./Common/GetInTouchBtn";
 import Magnetic from "./Common/Magnetic";
 import RadialBtn from "./Common/RadialBtn";
@@ -15,6 +16,7 @@ import Haseeb from "./Home/Haseeb";
 import Home from "./Home/Home";
 import PhotoCards from "./Home/PhotoCards";
 import VideoCards from "./Home/VideoCards";
+import Views from "./Home/Views";
 //Layout
 import AppContainer from "./Layout/AppContainer";
 import Footer from "./Layout/Footer";
@@ -23,6 +25,7 @@ import StartScreen from "./Layout/StartScreen";
 
 export {
   AboutMe,
+  CountUp,
   GetInTouchBtn,
   Magnetic,
   RadialBtn,
@@ -35,6 +38,7 @@ export {
   Home,
   PhotoCards,
   VideoCards,
+  Views,
   AppContainer,
   Footer,
   Header,

@@ -9,6 +9,7 @@ import {
   VideoCards,
   Transition,
   ContactButtons,
+  Views,
 } from "../";
 
 export default function Home() {
@@ -52,6 +53,7 @@ export default function Home() {
         </Parallax>
         <Haseeb />
         <Description className="z-10 overflow-hidden" />
+        <Views />
         <ContactButtons />
         {imageLoaded && <PhotoCards />}
         {photoCardsLoaded && <VideoCards />}
