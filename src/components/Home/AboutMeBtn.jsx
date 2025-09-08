@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import Magnetic from "./Magnetic";
 import { useNavigate } from "react-router-dom";
+
+import { Magnetic } from "../";
 
 export default function AboutMeBtn() {
   const { scrollY } = useScroll();

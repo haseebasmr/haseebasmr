@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import Magnetic from "./common/Magnetic";
-import RadialBtn from "./common/RadialBtn";
+
+import { Magnetic, RadialBtn } from "../";
 
 export default function Header() {
   const buttons = [

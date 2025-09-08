@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Parallax } from "react-scroll-parallax";
-import Transition from "./Transition";
+
+import { Transition } from "../";
 
 export default function AboutMe() {
   useEffect(() => {

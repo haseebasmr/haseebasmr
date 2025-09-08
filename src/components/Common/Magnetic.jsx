@@ -18,7 +18,7 @@ const Magnetic = ({ children, className }) => {
       setPosition({ x: middleX, y: middleY });
       setIsMouseInside(true);
     }, 60),
-    []
+    [],
   ); // Throttle to roughly 60fps
 
   const reset = useCallback(() => {

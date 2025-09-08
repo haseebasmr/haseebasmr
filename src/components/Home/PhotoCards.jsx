@@ -4,8 +4,6 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../styles/swiperPhoto.css";
-
 import {
   EffectCoverflow,
   Pagination,
@@ -13,6 +11,7 @@ import {
   Navigation,
 } from "swiper/modules";
 
+import "../../styles/swiperPhoto.css";
 import slide_image_1 from "/assets/images/product1.jpg";
 import slide_image_2 from "/assets/images/food1.jpg";
 import slide_image_3 from "/assets/images/portrait1.jpg";

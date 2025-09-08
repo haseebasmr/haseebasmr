@@ -1,9 +1,8 @@
-/* eslint-disable no-unused-vars */
-// Contact me page completed
-import { Magnetic, Transition } from "./";
-import React from "react";
 import { FaWhatsapp, FaInstagram, FaTiktok } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+
+import { Magnetic, Transition } from "../";
+
 export default function Contact() {
   const navigate = useNavigate();
   const instaButton = (e) => {
@@ -18,7 +17,7 @@ export default function Contact() {
     e.preventDefault();
     window.open(
       "https://www.tiktok.com/@haseebasmr?_t=8p8N7OnZWUB&_r=1",
-      "_blank"
+      "_blank",
     );
   };
   return (

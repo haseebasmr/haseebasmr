@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import StartScreen from "./StartScreen";
 import { motion } from "framer-motion";
-import { Header, Footer } from "./";
 import { Outlet } from "react-router-dom";
-import { LoadingContext } from "../context/LoadingContextProvider";
+
+import { LoadingContext } from "../../context/LoadingContextProvider";
+import { Header, Footer, StartScreen } from "../";
 
 export default function AppContainer() {
   const { loading } = useContext(LoadingContext);

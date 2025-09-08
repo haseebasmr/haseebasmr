@@ -1,9 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { useRef, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { GetInTouchBtn, Magnetic } from "./"; // Adjust the import path as needed
 
-import React from "react";
+import { GetInTouchBtn, Magnetic } from "../";
 
 export default function Footer() {
   const instaButton = (e) => {
@@ -18,7 +17,7 @@ export default function Footer() {
     e.preventDefault(); // Prevent the default behavior of the anchor tag
     window.open(
       "https://www.tiktok.com/@haseebasmr?_t=8p8N7OnZWUB&_r=1",
-      "_blank"
+      "_blank",
     ); // Open in new tab
   };
 
@@ -31,7 +30,7 @@ export default function Footer() {
       ([entry]) => {
         setInView(entry.isIntersecting);
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (footerRef.current) {

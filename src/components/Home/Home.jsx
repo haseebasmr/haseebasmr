@@ -1,7 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Parallax } from "react-scroll-parallax";
-import { Haseeb, Description, PhotoCards, VideoCards, Transition } from "./";
 import { useEffect, useState } from "react";
+
+import { Haseeb, Description, PhotoCards, VideoCards, Transition } from "../";
 
 export default function Home() {
   const [imageLoaded, setImageLoaded] = useState(false);

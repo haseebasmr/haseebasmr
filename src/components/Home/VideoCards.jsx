@@ -1,10 +1,10 @@
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "../styles/swiperVideo.css";
 import {
   EffectCoverflow,
   Pagination,
@@ -12,11 +12,11 @@ import {
   Mousewheel,
 } from "swiper/modules";
 
+import "../../styles/swiperVideo.css";
 import slide_video_1 from "/assets/videos/Promotion/thumbnail.mp4";
 import slide_video_2 from "/assets/videos/Nature/Thumbnail.mp4";
 import slide_video_3 from "/assets/videos/ASMR/thumbnail.mp4";
 import slide_video_4 from "/assets/videos/CookingASMR/thumbnail.mp4";
-import { useNavigate } from "react-router-dom";
 
 function VideoCards() {
   const swiperRef = useRef(null);

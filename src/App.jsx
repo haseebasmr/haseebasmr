@@ -1,9 +1,10 @@
 import { ParallaxProvider } from "react-scroll-parallax";
-import LoadingContextProvider from "./context/LoadingContextProvider";
 import { Routes, Route, useLocation } from "react-router-dom";
-import ReactLenis from "lenis/react";
-import { AboutMe, AppContainer, Home, Contact } from "./components";
 import { AnimatePresence } from "framer-motion";
+import ReactLenis from "lenis/react";
+
+import LoadingContextProvider from "./context/LoadingContextProvider";
+import { AboutMe, AppContainer, Home, Contact } from "./components";
 
 function App() {
   const location = useLocation();
