@@ -14,15 +14,6 @@ import Footer from "./Footer";
 import GetInTouchBtn from "./common/GetInTouchBtn";
 import Contact from "./Contact";
 import Transition from "./Transition";
-import FoodPhoto from "./photoCategories/FoodPhoto";
-import ProductPhoto from "./photoCategories/ProductPhoto";
-import PortraitPhoto from "./photoCategories/PortraitPhoto";
-import AestheticsPhoto from "./photoCategories/AestheticsPhoto";
-import NaturePhoto from "./photoCategories/NaturePhoto";
-import ASMRVideo from "./videoCategories/ASMRVideo";
-import NatureVideo from "./videoCategories/NatureVideo";
-import CookingASMRVideo from "./videoCategories/CookingASMRVideo";
-import PromotionVideo from "./videoCategories/PromotionVideo";
 
 export {
   StartScreen,
@@ -41,13 +32,4 @@ export {
   GetInTouchBtn,
   Contact,
   Transition,
-  FoodPhoto,
-  ProductPhoto,
-  PortraitPhoto,
-  AestheticsPhoto,
-  NaturePhoto,
-  ASMRVideo,
-  NatureVideo,
-  CookingASMRVideo,
-  PromotionVideo,
 };

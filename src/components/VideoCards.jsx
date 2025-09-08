@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -94,9 +94,9 @@ function VideoCards() {
             prevEl: ".swiper-button-prev",
           }}
           className="mySwiperVideo"
-        //onSlideChange={handleSlideChange}
+          //onSlideChange={handleSlideChange}
         >
-          <SwiperSlide onClick={() => navigate("promotionvideo")}>
+          <SwiperSlide>
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_1}
@@ -112,7 +112,7 @@ function VideoCards() {
               Promotion
             </div>
           </SwiperSlide>
-          <SwiperSlide onClick={() => navigate("naturevideo")}>
+          <SwiperSlide>
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_2}
@@ -128,7 +128,7 @@ function VideoCards() {
               Nature
             </div>
           </SwiperSlide>
-          <SwiperSlide onClick={() => navigate("asmrvideo")}>
+          <SwiperSlide>
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_3}
@@ -145,7 +145,7 @@ function VideoCards() {
             </div>
           </SwiperSlide>
 
-          <SwiperSlide onClick={() => navigate("cookingasmrvideo")}>
+          <SwiperSlide>
             <div className="aspect-ratio-4-5">
               <video
                 src={slide_video_4}
