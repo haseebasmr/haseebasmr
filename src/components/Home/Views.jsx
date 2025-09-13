@@ -21,7 +21,7 @@ export default function Views() {
         viewport={{ once: true }}
         className="relative flex flex-col items-center justify-center"
       >
-        <span className="text-pallet2 text-xl md:text-3xl font-montserrat mb-4">
+        <span className="text-pallet2 text-xl md:text-3xl font-montserrat font-bold mb-4">
           Over
         </span>
         <div className="relative flex items-end gap-2 md:gap-4">
@@ -40,11 +40,9 @@ export default function Views() {
                 +
               </span>
             </span>
-            {/* Realistic floating shadow optimized for both mobile and desktop */}
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-1.8rem] md:bottom-[-2.5rem] w-[140%] md:w-[110%] h-12 md:h-16 rounded-full bg-gradient-to-r from-transparent via-black/15 to-transparent blur-3xl opacity-50"></div>
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-1.3rem] md:bottom-[-1.8rem] w-[130%] md:w-[100%] h-8 md:h-12 rounded-full bg-gradient-to-r from-pallet2/30 via-pallet1/40 to-pallet2/30 blur-2xl opacity-60"></div>
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-0.8rem] md:bottom-[-1.2rem] w-[120%] md:w-[95%] h-5 md:h-8 rounded-full bg-gradient-to-r from-pallet2/40 via-pallet1/60 to-pallet2/40 blur-xl opacity-70"></div>
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-0.4rem] md:bottom-[-0.6rem] w-[110%] md:w-[85%] h-3 md:h-4 rounded-full bg-gradient-to-r from-pallet2/50 via-pallet1/70 to-pallet2/50 blur-lg opacity-80"></div>
+            {/* Balanced floating shadow - consistent across all devices */}
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-1.8rem] w-[140%] md:w-[110%] h-6 md:h-8 rounded-full bg-gradient-to-r from-transparent via-black/12 to-transparent blur-2xl opacity-50"></div>
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-1.3rem] w-[130%] md:w-[100%] h-4 md:h-6 rounded-full bg-gradient-to-r from-pallet2/25 via-pallet1/35 to-pallet2/25 blur-xl opacity-60"></div>
           </span>
         </div>
       </motion.div>
@@ -53,7 +51,7 @@ export default function Views() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-pallet2 text-base md:text-lg font-confine mt-8 tracking-widest"
+        className="text-pallet2 text-base md:text-lg font-confine mt-8 tracking-widest font-normal"
       >
         and counting
       </motion.span>

@@ -32,26 +32,27 @@ export default function ContactButtons({ minimal = false }) {
           <button
             className={`group flex flex-col items-center font-montserrat ${
               minimal
-                ? "text-xs md:text-sm p-2 md:p-3"
+                ? "text-sm md:text-base p-3 md:p-4"
                 : "md:text-lg text-base p-2"
-            } mx-1 font-medium transition-all duration-300 hover:scale-110 active:scale-95 bg-transparent rounded-2xl hover:bg-pallet1/5 hover:text-pallet1 relative`}
+            } mx-1 font-bold transition-all duration-300 hover:scale-110 active:scale-95 bg-transparent rounded-2xl hover:text-pallet1 relative cursor-pointer`}
           >
             <div
               className={`flex-1 ${
                 minimal ? "text-2xl md:text-4xl" : "md:text-5xl text-3xl"
-              } mb-2 transition-all duration-300 group-hover:drop-shadow-[0_4px_12px_rgba(40,40,60,0.20)]`}
+              } mb-2 transition-all duration-300 group-hover:drop-shadow-[0_4px_12px_rgba(40,40,60,0.30)] group-hover:scale-105 text-pallet1`}
             >
               <FaWhatsapp />
             </div>
             <div
               className={`flex-1 ${
-                minimal ? "text-[0.75rem] md:text-sm" : ""
-              } tracking-wide`}
+                minimal ? "text-[0.8rem] md:text-sm" : ""
+              } tracking-wide font-bold text-pallet1`}
+              style={{
+                filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.15))",
+              }}
             >
               WhatsApp
             </div>
-            {/* Subtle glow on hover */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-pallet1/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
           </button>
         </a>
       </Magnetic>
@@ -60,26 +61,27 @@ export default function ContactButtons({ minimal = false }) {
           <button
             className={`group flex flex-col items-center font-montserrat ${
               minimal
-                ? "text-xs md:text-sm p-2 md:p-3"
+                ? "text-sm md:text-base p-3 md:p-4"
                 : "md:text-lg text-base p-2"
-            } mx-1 font-medium transition-all duration-300 hover:scale-110 active:scale-95 bg-transparent rounded-2xl hover:bg-pallet1/5 hover:text-pallet1 relative`}
+            } mx-1 font-bold transition-all duration-300 hover:scale-110 active:scale-95 bg-transparent rounded-2xl hover:text-pallet1 relative cursor-pointer`}
           >
             <div
               className={`flex-1 ${
                 minimal ? "text-2xl md:text-4xl" : "md:text-5xl text-3xl"
-              } mb-2 transition-all duration-300 group-hover:drop-shadow-[0_4px_12px_rgba(40,40,60,0.20)]`}
+              } mb-2 transition-all duration-300 group-hover:drop-shadow-[0_4px_12px_rgba(40,40,60,0.30)] group-hover:scale-105 text-pallet1`}
             >
               <FaInstagram />
             </div>
             <div
               className={`flex-1 ${
-                minimal ? "text-[0.75rem] md:text-sm" : ""
-              } tracking-wide`}
+                minimal ? "text-[0.8rem] md:text-sm" : ""
+              } tracking-wide font-bold text-pallet1`}
+              style={{
+                filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.15))",
+              }}
             >
               Instagram
             </div>
-            {/* Subtle glow on hover */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-pallet1/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
           </button>
         </a>
       </Magnetic>
@@ -91,26 +93,27 @@ export default function ContactButtons({ minimal = false }) {
           <button
             className={`group flex flex-col items-center font-montserrat ${
               minimal
-                ? "text-xs md:text-sm p-2 md:p-3"
+                ? "text-sm md:text-base p-3 md:p-4"
                 : "md:text-lg text-base p-2"
-            } mx-1 font-medium transition-all duration-300 hover:scale-110 active:scale-95 bg-transparent rounded-2xl hover:bg-pallet1/5 hover:text-pallet1 relative`}
+            } mx-1 font-bold transition-all duration-300 hover:scale-110 active:scale-95 bg-transparent rounded-2xl hover:text-pallet1 relative cursor-pointer`}
           >
             <div
               className={`flex-1 ${
                 minimal ? "text-2xl md:text-4xl" : "md:text-5xl text-3xl"
-              } mb-2 transition-all duration-300 group-hover:drop-shadow-[0_4px_12px_rgba(40,40,60,0.20)]`}
+              } mb-2 transition-all duration-300 group-hover:drop-shadow-[0_4px_12px_rgba(40,40,60,0.30)] group-hover:scale-105 text-pallet1`}
             >
               <FaTiktok />
             </div>
             <div
               className={`flex-1 ${
-                minimal ? "text-[0.75rem] md:text-sm" : ""
-              } tracking-wide`}
+                minimal ? "text-[0.8rem] md:text-sm" : ""
+              } tracking-wide font-bold text-pallet1`}
+              style={{
+                filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.15))",
+              }}
             >
               TikTok
             </div>
-            {/* Subtle glow on hover */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-pallet1/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
           </button>
         </a>
       </Magnetic>
