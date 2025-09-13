@@ -41,8 +41,6 @@ function Digit({ place, value, height, digitStyle }) {
     width: "1ch",
     fontVariantNumeric: "tabular-nums",
     overflow: "hidden",
-    display: "flex",
-    alignItems: "center",
   };
 
   return (
@@ -55,31 +53,18 @@ function Digit({ place, value, height, digitStyle }) {
 }
 
 function Comma({ height, textColor, fontWeight, fontSize }) {
-  const commaContainerStyle = {
-    height,
-    position: "relative",
-    width: "0.5ch",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  };
-
   const commaStyle = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
     fontSize,
     color: textColor,
     fontWeight: fontWeight,
-    lineHeight: 1,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: `${height}px`,
+    width: "0.5ch",
   };
 
-  return (
-    <div style={commaContainerStyle}>
-      <span style={commaStyle}>,</span>
-    </div>
-  );
+  return <span style={commaStyle}>,</span>;
 }
 
 export default function Counter({
@@ -102,7 +87,7 @@ export default function Counter({
   bottomGradientStyle,
   showCommas = false,
 }) {
-  const height = fontSize + padding + (showCommas ? 10 : 0);
+  const height = Math.max(fontSize * 1.4, fontSize + padding + 20);
 
   const defaultContainerStyle = {
     position: "relative",
@@ -117,6 +102,8 @@ export default function Counter({
     borderRadius: borderRadius,
     paddingLeft: horizontalPadding,
     paddingRight: horizontalPadding,
+    paddingTop: 4,
+    paddingBottom: 4,
     lineHeight: 1,
     color: textColor,
     fontWeight: fontWeight,

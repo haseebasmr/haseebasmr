@@ -99,14 +99,28 @@ export default function Views() {
                   showCommas={true}
                 />
               </div>
-              <span className="text-pallet1 text-[2.8rem] md:text-6xl lg:text-7xl font-montserrat font-black ml-1 md:ml-2 self-center leading-none flex items-center h-[3.5rem] md:h-[6rem] lg:h-[7rem]">
+              <span
+                className="text-pallet1 font-montserrat -mt-2.5 md:mt-0 font-medium ml-1 md:ml-2"
+                style={{
+                  fontSize: `${fontSize * 0.8}px`,
+                  lineHeight: 1,
+                  display: "flex",
+                  alignItems: "baseline",
+                  height: "fit-content",
+                  alignSelf: "center",
+                  transform:
+                    window.innerWidth <= 768
+                      ? "translateY(-8%)"
+                      : "translateY(-5%)",
+                }}
+              >
                 +
               </span>
             </div>
-            {/* Enhanced floating shadow beneath the number */}
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-2rem] w-[120%] md:w-[110%] h-8 md:h-12 rounded-full bg-gradient-to-r from-transparent via-black/20 to-transparent blur-3xl opacity-60"></div>
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-1.5rem] w-[110%] md:w-[100%] h-6 md:h-8 rounded-full bg-gradient-to-r from-pallet2/30 via-pallet1/40 to-pallet2/30 blur-2xl opacity-70"></div>
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-1rem] w-[100%] md:w-[90%] h-4 md:h-6 rounded-full bg-gradient-to-r from-pallet2/40 via-pallet1/50 to-pallet2/40 blur-xl opacity-80"></div>
+            {/* Enhanced floating shadow beneath the number - optimized for mobile */}
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-0.5rem] md:bottom-[-2rem] w-[100%] md:w-[120%] lg:w-[110%] h-4 md:h-8 lg:h-12 rounded-full bg-gradient-to-r from-transparent via-black/20 to-transparent blur-xl md:blur-3xl opacity-60"></div>
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-0.2rem] md:bottom-[-1.5rem] w-[90%] md:w-[110%] lg:w-[100%] h-3 md:h-6 lg:h-8 rounded-full bg-gradient-to-r from-pallet2/30 via-pallet1/40 to-pallet2/30 blur-lg md:blur-2xl opacity-70"></div>
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-[0rem] md:bottom-[-1rem] w-[80%] md:w-[100%] lg:w-[90%] h-2 md:h-4 lg:h-6 rounded-full bg-gradient-to-r from-pallet2/40 via-pallet1/50 to-pallet2/40 blur-md md:blur-xl opacity-80"></div>
           </span>
         </div>
       </motion.div>
