@@ -1,3 +1,4 @@
+import React from "react";
 import { motion, useSpring, useTransform } from "framer-motion";
 import { useEffect } from "react";
 
@@ -39,6 +40,9 @@ function Digit({ place, value, height, digitStyle }) {
     position: "relative",
     width: "1ch",
     fontVariantNumeric: "tabular-nums",
+    overflow: "hidden",
+    display: "flex",
+    alignItems: "center",
   };
 
   return (
@@ -46,6 +50,34 @@ function Digit({ place, value, height, digitStyle }) {
       {Array.from({ length: 10 }, (_, i) => (
         <Number key={i} mv={animatedValue} number={i} height={height} />
       ))}
+    </div>
+  );
+}
+
+function Comma({ height, textColor, fontWeight, fontSize }) {
+  const commaContainerStyle = {
+    height,
+    position: "relative",
+    width: "0.5ch",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  };
+
+  const commaStyle = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    fontSize,
+    color: textColor,
+    fontWeight: fontWeight,
+    lineHeight: 1,
+  };
+
+  return (
+    <div style={commaContainerStyle}>
+      <span style={commaStyle}>,</span>
     </div>
   );
 }
@@ -68,8 +100,9 @@ export default function Counter({
   gradientTo = "transparent",
   topGradientStyle,
   bottomGradientStyle,
+  showCommas = false,
 }) {
-  const height = fontSize + padding;
+  const height = fontSize + padding + (showCommas ? 10 : 0);
 
   const defaultContainerStyle = {
     position: "relative",
@@ -80,7 +113,7 @@ export default function Counter({
     fontSize,
     display: "flex",
     gap: gap,
-    overflow: "hidden",
+    overflow: "visible",
     borderRadius: borderRadius,
     paddingLeft: horizontalPadding,
     paddingRight: horizontalPadding,
@@ -114,15 +147,32 @@ export default function Counter({
   return (
     <div style={{ ...defaultContainerStyle, ...containerStyle }}>
       <div style={{ ...defaultCounterStyle, ...counterStyle }}>
-        {places.map((place) => (
-          <Digit
-            key={place}
-            place={place}
-            value={value}
-            height={height}
-            digitStyle={digitStyle}
-          />
-        ))}
+        {places.map((place, index) => {
+          const shouldShowComma =
+            showCommas &&
+            index < places.length - 1 &&
+            place >= 1000 &&
+            (place === 1000000 || place === 1000);
+
+          return (
+            <React.Fragment key={place}>
+              <Digit
+                place={place}
+                value={value}
+                height={height}
+                digitStyle={digitStyle}
+              />
+              {shouldShowComma && (
+                <Comma
+                  height={height}
+                  textColor={textColor}
+                  fontWeight={fontWeight}
+                  fontSize={fontSize}
+                />
+              )}
+            </React.Fragment>
+          );
+        })}
       </div>
       <div style={gradientContainerStyle}>
         <div

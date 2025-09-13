@@ -79,13 +79,13 @@ export default function Views() {
         </span>
         <div className="relative flex items-center gap-2 md:gap-4" ref={ref}>
           <span className="relative">
-            <div className="flex items-center">
+            <div className="flex items-center justify-center">
               <div className="text-[3.5rem] md:text-8xl lg:text-9xl">
                 <Counter
                   value={counterValue}
                   places={[1000000, 100000, 10000, 1000, 100, 10, 1]}
                   fontSize={fontSize}
-                  padding={0}
+                  padding={8}
                   gap={fontSize >= 96 ? 6 : 2}
                   textColor="#27374D"
                   fontWeight={900}
@@ -96,9 +96,10 @@ export default function Views() {
                   gradientHeight={0}
                   topGradientStyle={{ display: "none" }}
                   bottomGradientStyle={{ display: "none" }}
+                  showCommas={true}
                 />
               </div>
-              <span className="text-pallet1 text-3xl md:text-6xl font-montserrat font-black ml-2">
+              <span className="text-pallet1 text-[2.8rem] md:text-6xl lg:text-7xl font-montserrat font-black ml-1 md:ml-2 self-center leading-none flex items-center h-[3.5rem] md:h-[6rem] lg:h-[7rem]">
                 +
               </span>
             </div>
