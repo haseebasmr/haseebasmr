@@ -1,7 +1,7 @@
 //About me
 import AboutMe from "./AboutMe/AboutMe";
 //Common
-import CountUp from "./Common/CountUp";
+import Counter from "./Common/Counter";
 import GetInTouchBtn from "./Common/GetInTouchBtn";
 import Magnetic from "./Common/Magnetic";
 import RadialBtn from "./Common/RadialBtn";
@@ -25,7 +25,7 @@ import StartScreen from "./Layout/StartScreen";
 
 export {
   AboutMe,
-  CountUp,
+  Counter,
   GetInTouchBtn,
   Magnetic,
   RadialBtn,
