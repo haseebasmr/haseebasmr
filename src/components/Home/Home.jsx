@@ -8,7 +8,6 @@ import {
   PhotoCards,
   VideoCards,
   Transition,
-  ContactButtons,
   Views,
 } from "../";
 
@@ -54,7 +53,7 @@ export default function Home() {
         <Haseeb />
         <Description className="z-10 overflow-hidden" />
         <Views />
-        <ContactButtons />
+
         {imageLoaded && <PhotoCards />}
         {photoCardsLoaded && <VideoCards />}
       </Transition>
