@@ -37,7 +37,7 @@ export default function Home() {
         <Parallax speed={-20}>
           <div className="relative w-screen h-[calc(100vh+100px)]">
             <img
-              src="assets/images/main.png"
+              src="assets/images/main.jpeg"
               alt="bacground image"
               className="absolute top-0 left-0 w-full h-full object-cover"
               onLoad={() => setImageLoaded(true)}
