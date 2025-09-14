@@ -1,6 +1,7 @@
 //About me
 import AboutMe from "./AboutMe/AboutMe";
 //Common
+import AnimatedText from "./Common/AnimatedText";
 import Counter from "./Common/Counter";
 import GetInTouchBtn from "./Common/GetInTouchBtn";
 import Magnetic from "./Common/Magnetic";
@@ -27,6 +28,7 @@ import StartScreen from "./Layout/StartScreen";
 
 export {
   AboutMe,
+  AnimatedText,
   Counter,
   GetInTouchBtn,
   Magnetic,
