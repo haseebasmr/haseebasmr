@@ -1,6 +1,7 @@
 //About me
 import AboutMe from "./AboutMe/AboutMe";
 //Common
+import AnimatedText from "./Common/AnimatedText";
 import Counter from "./Common/Counter";
 import Float from "./Common/Float";
 import GetInTouchBtn from "./Common/GetInTouchBtn";
@@ -28,6 +29,7 @@ import StartScreen from "./Layout/StartScreen";
 
 export {
   AboutMe,
+  AnimatedText,
   Counter,
   Float,
   GetInTouchBtn,
