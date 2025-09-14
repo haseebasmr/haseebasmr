@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import Shuffle from "../Common/Shuffle";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -20,8 +21,23 @@ import slide_video_4 from "/assets/videos/CookingASMR/thumbnail.mp4";
 function VideoCards() {
   return (
     <div className="w-screen bg-pallet4 py-20">
-      <div className="md:text-5xl text-4xl font-medium text-center py-10">
-        Videos
+      <div className="text-center py-10">
+        <Shuffle
+          text="Videos"
+          shuffleDirection="right"
+          duration={0.35}
+          animationMode="evenodd"
+          shuffleTimes={1}
+          ease="power3.out"
+          stagger={0.03}
+          threshold={0.1}
+          triggerOnce={true}
+          triggerOnHover={true}
+          respectReducedMotion={true}
+          loop={true}
+          loopDelay={1}
+          className="md:text-6xl text-2xl font-medium md:font-bold"
+        />
       </div>
       <div className="container md:px-4 px-0 mx-auto">
         <Swiper

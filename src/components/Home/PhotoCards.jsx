@@ -1,4 +1,4 @@
-import { Stack } from "../";
+import { Stack, Shuffle } from "../";
 import { useState, useEffect } from "react";
 
 import slide_image_1 from "/assets/images/product1.jpg";
@@ -64,8 +64,23 @@ function PhotoCards() {
 
   return (
     <div className="bg-pallet4 pb-28" id="photos">
-      <div className="md:text-5xl text-4xl font-medium text-center py-10">
-        Photo Categories
+      <div className="text-center py-10">
+        <Shuffle
+          text="Photos"
+          shuffleDirection="right"
+          duration={0.35}
+          animationMode="evenodd"
+          shuffleTimes={1}
+          ease="power3.out"
+          stagger={0.03}
+          threshold={0.1}
+          triggerOnce={true}
+          triggerOnHover={true}
+          respectReducedMotion={true}
+          loop={true}
+          loopDelay={1}
+          className="md:text-6xl text-2xl  font-medium md:font-bold"
+        />
       </div>
       <div className="w-full flex justify-center px-4">
         <Stack
