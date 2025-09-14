@@ -1,4 +1,5 @@
 import { Stack } from "../";
+import { useState, useEffect } from "react";
 
 import slide_image_1 from "/assets/images/product1.jpg";
 import slide_image_2 from "/assets/images/food1.jpg";
@@ -7,6 +8,27 @@ import slide_image_4 from "/assets/images/aesthetic1.jpg";
 import slide_image_5 from "/assets/images/nature1.jpg";
 
 function PhotoCards() {
+  const [cardDimensions, setCardDimensions] = useState({
+    width: 280,
+    height: 350,
+  });
+
+  useEffect(() => {
+    const updateCardSize = () => {
+      if (window.innerWidth < 768) {
+        setCardDimensions({ width: 280, height: 350 }); // Mobile - smaller polaroid
+      } else if (window.innerWidth < 1024) {
+        setCardDimensions({ width: 400, height: 500 }); // Tablet
+      } else {
+        setCardDimensions({ width: 500, height: 625 }); // Desktop - polaroid proportions
+      }
+    };
+
+    updateCardSize();
+    window.addEventListener("resize", updateCardSize);
+    return () => window.removeEventListener("resize", updateCardSize);
+  }, []);
+
   const images = [
     {
       id: 1,
@@ -45,13 +67,14 @@ function PhotoCards() {
       <div className="md:text-5xl text-4xl font-medium text-center py-10">
         Photo Categories
       </div>
-      <div className="w-screen flex justify-center">
+      <div className="w-full flex justify-center px-4">
         <Stack
-          randomRotation={false}
-          sensitivity={180}
+          randomRotation={true}
+          sensitivity={150}
           sendToBackOnClick={true}
-          cardDimensions={{ width: 800, height: 800 }}
+          cardDimensions={cardDimensions}
           cardsData={images}
+          polaroidStyle={true}
         />
       </div>
     </div>

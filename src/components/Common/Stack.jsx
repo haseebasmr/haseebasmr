@@ -41,6 +41,7 @@ export default function Stack({
   cardsData = [],
   animationConfig = { stiffness: 260, damping: 20 },
   sendToBackOnClick = false,
+  polaroidStyle = false,
 }) {
   const [cards, setCards] = useState(
     cardsData.length
@@ -66,7 +67,7 @@ export default function Stack({
             src: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?q=80&w=500&auto=format",
             type: "image",
           },
-        ],
+        ]
   );
 
   const sendToBack = (id) => {
@@ -98,7 +99,11 @@ export default function Stack({
             sensitivity={sensitivity}
           >
             <motion.div
-              className="rounded-2xl overflow-hidden border-4 border-white"
+              className={`rounded-2xl overflow-hidden ${
+                polaroidStyle
+                  ? "border-[12px] md:border-[16px] border-white shadow-2xl"
+                  : "border-4 border-white"
+              }`}
               onClick={() => sendToBackOnClick && sendToBack(card.id)}
               animate={{
                 rotateZ: (cards.length - index - 1) * 4 + randomRotate,
@@ -114,23 +119,26 @@ export default function Stack({
               style={{
                 width: cardDimensions.width,
                 height: cardDimensions.height,
+                backgroundColor: polaroidStyle ? "#ffffff" : "transparent",
               }}
             >
-              {card.type === "video" ? (
-                <video
-                  src={card.src}
-                  alt={`card-${card.id}`}
-                  className="w-full h-full object-cover pointer-events-none"
-                  autoPlay
-                  loop
-                />
-              ) : (
-                <img
-                  src={card.src}
-                  alt={`card-${card.id}`}
-                  className="w-full h-full object-cover pointer-events-none"
-                />
-              )}
+              <div className="w-full h-full overflow-hidden">
+                {card.type === "video" ? (
+                  <video
+                    src={card.src}
+                    alt={`card-${card.id}`}
+                    className="w-full h-full object-cover pointer-events-none"
+                    autoPlay
+                    loop
+                  />
+                ) : (
+                  <img
+                    src={card.src}
+                    alt={`card-${card.id}`}
+                    className="w-full h-full object-cover pointer-events-none"
+                  />
+                )}
+              </div>
             </motion.div>
           </CardRotate>
         );
