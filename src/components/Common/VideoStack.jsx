@@ -1,6 +1,39 @@
 import { motion, useInView } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 
+// Custom Arrow Components
+const ChevronLeftIcon = ({ className }) => (
+  <svg
+    className={className}
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={2}
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M15.75 19.5L8.25 12l7.5-7.5"
+    />
+  </svg>
+);
+
+const ChevronRightIcon = ({ className }) => (
+  <svg
+    className={className}
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={2}
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M8.25 4.5l7.5 7.5-7.5 7.5"
+    />
+  </svg>
+);
+
 export default function VideoStack({ videos = [], className = "" }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -34,6 +67,15 @@ export default function VideoStack({ videos = [], className = "" }) {
     setProgress(0);
   };
 
+  // Navigation functions
+  const nextSlide = () => {
+    changeSlide((currentIndex + 1) % videos.length);
+  };
+
+  const prevSlide = () => {
+    changeSlide((currentIndex - 1 + videos.length) % videos.length);
+  };
+
   // Touch handlers for mobile swiping
   const handleTouchStart = (e) => {
     setTouchEnd(null);
@@ -51,6 +93,7 @@ export default function VideoStack({ videos = [], className = "" }) {
     const isLeftSwipe = distance > 50;
     const isRightSwipe = distance < -50;
 
+    // Always slide from right to left regardless of swipe direction
     if (isLeftSwipe) {
       changeSlide((currentIndex + 1) % videos.length);
     } else if (isRightSwipe) {
@@ -93,12 +136,12 @@ export default function VideoStack({ videos = [], className = "" }) {
     >
       {/* Main Video Container */}
       <div className="relative">
-        {/* Enhanced Stack Effect - Multiple Tilted Cards */}
+        {/* Enhanced Stack Effect - Colorful Tilted Cards */}
         <div className="absolute inset-0">
-          {/* Third card (bottom) - most tilted */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-700/40 to-black/40 rounded-xl transform translate-x-3 translate-y-4 rotate-3 scale-95 shadow-lg" />
-          {/* Second card (middle) - slightly tilted */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-600/50 to-black/50 rounded-xl transform translate-x-1.5 translate-y-2 rotate-1 scale-97 shadow-xl" />
+          {/* Third card (bottom) - most tilted with purple gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/60 to-pink-600/40 rounded-xl transform translate-x-3 translate-y-4 rotate-3 scale-95 shadow-lg" />
+          {/* Second card (middle) - slightly tilted with blue gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/70 to-purple-500/50 rounded-xl transform translate-x-1.5 translate-y-2 rotate-1 scale-97 shadow-xl" />
         </div>
 
         {/* Main Video Card */}
@@ -140,11 +183,11 @@ export default function VideoStack({ videos = [], className = "" }) {
           {/* Minimal Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
-          {/* Single Progress Line */}
-          <div className="absolute top-3 left-3 right-3">
-            <div className="h-0.5 bg-white/20 rounded-full overflow-hidden">
+          {/* Single Progress Line - Higher Z-Index */}
+          <div className="absolute top-3 left-3 right-3 z-10">
+            <div className="h-0.5 bg-white/30 rounded-full overflow-hidden backdrop-blur-sm">
               <motion.div
-                className="h-full bg-white rounded-full"
+                className="h-full bg-white rounded-full shadow-sm"
                 initial={{ width: "0%" }}
                 animate={{ width: `${progress}%` }}
                 transition={{ duration: 0.1, ease: "linear" }}
@@ -152,6 +195,26 @@ export default function VideoStack({ videos = [], className = "" }) {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Beautiful Navigation Arrows for Desktop */}
+      <div className="hidden md:flex absolute top-1/2 -translate-y-1/2 -left-16 -right-16 justify-between pointer-events-none">
+        <motion.button
+          className="bg-white/10 backdrop-blur-md text-white p-3 rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 pointer-events-auto group"
+          onClick={prevSlide}
+          whileHover={{ scale: 1.1, x: -2 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <ChevronLeftIcon className="w-6 h-6 group-hover:text-white/90" />
+        </motion.button>
+        <motion.button
+          className="bg-white/10 backdrop-blur-md text-white p-3 rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 pointer-events-auto group"
+          onClick={nextSlide}
+          whileHover={{ scale: 1.1, x: 2 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <ChevronRightIcon className="w-6 h-6 group-hover:text-white/90" />
+        </motion.button>
       </div>
 
       {/* Enhanced Dot Indicators with Better Visibility */}
