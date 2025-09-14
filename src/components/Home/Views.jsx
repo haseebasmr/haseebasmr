@@ -63,7 +63,7 @@ export default function Views() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-pallet2 text-base md:text-lg font-confine tracking-widest uppercase mb-6 md:mb-10"
+        className="text-pallet2 text-xl md:text-2xl font-confine tracking-widest uppercase mb-6 md:mb-10"
       >
         Total Views
       </motion.span>
@@ -74,9 +74,6 @@ export default function Views() {
         viewport={{ once: true }}
         className="relative flex flex-col items-center justify-center"
       >
-        <span className="text-pallet2 text-xl md:text-3xl font-montserrat font-bold mb-4">
-          Over
-        </span>
         <div className="relative flex items-center gap-2 md:gap-4" ref={ref}>
           <span className="relative">
             <div className="flex items-center justify-center">
@@ -117,10 +114,9 @@ export default function Views() {
                 +
               </span>
             </div>
-            {/* Enhanced floating shadow beneath the number - optimized for mobile */}
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-0.5rem] md:bottom-[-2rem] w-[100%] md:w-[120%] lg:w-[110%] h-4 md:h-8 lg:h-12 rounded-full bg-gradient-to-r from-transparent via-black/20 to-transparent blur-xl md:blur-3xl opacity-60"></div>
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-[-0.2rem] md:bottom-[-1.5rem] w-[90%] md:w-[110%] lg:w-[100%] h-3 md:h-6 lg:h-8 rounded-full bg-gradient-to-r from-pallet2/30 via-pallet1/40 to-pallet2/30 blur-lg md:blur-2xl opacity-70"></div>
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-[0rem] md:bottom-[-1rem] w-[80%] md:w-[100%] lg:w-[90%] h-2 md:h-4 lg:h-6 rounded-full bg-gradient-to-r from-pallet2/40 via-pallet1/50 to-pallet2/40 blur-md md:blur-xl opacity-80"></div>
+            {/* Wider rectangular shadow with rounded edges - more substantial and blurred */}
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-[0.5rem] md:bottom-[-1rem] w-[130%] md:w-[125%] lg:w-[110%] h-[12px] md:h-[18px] rounded-xl bg-gradient-to-r from-transparent via-black/10 to-transparent blur-[4px] opacity-60"></div>
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-[0.6rem] md:bottom-[-0.9rem] w-[100%] md:w-[105%] lg:w-[100%] h-[6px] md:h-[9px] rounded-lg bg-gradient-to-r from-transparent via-pallet1/25 to-transparent blur-[4px] opacity-70"></div>
           </span>
         </div>
       </motion.div>
@@ -129,7 +125,7 @@ export default function Views() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="text-pallet2 text-base md:text-lg font-confine mt-8 tracking-widest font-normal"
+        className="text-pallet2 text-2xl md:text-3xl font-confine mt-10 tracking-widest font-normal"
       >
         and counting
       </motion.span>
