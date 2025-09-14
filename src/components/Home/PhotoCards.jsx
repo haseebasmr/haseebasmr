@@ -79,7 +79,7 @@ function PhotoCards() {
           respectReducedMotion={true}
           loop={true}
           loopDelay={1}
-          className="md:text-6xl text-[1.8rem] font-bold"
+          className="md:text-6xl text-[1.75rem] font-bold"
         />
       </div>
       <div className="w-full flex justify-center px-4">

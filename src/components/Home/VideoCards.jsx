@@ -36,7 +36,7 @@ function VideoCards() {
           respectReducedMotion={true}
           loop={true}
           loopDelay={1}
-          className="md:text-6xl text-[1.8rem] font-bold"
+          className="md:text-6xl text-[1.75rem] font-bold"
         />
       </div>
       <div className="container md:px-4 px-0 mx-auto">
