@@ -3,6 +3,7 @@ import AboutMe from "./AboutMe/AboutMe";
 //Common
 import AnimatedText from "./Common/AnimatedText";
 import Counter from "./Common/Counter";
+import Float from "./Common/Float";
 import GetInTouchBtn from "./Common/GetInTouchBtn";
 import Magnetic from "./Common/Magnetic";
 import RadialBtn from "./Common/RadialBtn";
@@ -30,6 +31,7 @@ export {
   AboutMe,
   AnimatedText,
   Counter,
+  Float,
   GetInTouchBtn,
   Magnetic,
   RadialBtn,
