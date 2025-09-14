@@ -68,18 +68,18 @@ function PhotoCards() {
         <Shuffle
           text="Photos"
           shuffleDirection="right"
-          duration={0.35}
+          duration={0.7}
           animationMode="evenodd"
           shuffleTimes={1}
           ease="power3.out"
-          stagger={0.03}
+          stagger={0.08}
           threshold={0.1}
           triggerOnce={true}
           triggerOnHover={true}
           respectReducedMotion={true}
           loop={true}
           loopDelay={1}
-          className="md:text-6xl text-2xl  font-medium md:font-bold"
+          className="md:text-6xl text-[1.8rem] font-bold"
         />
       </div>
       <div className="w-full flex justify-center px-4">
