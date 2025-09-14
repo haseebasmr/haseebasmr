@@ -1,5 +1,5 @@
 import { motion, useInView } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 
 // Custom Arrow Components
 const ChevronLeftIcon = ({ className }) => (
@@ -40,19 +40,31 @@ export default function VideoStack({ videos = [], className = "" }) {
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
   const [slideDirection, setSlideDirection] = useState("next"); // "next" or "prev"
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [previousIndex, setPreviousIndex] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   const SLIDE_DURATION = 4000; // 4 seconds per slide
 
-  // Auto-play with progress
+  // Auto-play with progress - use proper transition system
   useEffect(() => {
-    if (videos.length === 0) return;
+    if (videos.length === 0 || isTransitioning) return;
 
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
+          // Use the same logic as manual transitions
+          setPreviousIndex(currentIndex);
+          setSlideDirection("next");
+          setIsTransitioning(true);
           setCurrentIndex((current) => (current + 1) % videos.length);
+
+          // Reset transition state after animation completes
+          setTimeout(() => {
+            setIsTransitioning(false);
+          }, 1200);
+
           return 0;
         }
         return prev + 100 / (SLIDE_DURATION / 50);
@@ -60,14 +72,44 @@ export default function VideoStack({ videos = [], className = "" }) {
     }, 50);
 
     return () => clearInterval(interval);
-  }, [videos.length]);
+  }, [videos.length, currentIndex, isTransitioning]); // Add dependencies to sync properly
 
   // Reset progress when manually changing slides
-  const changeSlide = (newIndex, direction = "next") => {
-    setSlideDirection(direction);
-    setCurrentIndex(newIndex);
-    setProgress(0);
-  };
+  const changeSlide = useCallback(
+    (newIndex, direction = "next") => {
+      if (isTransitioning) return; // Prevent multiple transitions
+
+      setPreviousIndex(currentIndex);
+      setSlideDirection(direction);
+      setIsTransitioning(true);
+      setCurrentIndex(newIndex);
+      setProgress(0);
+
+      // Reset transition state after animation completes
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 1200); // Slightly longer than transition duration
+    },
+    [currentIndex, isTransitioning]
+  );
+
+  // Ensure current video plays when index changes
+  useEffect(() => {
+    if (!isTransitioning && videos[currentIndex]) {
+      const timer = setTimeout(() => {
+        const currentVideo = document.querySelector(
+          `video[src="${videos[currentIndex].src}"]`
+        );
+        if (currentVideo && currentVideo.paused) {
+          currentVideo.play().catch(() => {
+            // Handle autoplay restrictions silently
+          });
+        }
+      }, 100); // Small delay to ensure DOM is updated
+
+      return () => clearTimeout(timer);
+    }
+  }, [currentIndex, isTransitioning, videos]);
 
   // Navigation functions
   const nextSlide = () => {
@@ -94,6 +136,10 @@ export default function VideoStack({ videos = [], className = "" }) {
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > 50;
     const isRightSwipe = distance < -50;
+
+    // Reset touch states immediately
+    setTouchStart(null);
+    setTouchEnd(null);
 
     // Different slide directions based on swipe
     if (isLeftSwipe) {
@@ -150,46 +196,79 @@ export default function VideoStack({ videos = [], className = "" }) {
         <div className="relative w-full aspect-[4/5] md:aspect-[3/4] bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden shadow-2xl border border-gray-800/50">
           {/* Video Container with Directional Slide Transition */}
           <div className="absolute inset-0">
-            {videos.map((video, index) => (
-              <motion.video
-                key={`${index}-${currentIndex}`}
-                src={video.src}
-                autoPlay={index === currentIndex}
-                muted
-                loop
-                className="absolute inset-0 w-full h-full object-cover"
-                playsInline
-                initial={{
-                  x:
-                    index === currentIndex
-                      ? slideDirection === "next"
-                        ? "100%"
-                        : "-100%"
-                      : "0%",
-                  opacity: index === currentIndex ? 1 : 0,
-                }}
-                animate={{
-                  x:
-                    index === currentIndex
+            {videos.map((video, index) => {
+              const isCurrentVideo = index === currentIndex;
+              const isPreviousVideo =
+                index === previousIndex && isTransitioning;
+              const isNextVideo = index === (currentIndex + 1) % videos.length;
+              const isPrevVideo =
+                index === (currentIndex - 1 + videos.length) % videos.length;
+
+              // Always render current, previous (during transition), and adjacent videos to prevent black screens
+              const shouldRender =
+                isCurrentVideo ||
+                isPreviousVideo ||
+                (!isTransitioning && (isNextVideo || isPrevVideo));
+
+              if (!shouldRender) return null;
+
+              return (
+                <motion.video
+                  key={`video-${index}`} // Stable key to prevent remounting
+                  src={video.src}
+                  autoPlay={isCurrentVideo && !isTransitioning} // Only autoplay current video when not transitioning
+                  muted
+                  loop
+                  className="absolute inset-0 w-full h-full object-cover"
+                  playsInline
+                  preload="auto" // Preload full video for smoother playback
+                  initial={false} // Don't animate on mount
+                  animate={{
+                    x: isCurrentVideo
                       ? "0%"
+                      : isPreviousVideo
+                      ? slideDirection === "next"
+                        ? "-100%"
+                        : "100%"
                       : slideDirection === "next"
-                      ? "-100%"
-                      : "100%",
-                  opacity: index === currentIndex ? 1 : 0,
-                }}
-                exit={{
-                  x: slideDirection === "next" ? "-100%" : "100%",
-                  opacity: 0,
-                }}
-                transition={{
-                  duration: 0.8,
-                  ease: [0.4, 0, 0.2, 1],
-                }}
-                style={{
-                  zIndex: index === currentIndex ? 2 : 1,
-                }}
-              />
-            ))}
+                      ? "100%"
+                      : "-100%",
+                    opacity:
+                      isCurrentVideo || (isPreviousVideo && isTransitioning)
+                        ? 1
+                        : 0,
+                  }}
+                  onLoadedData={() => {
+                    // Ensure video starts playing when it becomes current
+                    if (isCurrentVideo) {
+                      const videoElement = document.querySelector(
+                        `video[src="${video.src}"]`
+                      );
+                      if (videoElement && videoElement.paused) {
+                        videoElement.play().catch(() => {
+                          // Handle autoplay restrictions
+                        });
+                      }
+                    }
+                  }}
+                  transition={{
+                    x: {
+                      duration: 0.8,
+                      ease: [0.4, 0, 0.2, 1],
+                      delay: isPreviousVideo ? 0.4 : 0, // Previous video slides out after new video slides in
+                    },
+                    opacity: {
+                      duration: 0.3,
+                      delay: isPreviousVideo ? 0.4 : 0,
+                    },
+                  }}
+                  style={{
+                    zIndex: isCurrentVideo ? 3 : isPreviousVideo ? 2 : 1,
+                    visibility: shouldRender ? "visible" : "hidden",
+                  }}
+                />
+              );
+            })}
           </div>
 
           {/* Minimal Overlay */}
