@@ -8,6 +8,7 @@ import RadialBtn from "./Common/RadialBtn";
 import Stack from "./Common/Stack";
 import Shuffle from "./Common/Shuffle";
 import Transition from "./Common/Transition";
+import VideoStack from "./Common/VideoStack";
 //Contact
 import Contact from "./Contact/Contact";
 //Home
@@ -34,6 +35,7 @@ export {
   Stack,
   Shuffle,
   Transition,
+  VideoStack,
   Contact,
   AboutMeBtn,
   ContactButtons,
