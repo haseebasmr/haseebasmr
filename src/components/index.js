@@ -6,6 +6,7 @@ import GetInTouchBtn from "./Common/GetInTouchBtn";
 import Magnetic from "./Common/Magnetic";
 import RadialBtn from "./Common/RadialBtn";
 import Stack from "./Common/Stack";
+import Shuffle from "./Common/Shuffle";
 import Transition from "./Common/Transition";
 //Contact
 import Contact from "./Contact/Contact";
@@ -31,6 +32,7 @@ export {
   Magnetic,
   RadialBtn,
   Stack,
+  Shuffle,
   Transition,
   Contact,
   AboutMeBtn,
