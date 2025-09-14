@@ -39,6 +39,7 @@ export default function VideoStack({ videos = [], className = "" }) {
   const [progress, setProgress] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
+  const [slideDirection, setSlideDirection] = useState("next"); // "next" or "prev"
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -62,18 +63,19 @@ export default function VideoStack({ videos = [], className = "" }) {
   }, [videos.length]);
 
   // Reset progress when manually changing slides
-  const changeSlide = (newIndex) => {
+  const changeSlide = (newIndex, direction = "next") => {
+    setSlideDirection(direction);
     setCurrentIndex(newIndex);
     setProgress(0);
   };
 
   // Navigation functions
   const nextSlide = () => {
-    changeSlide((currentIndex + 1) % videos.length);
+    changeSlide((currentIndex + 1) % videos.length, "next");
   };
 
   const prevSlide = () => {
-    changeSlide((currentIndex - 1 + videos.length) % videos.length);
+    changeSlide((currentIndex - 1 + videos.length) % videos.length, "prev");
   };
 
   // Touch handlers for mobile swiping
@@ -93,11 +95,11 @@ export default function VideoStack({ videos = [], className = "" }) {
     const isLeftSwipe = distance > 50;
     const isRightSwipe = distance < -50;
 
-    // Always slide from right to left regardless of swipe direction
+    // Different slide directions based on swipe
     if (isLeftSwipe) {
-      changeSlide((currentIndex + 1) % videos.length);
+      nextSlide(); // Swipe left = next video (slides right to left)
     } else if (isRightSwipe) {
-      changeSlide((currentIndex - 1 + videos.length) % videos.length);
+      prevSlide(); // Swipe right = previous video (slides left to right)
     }
   };
 
@@ -146,7 +148,7 @@ export default function VideoStack({ videos = [], className = "" }) {
 
         {/* Main Video Card */}
         <div className="relative w-full aspect-[4/5] md:aspect-[3/4] bg-gradient-to-br from-gray-900 to-black rounded-xl overflow-hidden shadow-2xl border border-gray-800/50">
-          {/* Video Container with Slide Transition */}
+          {/* Video Container with Directional Slide Transition */}
           <div className="absolute inset-0">
             {videos.map((video, index) => (
               <motion.video
@@ -158,15 +160,25 @@ export default function VideoStack({ videos = [], className = "" }) {
                 className="absolute inset-0 w-full h-full object-cover"
                 playsInline
                 initial={{
-                  x: index === currentIndex ? "100%" : "0%",
+                  x:
+                    index === currentIndex
+                      ? slideDirection === "next"
+                        ? "100%"
+                        : "-100%"
+                      : "0%",
                   opacity: index === currentIndex ? 1 : 0,
                 }}
                 animate={{
-                  x: index === currentIndex ? "0%" : "-100%",
+                  x:
+                    index === currentIndex
+                      ? "0%"
+                      : slideDirection === "next"
+                      ? "-100%"
+                      : "100%",
                   opacity: index === currentIndex ? 1 : 0,
                 }}
                 exit={{
-                  x: "-100%",
+                  x: slideDirection === "next" ? "-100%" : "100%",
                   opacity: 0,
                 }}
                 transition={{
@@ -183,8 +195,8 @@ export default function VideoStack({ videos = [], className = "" }) {
           {/* Minimal Overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
-          {/* Single Progress Line - Higher Z-Index */}
-          <div className="absolute top-3 left-3 right-3 z-10">
+          {/* Single Progress Line - Bottom Position */}
+          <div className="absolute bottom-3 left-3 right-3 z-10">
             <div className="h-0.5 bg-white/30 rounded-full overflow-hidden backdrop-blur-sm">
               <motion.div
                 className="h-full bg-white rounded-full shadow-sm"
@@ -196,27 +208,25 @@ export default function VideoStack({ videos = [], className = "" }) {
           </div>
         </div>
       </div>
-
-      {/* Beautiful Navigation Arrows for Desktop */}
+      {/* Beautiful Navigation Arrows for Desktop - Darker */}
       <div className="hidden md:flex absolute top-1/2 -translate-y-1/2 -left-16 -right-16 justify-between pointer-events-none">
         <motion.button
-          className="bg-white/10 backdrop-blur-md text-white p-3 rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 pointer-events-auto group"
+          className="bg-black/40 backdrop-blur-md text-white p-3 rounded-full border border-gray-700/50 hover:bg-black/60 hover:border-gray-600/70 transition-all duration-300 pointer-events-auto group shadow-lg"
           onClick={prevSlide}
           whileHover={{ scale: 1.1, x: -2 }}
           whileTap={{ scale: 0.95 }}
         >
-          <ChevronLeftIcon className="w-6 h-6 group-hover:text-white/90" />
+          <ChevronLeftIcon className="w-6 h-6 group-hover:text-white drop-shadow-sm" />
         </motion.button>
         <motion.button
-          className="bg-white/10 backdrop-blur-md text-white p-3 rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 pointer-events-auto group"
+          className="bg-black/40 backdrop-blur-md text-white p-3 rounded-full border border-gray-700/50 hover:bg-black/60 hover:border-gray-600/70 transition-all duration-300 pointer-events-auto group shadow-lg"
           onClick={nextSlide}
           whileHover={{ scale: 1.1, x: 2 }}
           whileTap={{ scale: 0.95 }}
         >
-          <ChevronRightIcon className="w-6 h-6 group-hover:text-white/90" />
+          <ChevronRightIcon className="w-6 h-6 group-hover:text-white drop-shadow-sm" />
         </motion.button>
-      </div>
-
+      </div>{" "}
       {/* Enhanced Dot Indicators with Better Visibility */}
       <div className="flex justify-center mt-6 space-x-3">
         {videos.map((_, index) => (
@@ -233,7 +243,6 @@ export default function VideoStack({ videos = [], className = "" }) {
           />
         ))}
       </div>
-
       {/* Mobile Swipe Hint - Very Subtle */}
       <div className="md:hidden text-center mt-3">
         <p className="text-gray-500 text-xs">Swipe to browse</p>
