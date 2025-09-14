@@ -27,23 +27,19 @@ const Float = ({
       x: 0,
       y: 0,
       rotate: 0,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+      },
     },
   };
-
-  if (disabled) {
-    return (
-      <div className={className} style={style}>
-        {children}
-      </div>
-    );
-  }
 
   return (
     <motion.div
       className={className}
       style={style}
       variants={floatVariants}
-      animate="floating"
+      animate={disabled ? "static" : "floating"}
       initial="static"
     >
       {children}

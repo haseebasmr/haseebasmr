@@ -44,74 +44,79 @@ export default function RadialBtn() {
   };
 
   return (
-    <Float
-      xRange={2}
-      yRange={12}
-      speed={4}
-      rotateRange={1}
-      disabled={isClicked}
-    >
-      <div className="md:hidden fixed right-2 top-2 z-40">
-        {isClicked ? (
-          <button className="absolute right-7 top-7 z-50" onClick={handleClick}>
-            <FaTimes size={25} color="white" />
-          </button>
-        ) : (
-          <FaGripLines
-            size={25}
-            color="white"
-            className="absolute right-7 top-7 z-50 pointer-events-none"
-            onClick={handleClick}
-          />
-        )}
-        <AnimatePresence>
-          {isClicked && (
-            <motion.div
-              className="h-10 w-10 fixed top-7 right-7 z-40"
-              initial={{ rotate: -150 }}
-              animate={{ rotate: 0 }}
-              exit={{ rotate: 150 }}
-              transition={{ duration: 0.2 }}
+    <div className="md:hidden">
+      <Float
+        xRange={2}
+        yRange={12}
+        speed={4}
+        rotateRange={1}
+        disabled={isClicked}
+      >
+        <div className="fixed right-2 top-2 z-40">
+          {isClicked ? (
+            <button
+              className="absolute right-7 top-7 z-50"
+              onClick={handleClick}
             >
-              {items.map((item, index) => {
-                const x = radius * Math.cos((item.angle * Math.PI) / 180);
-                const y = radius * Math.sin((item.angle * Math.PI) / 180);
-                return (
-                  <div
-                    key={index}
-                    className="absolute h-12 w-12 flex items-center justify-center rounded-full"
-                    style={{ transform: `translate(${x}px, ${-y}px)` }}
-                  >
-                    <button
-                      onClick={() => handleRadialClick(item.Link)}
-                      className="text-white text-sm active:text-xl hover:text-lg"
-                    >
-                      {item.label}
-                    </button>
-                  </div>
-                );
-              })}
-            </motion.div>
+              <FaTimes size={25} color="white" />
+            </button>
+          ) : (
+            <button
+              className="absolute right-7 top-7 z-50 bg-transparent border-none p-0"
+              onClick={handleClick}
+            >
+              <FaGripLines size={25} color="white" />
+            </button>
           )}
-        </AnimatePresence>
-        <motion.button
-          className="bg-pallet1 flex items-center justify-center rounded-full"
-          onClick={handleClick}
-          initial={{ height: 0, width: 0 }}
-          animate={{
-            height: isClicked ? "20rem" : "5rem",
-            width: isClicked ? "20rem" : "5rem",
-            x: isClicked ? "7.5rem" : 0,
-            y: isClicked ? "-7.5rem" : 0,
-          }}
-          transition={{
-            duration: 0.2,
-            delay: isClicked ? 0 : 0.2,
-            ease: "easeOut",
-          }}
-          style={{ originX: 0, originY: 0 }}
-        ></motion.button>
-      </div>
-    </Float>
+          <AnimatePresence>
+            {isClicked && (
+              <motion.div
+                className="h-10 w-10 fixed top-7 right-7 z-40"
+                initial={{ rotate: -150 }}
+                animate={{ rotate: 0 }}
+                exit={{ rotate: 150 }}
+                transition={{ duration: 0.2 }}
+              >
+                {items.map((item, index) => {
+                  const x = radius * Math.cos((item.angle * Math.PI) / 180);
+                  const y = radius * Math.sin((item.angle * Math.PI) / 180);
+                  return (
+                    <div
+                      key={index}
+                      className="absolute h-12 w-12 flex items-center justify-center rounded-full"
+                      style={{ transform: `translate(${x}px, ${-y}px)` }}
+                    >
+                      <button
+                        onClick={() => handleRadialClick(item.Link)}
+                        className="text-white text-sm active:text-xl hover:text-lg"
+                      >
+                        {item.label}
+                      </button>
+                    </div>
+                  );
+                })}
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <motion.button
+            className="bg-pallet1 flex items-center justify-center rounded-full"
+            onClick={handleClick}
+            initial={{ height: 0, width: 0 }}
+            animate={{
+              height: isClicked ? "20rem" : "5rem",
+              width: isClicked ? "20rem" : "5rem",
+              x: isClicked ? "7.5rem" : 0,
+              y: isClicked ? "-7.5rem" : 0,
+            }}
+            transition={{
+              duration: 0.2,
+              delay: isClicked ? 0 : 0.2,
+              ease: "easeOut",
+            }}
+            style={{ originX: 0, originY: 0 }}
+          ></motion.button>
+        </div>
+      </Float>
+    </div>
   );
 }
