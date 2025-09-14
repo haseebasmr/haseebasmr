@@ -54,8 +54,8 @@ export default function Home() {
         <Description className="z-10 overflow-hidden" />
         <Views />
 
-        {imageLoaded && <PhotoCards />}
         {photoCardsLoaded && <VideoCards />}
+        {imageLoaded && <PhotoCards />}
       </Transition>
     </>
   );
