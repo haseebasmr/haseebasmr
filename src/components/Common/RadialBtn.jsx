@@ -44,7 +44,13 @@ export default function RadialBtn() {
   };
 
   return (
-    <Float xRange={3} yRange={5} speed={4} rotateRange={1} disabled={isClicked}>
+    <Float
+      xRange={2}
+      yRange={12}
+      speed={4}
+      rotateRange={1}
+      disabled={isClicked}
+    >
       <div className="md:hidden fixed right-2 top-2 z-40">
         {isClicked ? (
           <button className="absolute right-7 top-7 z-50" onClick={handleClick}>

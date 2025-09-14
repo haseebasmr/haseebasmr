@@ -12,9 +12,10 @@ const Float = ({
 }) => {
   const floatVariants = {
     floating: {
-      x: [0, xRange, -xRange, 0],
-      y: [0, -yRange, yRange, -yRange / 2, 0],
-      rotate: [0, rotateRange, -rotateRange, 0],
+      // Smooth, natural floating pattern
+      y: [0, -yRange, -yRange * 0.3, -yRange * 0.8, 0],
+      x: [0, xRange * 0.3, 0, -xRange * 0.2, 0],
+      rotate: [0, rotateRange * 0.5, 0, -rotateRange * 0.3, 0],
       transition: {
         duration: speed,
         ease: "easeInOut",
